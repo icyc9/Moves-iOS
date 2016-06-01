@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0212DC821CFF98DA00D7F9FD /* FindMovesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0212DC811CFF98DA00D7F9FD /* FindMovesViewController.swift */; };
+		0212DC841CFF9ECB00D7F9FD /* AcceptedMovesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0212DC831CFF9ECB00D7F9FD /* AcceptedMovesViewController.swift */; };
+		0212DC861CFF9EEB00D7F9FD /* MoveInvitationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0212DC851CFF9EEB00D7F9FD /* MoveInvitationsViewController.swift */; };
+		0212DC881CFF9F3B00D7F9FD /* FriendsMovesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0212DC871CFF9F3B00D7F9FD /* FriendsMovesViewController.swift */; };
+		0212DC8A1CFF9F6500D7F9FD /* AreaMovesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0212DC891CFF9F6500D7F9FD /* AreaMovesViewController.swift */; };
 		0232096D1CFD0C9E00BB21A6 /* CreateHangoutOrMeetPeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0232096C1CFD0C9E00BB21A6 /* CreateHangoutOrMeetPeopleViewController.swift */; };
 		023209741CFD3E0C00BB21A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 023209721CFD3E0C00BB21A6 /* Main.storyboard */; };
 		023209891CFE9BA500BB21A6 /* CAPSPageMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023209881CFE9BA500BB21A6 /* CAPSPageMenu.swift */; };
@@ -20,6 +24,10 @@
 
 /* Begin PBXFileReference section */
 		0212DC811CFF98DA00D7F9FD /* FindMovesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindMovesViewController.swift; sourceTree = "<group>"; };
+		0212DC831CFF9ECB00D7F9FD /* AcceptedMovesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptedMovesViewController.swift; sourceTree = "<group>"; };
+		0212DC851CFF9EEB00D7F9FD /* MoveInvitationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveInvitationsViewController.swift; sourceTree = "<group>"; };
+		0212DC871CFF9F3B00D7F9FD /* FriendsMovesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsMovesViewController.swift; sourceTree = "<group>"; };
+		0212DC891CFF9F6500D7F9FD /* AreaMovesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AreaMovesViewController.swift; sourceTree = "<group>"; };
 		0232096C1CFD0C9E00BB21A6 /* CreateHangoutOrMeetPeopleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateHangoutOrMeetPeopleViewController.swift; sourceTree = "<group>"; };
 		023209731CFD3E0C00BB21A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		023209881CFE9BA500BB21A6 /* CAPSPageMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAPSPageMenu.swift; sourceTree = "<group>"; };
@@ -44,6 +52,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0212DC8B1CFF9F8700D7F9FD /* storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				02D473141CFCF766007BA0F8 /* LaunchScreen.storyboard */,
+				023209721CFD3E0C00BB21A6 /* Main.storyboard */,
+			);
+			name = storyboards;
+			sourceTree = "<group>";
+		};
+		0212DC8C1CFF9FB400D7F9FD /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				023209881CFE9BA500BB21A6 /* CAPSPageMenu.swift */,
+				02D4731D1CFD017C007BA0F8 /* MainNavigationTabBarViewController.swift */,
+				0212DC901CFF9FF100D7F9FD /* find_moves */,
+				0212DC8F1CFF9FE100D7F9FD /* make_moves */,
+				0212DC8E1CFF9FDC00D7F9FD /* my_moves */,
+			);
+			name = ui;
+			sourceTree = "<group>";
+		};
+		0212DC8E1CFF9FDC00D7F9FD /* my_moves */ = {
+			isa = PBXGroup;
+			children = (
+				0232098A1CFE9BCE00BB21A6 /* MovesViewController.swift */,
+				0212DC831CFF9ECB00D7F9FD /* AcceptedMovesViewController.swift */,
+				0212DC851CFF9EEB00D7F9FD /* MoveInvitationsViewController.swift */,
+			);
+			name = my_moves;
+			sourceTree = "<group>";
+		};
+		0212DC8F1CFF9FE100D7F9FD /* make_moves */ = {
+			isa = PBXGroup;
+			children = (
+				0232096C1CFD0C9E00BB21A6 /* CreateHangoutOrMeetPeopleViewController.swift */,
+			);
+			name = make_moves;
+			sourceTree = "<group>";
+		};
+		0212DC901CFF9FF100D7F9FD /* find_moves */ = {
+			isa = PBXGroup;
+			children = (
+				0212DC811CFF98DA00D7F9FD /* FindMovesViewController.swift */,
+				0212DC871CFF9F3B00D7F9FD /* FriendsMovesViewController.swift */,
+				0212DC891CFF9F6500D7F9FD /* AreaMovesViewController.swift */,
+			);
+			name = find_moves;
+			sourceTree = "<group>";
+		};
 		02D472FD1CFCF766007BA0F8 = {
 			isa = PBXGroup;
 			children = (
@@ -64,16 +121,11 @@
 		02D473081CFCF766007BA0F8 /* friendly */ = {
 			isa = PBXGroup;
 			children = (
-				023209721CFD3E0C00BB21A6 /* Main.storyboard */,
+				0212DC8C1CFF9FB400D7F9FD /* ui */,
+				0212DC8B1CFF9F8700D7F9FD /* storyboards */,
 				02D473091CFCF766007BA0F8 /* AppDelegate.swift */,
 				02D473121CFCF766007BA0F8 /* Assets.xcassets */,
-				02D473141CFCF766007BA0F8 /* LaunchScreen.storyboard */,
 				02D473171CFCF766007BA0F8 /* Info.plist */,
-				02D4731D1CFD017C007BA0F8 /* MainNavigationTabBarViewController.swift */,
-				0232096C1CFD0C9E00BB21A6 /* CreateHangoutOrMeetPeopleViewController.swift */,
-				023209881CFE9BA500BB21A6 /* CAPSPageMenu.swift */,
-				0232098A1CFE9BCE00BB21A6 /* MovesViewController.swift */,
-				0212DC811CFF98DA00D7F9FD /* FindMovesViewController.swift */,
 			);
 			path = friendly;
 			sourceTree = "<group>";
@@ -161,6 +213,10 @@
 				0212DC821CFF98DA00D7F9FD /* FindMovesViewController.swift in Sources */,
 				023209891CFE9BA500BB21A6 /* CAPSPageMenu.swift in Sources */,
 				02D4730A1CFCF766007BA0F8 /* AppDelegate.swift in Sources */,
+				0212DC861CFF9EEB00D7F9FD /* MoveInvitationsViewController.swift in Sources */,
+				0212DC881CFF9F3B00D7F9FD /* FriendsMovesViewController.swift in Sources */,
+				0212DC8A1CFF9F6500D7F9FD /* AreaMovesViewController.swift in Sources */,
+				0212DC841CFF9ECB00D7F9FD /* AcceptedMovesViewController.swift in Sources */,
 				0232098B1CFE9BCE00BB21A6 /* MovesViewController.swift in Sources */,
 				02D4731E1CFD017C007BA0F8 /* MainNavigationTabBarViewController.swift in Sources */,
 			);
