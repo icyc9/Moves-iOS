@@ -12,7 +12,7 @@ class MainNavigationTabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+
         // Use white text/normal image tinting for each tab
         configureTintForTab(tabBar.items![0])
         configureTintForTab(tabBar.items![1])
