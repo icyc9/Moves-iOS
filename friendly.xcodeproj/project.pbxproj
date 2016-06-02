@@ -12,6 +12,8 @@
 		0212DC861CFF9EEB00D7F9FD /* MoveInvitationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0212DC851CFF9EEB00D7F9FD /* MoveInvitationsViewController.swift */; };
 		0212DC881CFF9F3B00D7F9FD /* FriendsMovesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0212DC871CFF9F3B00D7F9FD /* FriendsMovesViewController.swift */; };
 		0212DC8A1CFF9F6500D7F9FD /* AreaMovesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0212DC891CFF9F6500D7F9FD /* AreaMovesViewController.swift */; };
+		0212DC951CFFBA8F00D7F9FD /* proxima-nova-soft-light-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0212DC931CFFBA8F00D7F9FD /* proxima-nova-soft-light-webfont.ttf */; };
+		0212DC961CFFBA8F00D7F9FD /* proxima-nova-soft-normal-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0212DC941CFFBA8F00D7F9FD /* proxima-nova-soft-normal-webfont.ttf */; };
 		0232096D1CFD0C9E00BB21A6 /* CreateHangoutOrMeetPeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0232096C1CFD0C9E00BB21A6 /* CreateHangoutOrMeetPeopleViewController.swift */; };
 		023209741CFD3E0C00BB21A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 023209721CFD3E0C00BB21A6 /* Main.storyboard */; };
 		023209891CFE9BA500BB21A6 /* CAPSPageMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023209881CFE9BA500BB21A6 /* CAPSPageMenu.swift */; };
@@ -28,6 +30,8 @@
 		0212DC851CFF9EEB00D7F9FD /* MoveInvitationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveInvitationsViewController.swift; sourceTree = "<group>"; };
 		0212DC871CFF9F3B00D7F9FD /* FriendsMovesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsMovesViewController.swift; sourceTree = "<group>"; };
 		0212DC891CFF9F6500D7F9FD /* AreaMovesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AreaMovesViewController.swift; sourceTree = "<group>"; };
+		0212DC931CFFBA8F00D7F9FD /* proxima-nova-soft-light-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "proxima-nova-soft-light-webfont.ttf"; path = "../../../Desktop/proxima-nova-soft-light-webfont.ttf"; sourceTree = "<group>"; };
+		0212DC941CFFBA8F00D7F9FD /* proxima-nova-soft-normal-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "proxima-nova-soft-normal-webfont.ttf"; path = "../../../Desktop/proxima-nova-soft-normal-webfont.ttf"; sourceTree = "<group>"; };
 		0232096C1CFD0C9E00BB21A6 /* CreateHangoutOrMeetPeopleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateHangoutOrMeetPeopleViewController.swift; sourceTree = "<group>"; };
 		023209731CFD3E0C00BB21A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		023209881CFE9BA500BB21A6 /* CAPSPageMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAPSPageMenu.swift; sourceTree = "<group>"; };
@@ -101,6 +105,15 @@
 			name = find_moves;
 			sourceTree = "<group>";
 		};
+		0212DC921CFFB9EC00D7F9FD /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				0212DC931CFFBA8F00D7F9FD /* proxima-nova-soft-light-webfont.ttf */,
+				0212DC941CFFBA8F00D7F9FD /* proxima-nova-soft-normal-webfont.ttf */,
+			);
+			name = resources;
+			sourceTree = "<group>";
+		};
 		02D472FD1CFCF766007BA0F8 = {
 			isa = PBXGroup;
 			children = (
@@ -121,8 +134,9 @@
 		02D473081CFCF766007BA0F8 /* friendly */ = {
 			isa = PBXGroup;
 			children = (
-				0212DC8C1CFF9FB400D7F9FD /* ui */,
+				0212DC921CFFB9EC00D7F9FD /* resources */,
 				0212DC8B1CFF9F8700D7F9FD /* storyboards */,
+				0212DC8C1CFF9FB400D7F9FD /* ui */,
 				02D473091CFCF766007BA0F8 /* AppDelegate.swift */,
 				02D473121CFCF766007BA0F8 /* Assets.xcassets */,
 				02D473171CFCF766007BA0F8 /* Info.plist */,
@@ -196,6 +210,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0212DC951CFFBA8F00D7F9FD /* proxima-nova-soft-light-webfont.ttf in Resources */,
+				0212DC961CFFBA8F00D7F9FD /* proxima-nova-soft-normal-webfont.ttf in Resources */,
 				023209741CFD3E0C00BB21A6 /* Main.storyboard in Resources */,
 				02D473161CFCF766007BA0F8 /* LaunchScreen.storyboard in Resources */,
 				02D473131CFCF766007BA0F8 /* Assets.xcassets in Resources */,

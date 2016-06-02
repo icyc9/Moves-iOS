@@ -3,7 +3,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="proxima-nova-soft-normal-webfont.ttf">
+            <string>ProximaNovaSoft-Medium</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--My Moves-->
         <scene sceneID="hNz-n2-bh7">
@@ -43,26 +49,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="195" y="279" width="210" height="42"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What are you down to do?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJd-0s-cty">
+                                <rect key="frame" x="0.0" y="20" width="600" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="94s-zQ-qLk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNovaSoft-Medium" family="ProximaNovaSoft-Medium" pointSize="24"/>
+                                <color key="textColor" red="0.61176470588235299" green="0.6705882352941176" blue="0.74509803921568629" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="lineBreakMode" value=".ByClipping"/>
+                                </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="192" y="329" width="216" height="17"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Anything" borderStyle="roundedRect" placeholder="Movies, lunch, run, hike, etc..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="156-zV-QWj">
+                                <rect key="frame" x="212" y="94" width="176" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="176" id="zdX-HX-UWv"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="rocket_large" translatesAutoresizingMaskIntoConstraints="NO" id="pKh-BO-2Ve">
+                                <rect key="frame" x="264" y="388" width="72" height="72"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to make moves!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6fH-GJ-l3Q">
+                                <rect key="frame" x="224" y="468" width="153" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.61176470588235299" green="0.6705882352941176" blue="0.74509803921568629" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstItem="6fH-GJ-l3Q" firstAttribute="top" secondItem="pKh-BO-2Ve" secondAttribute="bottom" constant="8" symbolic="YES" id="0O6-qn-7gc"/>
+                            <constraint firstItem="156-zV-QWj" firstAttribute="top" secondItem="UJd-0s-cty" secondAttribute="bottom" constant="8" symbolic="YES" id="1sW-vU-od2"/>
+                            <constraint firstItem="156-zV-QWj" firstAttribute="centerX" secondItem="pKh-BO-2Ve" secondAttribute="centerX" id="8gx-oZ-i8k"/>
+                            <constraint firstItem="UJd-0s-cty" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="Joj-Es-hrY"/>
+                            <constraint firstItem="UJd-0s-cty" firstAttribute="centerX" secondItem="156-zV-QWj" secondAttribute="centerX" id="Pb1-eN-qgK"/>
+                            <constraint firstItem="pKh-BO-2Ve" firstAttribute="centerX" secondItem="6fH-GJ-l3Q" secondAttribute="centerX" id="PsK-uF-4A5"/>
+                            <constraint firstItem="UJd-0s-cty" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="-20" id="VQA-sj-MN2"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="6fH-GJ-l3Q" secondAttribute="bottom" constant="62" id="WnC-t5-lbV"/>
+                            <constraint firstItem="UJd-0s-cty" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="gda-Rk-rxR"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Make Moves" image="calendar" selectedImage="calendar" id="cPa-gy-q4n">
@@ -122,28 +149,11 @@
             </objects>
             <point key="canvasLocation" x="-1306" y="820"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="hK1-fw-qlY">
-            <objects>
-                <viewController id="vFV-Ve-ls5" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="8wb-ae-8Ku"/>
-                        <viewControllerLayoutGuide type="bottom" id="PtB-Ry-fgt"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="die-u9-s8l">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pT0-fD-p6g" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="505" y="289"/>
-        </scene>
     </scenes>
     <resources>
         <image name="calendar" width="24" height="24"/>
         <image name="magnifier" width="24" height="24"/>
         <image name="ok" width="24" height="24"/>
+        <image name="rocket_large" width="72" height="72"/>
     </resources>
 </document>
