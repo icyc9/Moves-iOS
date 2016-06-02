@@ -17,7 +17,8 @@ class MovesViewController: UIViewController {
         // Array to keep track of controllers in page menu
         var controllerArray : [UIViewController] = []
         
-        let myMovesController = UIViewController()
+        let myMovesController = storyboard!.instantiateViewControllerWithIdentifier("accepted_moves")
+        
         myMovesController.title = "My Moves"
         
         let invitationsController = UIViewController()

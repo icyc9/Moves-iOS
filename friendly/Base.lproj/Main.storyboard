@@ -6,7 +6,12 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <mutableArray key="proxima-nova-soft-light-webfont.ttf">
+            <string>ProximaNovaSoft-Regular</string>
+        </mutableArray>
         <mutableArray key="proxima-nova-soft-normal-webfont.ttf">
+            <string>ProximaNovaSoft-Medium</string>
+            <string>ProximaNovaSoft-Medium</string>
             <string>ProximaNovaSoft-Medium</string>
         </mutableArray>
     </customFonts>
@@ -35,7 +40,65 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="366" y="-376"/>
+            <point key="canvasLocation" x="-498" y="-368"/>
+        </scene>
+        <!--Accepted Moves View Controller-->
+        <scene sceneID="fao-9h-taG">
+            <objects>
+                <tableViewController storyboardIdentifier="accepted_moves" id="XWd-em-Cdl" customClass="AcceptedMovesViewController" customModule="friendly" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="j2b-c3-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <sections>
+                            <tableViewSection id="dp6-Zp-CWE">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="0.0" shouldIndentWhileEditing="NO" reuseIdentifier="MoveTableViewCell" rowHeight="67" id="5Ul-eJ-bYt" customClass="AcceptedMoveCellTableViewCell" customModule="friendly" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="67"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Ul-eJ-bYt" id="jld-VL-lP7">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="66"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I2G-AG-gXO">
+                                                    <rect key="frame" x="8" y="8" width="504" height="50"/>
+                                                    <connections>
+                                                        <segue destination="mkx-g9-DLY" kind="embed" id="xuz-Fr-muf"/>
+                                                    </connections>
+                                                </containerView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ok" translatesAutoresizingMaskIntoConstraints="NO" id="o1x-2M-fDH">
+                                                    <rect key="frame" x="560" y="17" width="32" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="32" id="RRP-f1-i1w"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="I2G-AG-gXO" firstAttribute="leading" secondItem="jld-VL-lP7" secondAttribute="leadingMargin" id="9aX-3S-w1A"/>
+                                                <constraint firstItem="o1x-2M-fDH" firstAttribute="centerY" secondItem="I2G-AG-gXO" secondAttribute="centerY" id="EJE-od-qzZ"/>
+                                                <constraint firstItem="o1x-2M-fDH" firstAttribute="leading" secondItem="I2G-AG-gXO" secondAttribute="trailing" constant="48" id="TEZ-ED-Rsf"/>
+                                                <constraint firstItem="I2G-AG-gXO" firstAttribute="top" secondItem="jld-VL-lP7" secondAttribute="topMargin" id="XaY-55-SEa"/>
+                                                <constraint firstItem="o1x-2M-fDH" firstAttribute="trailing" secondItem="jld-VL-lP7" secondAttribute="trailingMargin" id="izT-U1-Sfn"/>
+                                                <constraint firstItem="o1x-2M-fDH" firstAttribute="top" secondItem="jld-VL-lP7" secondAttribute="topMargin" constant="9" id="sc0-MR-LWL"/>
+                                                <constraint firstItem="o1x-2M-fDH" firstAttribute="centerY" secondItem="jld-VL-lP7" secondAttribute="centerY" id="wQz-MZ-yy1"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="8"/>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="XWd-em-Cdl" id="OwF-Dg-ZPl"/>
+                            <outlet property="delegate" destination="XWd-em-Cdl" id="hrE-Am-DrH"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hdG-1w-NTy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="943" y="503"/>
         </scene>
         <!--Make Moves-->
         <scene sceneID="wg7-f3-ORb">
@@ -102,7 +165,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="1095"/>
+            <point key="canvasLocation" x="-663" y="587"/>
         </scene>
         <!--Main Navigation Tab Bar View Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -128,7 +191,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-686" y="-344"/>
+            <point key="canvasLocation" x="-1532" y="-384"/>
         </scene>
         <!--Find Moves-->
         <scene sceneID="fal-Xr-GoM">
@@ -147,7 +210,53 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Cz-PO-pO3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1306" y="820"/>
+            <point key="canvasLocation" x="-1610" y="636"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="4eh-qg-drK">
+            <objects>
+                <viewController id="mkx-g9-DLY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zHj-rE-MyP">
+                        <rect key="frame" x="0.0" y="0.0" width="504" height="50"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X-Men tonight at 7:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYM-ip-uXk">
+                                <rect key="frame" x="20" y="0.0" width="160" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="NUd-cJ-9KC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNovaSoft-Regular" family="ProximaNovaSoft-Regular" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="invited by Daniel Christopher" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vmz-ZM-3vV">
+                                <rect key="frame" x="20" y="20" width="160" height="14"/>
+                                <fontDescription key="fontDescription" name="ProximaNovaSoft-Medium" family="ProximaNovaSoft-Medium" pointSize="12"/>
+                                <color key="textColor" red="0.61176470588235299" green="0.6705882352941176" blue="0.74509803921568629" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="with 7 friends and 3 others" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2E-GB-FmR">
+                                <rect key="frame" x="20" y="34" width="160" height="14"/>
+                                <fontDescription key="fontDescription" name="ProximaNovaSoft-Medium" family="ProximaNovaSoft-Medium" pointSize="12"/>
+                                <color key="textColor" red="0.61176470589999998" green="0.6705882353" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Vmz-ZM-3vV" firstAttribute="top" secondItem="zHj-rE-MyP" secondAttribute="top" constant="20" symbolic="YES" id="513-09-jXV"/>
+                            <constraint firstItem="cYM-ip-uXk" firstAttribute="leading" secondItem="Vmz-ZM-3vV" secondAttribute="leading" id="66p-wJ-pM3"/>
+                            <constraint firstItem="c2E-GB-FmR" firstAttribute="trailing" secondItem="Vmz-ZM-3vV" secondAttribute="trailing" id="AHO-sT-z0f"/>
+                            <constraint firstItem="c2E-GB-FmR" firstAttribute="top" secondItem="cYM-ip-uXk" secondAttribute="bottom" constant="8" symbolic="YES" id="Gi3-oH-HAj"/>
+                            <constraint firstItem="c2E-GB-FmR" firstAttribute="leading" secondItem="Vmz-ZM-3vV" secondAttribute="leading" id="Lf3-wl-SvE"/>
+                            <constraint firstItem="cYM-ip-uXk" firstAttribute="leading" secondItem="zHj-rE-MyP" secondAttribute="leadingMargin" id="bgI-fE-r9z"/>
+                            <constraint firstItem="cYM-ip-uXk" firstAttribute="top" secondItem="zHj-rE-MyP" secondAttribute="top" id="dXy-pa-mcf"/>
+                            <constraint firstItem="cYM-ip-uXk" firstAttribute="trailing" secondItem="Vmz-ZM-3vV" secondAttribute="trailing" id="m2t-Dv-Vaw"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wm0-eg-cdS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="965" y="930"/>
         </scene>
     </scenes>
     <resources>

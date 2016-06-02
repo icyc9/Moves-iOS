@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AcceptedMovesViewController: UIPageViewController {
+class AcceptedMovesViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
