@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MoveInvitationsViewController: UIPageViewController {
+class MoveInvitationsViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

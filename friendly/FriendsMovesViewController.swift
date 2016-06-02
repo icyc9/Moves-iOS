@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FriendsMovesViewController: UIPageViewController {
+class FriendsMovesViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

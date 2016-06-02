@@ -12,14 +12,19 @@ class MainNavigationTabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Use white text/normal image tinting for each tab
-        configureTintForTab(tabBar.items![0])
-        configureTintForTab(tabBar.items![1])
-        configureTintForTab(tabBar.items![2])
+        
+        // Change tab bar item appearance
+        UITabBarItem.appearance().setTitleTextAttributes(
+            [NSFontAttributeName: UIFont(name:"ProximaNovaSoft-Regular", size:13)!,
+                NSForegroundColorAttributeName: UIColor.whiteColor()],
+            forState: .Normal)
+        
+        configureTab(tabBar.items![0])
+        configureTab(tabBar.items![1])
+        configureTab(tabBar.items![2])
     }
 
-    func configureTintForTab(tab: UITabBarItem) {
+    func configureTab(tab: UITabBarItem) {
         let originalImage2 = tab.selectedImage?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
         tab.selectedImage = originalImage2
         tab.image = originalImage2

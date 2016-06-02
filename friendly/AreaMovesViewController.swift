@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AreaMovesViewController: UIPageViewController {
+class AreaMovesViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

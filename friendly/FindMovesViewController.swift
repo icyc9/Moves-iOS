@@ -17,10 +17,10 @@ class FindMovesViewController: UIViewController {
         // Array to keep track of controllers in page menu
         var controllerArray : [UIViewController] = []
         
-        let friendsController = UIViewController()
+        let friendsController = storyboard!.instantiateViewControllerWithIdentifier("friends_moves")
         friendsController.title = "Friends"
         
-        let areaController = UIViewController()
+        let areaController = storyboard!.instantiateViewControllerWithIdentifier("area_moves")
         areaController.title = "Area"
         
         controllerArray.append(friendsController);

@@ -21,7 +21,7 @@ class MovesViewController: UIViewController {
         
         myMovesController.title = "My Moves"
         
-        let invitationsController = UIViewController()
+        let invitationsController = storyboard!.instantiateViewControllerWithIdentifier("invitations")
         invitationsController.title = "Moves I'm Invited To"
         
         controllerArray.append(myMovesController);

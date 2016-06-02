@@ -15,6 +15,7 @@
 		0212DC951CFFBA8F00D7F9FD /* proxima-nova-soft-light-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0212DC931CFFBA8F00D7F9FD /* proxima-nova-soft-light-webfont.ttf */; };
 		0212DC961CFFBA8F00D7F9FD /* proxima-nova-soft-normal-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0212DC941CFFBA8F00D7F9FD /* proxima-nova-soft-normal-webfont.ttf */; };
 		0212DC981CFFC32E00D7F9FD /* AcceptedMoveCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0212DC971CFFC32E00D7F9FD /* AcceptedMoveCellTableViewCell.swift */; };
+		0212DC9A1D00C80A00D7F9FD /* InvitationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0212DC991D00C80A00D7F9FD /* InvitationTableViewCell.swift */; };
 		0232096D1CFD0C9E00BB21A6 /* CreateHangoutOrMeetPeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0232096C1CFD0C9E00BB21A6 /* CreateHangoutOrMeetPeopleViewController.swift */; };
 		023209741CFD3E0C00BB21A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 023209721CFD3E0C00BB21A6 /* Main.storyboard */; };
 		023209891CFE9BA500BB21A6 /* CAPSPageMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023209881CFE9BA500BB21A6 /* CAPSPageMenu.swift */; };
@@ -34,6 +35,7 @@
 		0212DC931CFFBA8F00D7F9FD /* proxima-nova-soft-light-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "proxima-nova-soft-light-webfont.ttf"; path = "../../../Desktop/proxima-nova-soft-light-webfont.ttf"; sourceTree = "<group>"; };
 		0212DC941CFFBA8F00D7F9FD /* proxima-nova-soft-normal-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "proxima-nova-soft-normal-webfont.ttf"; path = "../../../Desktop/proxima-nova-soft-normal-webfont.ttf"; sourceTree = "<group>"; };
 		0212DC971CFFC32E00D7F9FD /* AcceptedMoveCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptedMoveCellTableViewCell.swift; sourceTree = "<group>"; };
+		0212DC991D00C80A00D7F9FD /* InvitationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvitationTableViewCell.swift; sourceTree = "<group>"; };
 		0232096C1CFD0C9E00BB21A6 /* CreateHangoutOrMeetPeopleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateHangoutOrMeetPeopleViewController.swift; sourceTree = "<group>"; };
 		023209731CFD3E0C00BB21A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		023209881CFE9BA500BB21A6 /* CAPSPageMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAPSPageMenu.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				0212DC831CFF9ECB00D7F9FD /* AcceptedMovesViewController.swift */,
 				0212DC851CFF9EEB00D7F9FD /* MoveInvitationsViewController.swift */,
 				0212DC971CFFC32E00D7F9FD /* AcceptedMoveCellTableViewCell.swift */,
+				0212DC991D00C80A00D7F9FD /* InvitationTableViewCell.swift */,
 			);
 			name = my_moves;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				0212DC821CFF98DA00D7F9FD /* FindMovesViewController.swift in Sources */,
 				0212DC981CFFC32E00D7F9FD /* AcceptedMoveCellTableViewCell.swift in Sources */,
 				023209891CFE9BA500BB21A6 /* CAPSPageMenu.swift in Sources */,
+				0212DC9A1D00C80A00D7F9FD /* InvitationTableViewCell.swift in Sources */,
 				02D4730A1CFCF766007BA0F8 /* AppDelegate.swift in Sources */,
 				0212DC861CFF9EEB00D7F9FD /* MoveInvitationsViewController.swift in Sources */,
 				0212DC881CFF9F3B00D7F9FD /* FriendsMovesViewController.swift in Sources */,
