@@ -13,7 +13,11 @@ class AcceptedMovesViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let primary = UIColor(red: 0.13, green: 0.59, blue: 0.95, alpha: 1)
+        let navigationBar = self.navigationController?.navigationBar
+        navigationBar?.barTintColor = primary
+        navigationBar?.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        navigationBar?.topItem?.title = "My Moves"
     }
 
     override func didReceiveMemoryWarning() {

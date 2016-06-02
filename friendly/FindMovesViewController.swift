@@ -34,7 +34,8 @@ class FindMovesViewController: UIViewController {
             .MenuItemSeparatorPercentageHeight(0.1),
             .ScrollMenuBackgroundColor(primaryBlue),
             .SelectionIndicatorColor(UIColor(red: 1, green: 0.25, blue: 0.50, alpha: 1)),
-            .MenuItemSeparatorColor(primaryBlue)
+            .MenuItemSeparatorColor(primaryBlue),
+            .UnselectedMenuItemLabelColor(UIColor.darkGrayColor())
         ]
         
         let navheight = (navigationController?.navigationBar.frame.size.height ?? 0) + UIApplication.sharedApplication().statusBarFrame.size.height

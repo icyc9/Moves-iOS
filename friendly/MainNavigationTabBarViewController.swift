@@ -13,12 +13,6 @@ class MainNavigationTabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Change tab bar item appearance
-        UITabBarItem.appearance().setTitleTextAttributes(
-            [NSFontAttributeName: UIFont(name:"ProximaNovaSoft-Regular", size:13)!,
-                NSForegroundColorAttributeName: UIColor.whiteColor()],
-            forState: .Normal)
-        
         configureTab(tabBar.items![0])
         configureTab(tabBar.items![1])
         configureTab(tabBar.items![2])
