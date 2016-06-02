@@ -16,6 +16,7 @@
 		0212DC961CFFBA8F00D7F9FD /* proxima-nova-soft-normal-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0212DC941CFFBA8F00D7F9FD /* proxima-nova-soft-normal-webfont.ttf */; };
 		0212DC9A1D00C80A00D7F9FD /* InvitationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0212DC991D00C80A00D7F9FD /* InvitationTableViewCell.swift */; };
 		0212DC9C1D00DCA500D7F9FD /* AcceptedMoveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0212DC9B1D00DCA500D7F9FD /* AcceptedMoveTableViewCell.swift */; };
+		0212DC9E1D00E65F00D7F9FD /* MainNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0212DC9D1D00E65F00D7F9FD /* MainNavigationViewController.swift */; };
 		0232096D1CFD0C9E00BB21A6 /* CreateHangoutOrMeetPeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0232096C1CFD0C9E00BB21A6 /* CreateHangoutOrMeetPeopleViewController.swift */; };
 		023209741CFD3E0C00BB21A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 023209721CFD3E0C00BB21A6 /* Main.storyboard */; };
 		023209891CFE9BA500BB21A6 /* CAPSPageMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023209881CFE9BA500BB21A6 /* CAPSPageMenu.swift */; };
@@ -36,6 +37,7 @@
 		0212DC941CFFBA8F00D7F9FD /* proxima-nova-soft-normal-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "proxima-nova-soft-normal-webfont.ttf"; path = "../../../Desktop/proxima-nova-soft-normal-webfont.ttf"; sourceTree = "<group>"; };
 		0212DC991D00C80A00D7F9FD /* InvitationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvitationTableViewCell.swift; sourceTree = "<group>"; };
 		0212DC9B1D00DCA500D7F9FD /* AcceptedMoveTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptedMoveTableViewCell.swift; sourceTree = "<group>"; };
+		0212DC9D1D00E65F00D7F9FD /* MainNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationViewController.swift; sourceTree = "<group>"; };
 		0232096C1CFD0C9E00BB21A6 /* CreateHangoutOrMeetPeopleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateHangoutOrMeetPeopleViewController.swift; sourceTree = "<group>"; };
 		023209731CFD3E0C00BB21A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		023209881CFE9BA500BB21A6 /* CAPSPageMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAPSPageMenu.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 			children = (
 				023209881CFE9BA500BB21A6 /* CAPSPageMenu.swift */,
 				02D4731D1CFD017C007BA0F8 /* MainNavigationTabBarViewController.swift */,
+				0212DC9D1D00E65F00D7F9FD /* MainNavigationViewController.swift */,
 				0212DC901CFF9FF100D7F9FD /* find_moves */,
 				0212DC8F1CFF9FE100D7F9FD /* make_moves */,
 				0212DC8E1CFF9FDC00D7F9FD /* my_moves */,
@@ -231,6 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0212DC9E1D00E65F00D7F9FD /* MainNavigationViewController.swift in Sources */,
 				0232096D1CFD0C9E00BB21A6 /* CreateHangoutOrMeetPeopleViewController.swift in Sources */,
 				0212DC821CFF98DA00D7F9FD /* FindMovesViewController.swift in Sources */,
 				023209891CFE9BA500BB21A6 /* CAPSPageMenu.swift in Sources */,
