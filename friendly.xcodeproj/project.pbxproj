@@ -17,6 +17,10 @@
 		0212DC9A1D00C80A00D7F9FD /* InvitationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0212DC991D00C80A00D7F9FD /* InvitationTableViewCell.swift */; };
 		0212DC9C1D00DCA500D7F9FD /* AcceptedMoveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0212DC9B1D00DCA500D7F9FD /* AcceptedMoveTableViewCell.swift */; };
 		0212DC9E1D00E65F00D7F9FD /* MainNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0212DC9D1D00E65F00D7F9FD /* MainNavigationViewController.swift */; };
+		0212DCA01D00F78E00D7F9FD /* KaedeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0212DC9F1D00F78E00D7F9FD /* KaedeTextField.swift */; };
+		0212DCA21D00F7C200D7F9FD /* TextFieldEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0212DCA11D00F7C200D7F9FD /* TextFieldEffects.swift */; };
+		0220361E1D010DF000831162 /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0220361D1D010DF000831162 /* SCLAlertView.swift */; };
+		022036201D010E0700831162 /* SCLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0220361F1D010E0700831162 /* SCLExtensions.swift */; };
 		0232096D1CFD0C9E00BB21A6 /* CreateHangoutOrMeetPeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0232096C1CFD0C9E00BB21A6 /* CreateHangoutOrMeetPeopleViewController.swift */; };
 		023209741CFD3E0C00BB21A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 023209721CFD3E0C00BB21A6 /* Main.storyboard */; };
 		023209891CFE9BA500BB21A6 /* CAPSPageMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023209881CFE9BA500BB21A6 /* CAPSPageMenu.swift */; };
@@ -38,6 +42,10 @@
 		0212DC991D00C80A00D7F9FD /* InvitationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvitationTableViewCell.swift; sourceTree = "<group>"; };
 		0212DC9B1D00DCA500D7F9FD /* AcceptedMoveTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptedMoveTableViewCell.swift; sourceTree = "<group>"; };
 		0212DC9D1D00E65F00D7F9FD /* MainNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationViewController.swift; sourceTree = "<group>"; };
+		0212DC9F1D00F78E00D7F9FD /* KaedeTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KaedeTextField.swift; sourceTree = "<group>"; };
+		0212DCA11D00F7C200D7F9FD /* TextFieldEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldEffects.swift; sourceTree = "<group>"; };
+		0220361D1D010DF000831162 /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLAlertView.swift; sourceTree = "<group>"; };
+		0220361F1D010E0700831162 /* SCLExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLExtensions.swift; sourceTree = "<group>"; };
 		0232096C1CFD0C9E00BB21A6 /* CreateHangoutOrMeetPeopleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateHangoutOrMeetPeopleViewController.swift; sourceTree = "<group>"; };
 		023209731CFD3E0C00BB21A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		023209881CFE9BA500BB21A6 /* CAPSPageMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAPSPageMenu.swift; sourceTree = "<group>"; };
@@ -48,7 +56,6 @@
 		02D473151CFCF766007BA0F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02D473171CFCF766007BA0F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02D4731D1CFD017C007BA0F8 /* MainNavigationTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationTabBarViewController.swift; sourceTree = "<group>"; };
-		1B2214DFC55D9EE552441AAC /* Pods_friendly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_friendly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +87,10 @@
 				0212DC901CFF9FF100D7F9FD /* find_moves */,
 				0212DC8F1CFF9FE100D7F9FD /* make_moves */,
 				0212DC8E1CFF9FDC00D7F9FD /* my_moves */,
+				0212DC9F1D00F78E00D7F9FD /* KaedeTextField.swift */,
+				0212DCA11D00F7C200D7F9FD /* TextFieldEffects.swift */,
+				0220361D1D010DF000831162 /* SCLAlertView.swift */,
+				0220361F1D010E0700831162 /* SCLExtensions.swift */,
 			);
 			name = ui;
 			sourceTree = "<group>";
@@ -128,7 +139,6 @@
 			children = (
 				02D473081CFCF766007BA0F8 /* friendly */,
 				02D473071CFCF766007BA0F8 /* Products */,
-				CEDE76F4029020FCECED54A0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,14 +161,6 @@
 				02D473171CFCF766007BA0F8 /* Info.plist */,
 			);
 			path = friendly;
-			sourceTree = "<group>";
-		};
-		CEDE76F4029020FCECED54A0 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1B2214DFC55D9EE552441AAC /* Pods_friendly.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,17 +238,21 @@
 			files = (
 				0212DC9E1D00E65F00D7F9FD /* MainNavigationViewController.swift in Sources */,
 				0232096D1CFD0C9E00BB21A6 /* CreateHangoutOrMeetPeopleViewController.swift in Sources */,
+				0220361E1D010DF000831162 /* SCLAlertView.swift in Sources */,
+				0212DCA01D00F78E00D7F9FD /* KaedeTextField.swift in Sources */,
 				0212DC821CFF98DA00D7F9FD /* FindMovesViewController.swift in Sources */,
 				023209891CFE9BA500BB21A6 /* CAPSPageMenu.swift in Sources */,
 				0212DC9A1D00C80A00D7F9FD /* InvitationTableViewCell.swift in Sources */,
 				02D4730A1CFCF766007BA0F8 /* AppDelegate.swift in Sources */,
 				0212DC9C1D00DCA500D7F9FD /* AcceptedMoveTableViewCell.swift in Sources */,
+				022036201D010E0700831162 /* SCLExtensions.swift in Sources */,
 				0212DC861CFF9EEB00D7F9FD /* MoveInvitationsViewController.swift in Sources */,
 				0212DC881CFF9F3B00D7F9FD /* FriendsMovesViewController.swift in Sources */,
 				0212DC8A1CFF9F6500D7F9FD /* AreaMovesViewController.swift in Sources */,
 				0212DC841CFF9ECB00D7F9FD /* AcceptedMovesViewController.swift in Sources */,
 				0232098B1CFE9BCE00BB21A6 /* MovesViewController.swift in Sources */,
 				02D4731E1CFD017C007BA0F8 /* MainNavigationTabBarViewController.swift in Sources */,
+				0212DCA21D00F7C200D7F9FD /* TextFieldEffects.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,7 +14,6 @@
             <string>ProximaNovaSoft-Regular</string>
             <string>ProximaNovaSoft-Regular</string>
             <string>ProximaNovaSoft-Regular</string>
-            <string>ProximaNovaSoft-Regular</string>
         </mutableArray>
         <mutableArray key="proxima-nova-soft-normal-webfont.ttf">
             <string>ProximaNovaSoft-Medium</string>
@@ -361,59 +360,69 @@
         <!--Make Moves-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController storyboardIdentifier="make_moves" id="8rJ-Kc-sve" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="make_moves" id="8rJ-Kc-sve" customClass="CreateHangoutOrMeetPeopleViewController" customModule="friendly" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW" customClass="Create">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Anything" borderStyle="roundedRect" placeholder="Movies, lunch, run, hike, etc..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="156-zV-QWj">
-                                <rect key="frame" x="212" y="94" width="176" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What are you down to do?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="156-zV-QWj" customClass="KaedeTextField" customModule="friendly" customModuleProvider="target">
+                                <rect key="frame" x="167" y="177" width="266" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="176" id="zdX-HX-UWv"/>
+                                    <constraint firstAttribute="width" constant="266" id="eZK-Pe-90s"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
+                                        <color key="value" red="0.31372549019607843" green="0.37254901960784315" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" image="rocket_large" translatesAutoresizingMaskIntoConstraints="NO" id="pKh-BO-2Ve">
-                                <rect key="frame" x="264" y="388" width="72" height="72"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tap to make moves!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6fH-GJ-l3Q">
-                                <rect key="frame" x="224" y="468" width="153" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to make moves!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6fH-GJ-l3Q">
+                                <rect key="frame" x="224" y="524" width="153" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What are you down to do?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJd-0s-cty">
-                                <rect key="frame" x="0.0" y="20" width="600" height="66"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rocket_large" translatesAutoresizingMaskIntoConstraints="NO" id="ya9-mv-jp1">
+                                <rect key="frame" x="268" y="452" width="64" height="64"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="66" id="94s-zQ-qLk"/>
+                                    <constraint firstAttribute="width" constant="64" id="bcR-k5-DlM"/>
+                                    <constraint firstAttribute="height" constant="64" id="iXK-jR-bEz"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="ProximaNovaSoft-Regular" family="ProximaNovaSoft-Regular" pointSize="23"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="lineBreakMode" value=".ByClipping"/>
-                                </userDefinedRuntimeAttributes>
-                            </label>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8r-Fz-Nnf">
+                                <rect key="frame" x="263" y="233" width="74" height="30"/>
+                                <state key="normal" title="Add a time"/>
+                                <connections>
+                                    <action selector="onAddTimeClicked:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="KLR-l8-ZU6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6fH-GJ-l3Q" firstAttribute="top" secondItem="pKh-BO-2Ve" secondAttribute="bottom" constant="8" symbolic="YES" id="0O6-qn-7gc"/>
-                            <constraint firstItem="156-zV-QWj" firstAttribute="top" secondItem="UJd-0s-cty" secondAttribute="bottom" constant="8" symbolic="YES" id="1sW-vU-od2"/>
-                            <constraint firstItem="156-zV-QWj" firstAttribute="centerX" secondItem="pKh-BO-2Ve" secondAttribute="centerX" id="8gx-oZ-i8k"/>
-                            <constraint firstItem="UJd-0s-cty" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="Joj-Es-hrY"/>
-                            <constraint firstItem="UJd-0s-cty" firstAttribute="centerX" secondItem="156-zV-QWj" secondAttribute="centerX" id="Pb1-eN-qgK"/>
-                            <constraint firstItem="pKh-BO-2Ve" firstAttribute="centerX" secondItem="6fH-GJ-l3Q" secondAttribute="centerX" id="PsK-uF-4A5"/>
-                            <constraint firstItem="UJd-0s-cty" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="-20" id="VQA-sj-MN2"/>
-                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="6fH-GJ-l3Q" secondAttribute="bottom" constant="62" id="WnC-t5-lbV"/>
-                            <constraint firstItem="UJd-0s-cty" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="gda-Rk-rxR"/>
+                            <constraint firstItem="156-zV-QWj" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="Dr7-UZ-dmY"/>
+                            <constraint firstItem="a8r-Fz-Nnf" firstAttribute="top" secondItem="156-zV-QWj" secondAttribute="bottom" constant="26" id="Q63-u7-hvU"/>
+                            <constraint firstItem="156-zV-QWj" firstAttribute="centerX" secondItem="a8r-Fz-Nnf" secondAttribute="centerX" id="TvN-Pz-mgt"/>
+                            <constraint firstItem="156-zV-QWj" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="157" id="c4j-aN-gii"/>
+                            <constraint firstItem="6fH-GJ-l3Q" firstAttribute="top" secondItem="ya9-mv-jp1" secondAttribute="bottom" constant="8" symbolic="YES" id="dkT-Ff-Qc3"/>
+                            <constraint firstItem="a8r-Fz-Nnf" firstAttribute="centerX" secondItem="ya9-mv-jp1" secondAttribute="centerX" id="fox-cl-tNK"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="6fH-GJ-l3Q" secondAttribute="bottom" constant="55" id="o0n-Y6-mVe"/>
+                            <constraint firstItem="ya9-mv-jp1" firstAttribute="centerX" secondItem="6fH-GJ-l3Q" secondAttribute="centerX" id="xiu-s5-sZO"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Make Moves" image="calendar" selectedImage="calendar" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="addTimeButton" destination="a8r-Fz-Nnf" id="226-si-eXw"/>
+                        <outlet property="messageTextField" destination="156-zV-QWj" id="Oad-Wt-bLb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -422,7 +431,6 @@
         <!--Find Moves View Controller-->
         <scene sceneID="vRg-xr-u5d">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZyA-Pn-q7P" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="mCR-Ta-Lhc" customClass="FindMovesViewController" customModule="friendly" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="nD7-mv-DXx">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -500,6 +508,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="bgH-Lr-q2O"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZyA-Pn-q7P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="212" y="-74"/>
         </scene>
