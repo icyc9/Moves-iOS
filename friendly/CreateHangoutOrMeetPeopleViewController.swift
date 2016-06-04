@@ -14,9 +14,13 @@ class CreateHangoutOrMeetPeopleViewController: UIViewController {
 
     @IBOutlet weak var addTimeButton: UIButton!
     
+    @IBOutlet weak var sendButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
+        sendButton.layer.cornerRadius = 8
+        sendButton.layer.borderColor = UIColor.whiteColor().CGColor
     }
     
     override func didReceiveMemoryWarning() {

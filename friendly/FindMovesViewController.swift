@@ -15,7 +15,7 @@ class FindMovesViewController: UITableViewController {
         
         let navigationBar = self.navigationController?.navigationBar
         navigationBar?.barTintColor = UIColor(red: 0.13, green: 0.59, blue: 0.95, alpha: 1)
-        navigationBar?.topItem?.title = "Open Moves"
+        navigationBar?.topItem?.title = "What your friends want to do"
         navigationBar?.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
     }
     

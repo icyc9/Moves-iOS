@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -12,12 +14,8 @@
             <string>ProximaNovaSoft-Regular</string>
             <string>ProximaNovaSoft-Regular</string>
             <string>ProximaNovaSoft-Regular</string>
-            <string>ProximaNovaSoft-Regular</string>
-            <string>ProximaNovaSoft-Regular</string>
         </mutableArray>
         <mutableArray key="proxima-nova-soft-normal-webfont.ttf">
-            <string>ProximaNovaSoft-Medium</string>
-            <string>ProximaNovaSoft-Medium</string>
             <string>ProximaNovaSoft-Medium</string>
             <string>ProximaNovaSoft-Medium</string>
             <string>ProximaNovaSoft-Medium</string>
@@ -84,20 +82,20 @@
                                                         <constraint firstAttribute="width" constant="32" id="xLd-cE-j35"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X-Men tonight at 7:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRZ-yg-Cyz">
-                                                    <rect key="frame" x="8" y="13" width="160" height="26"/>
-                                                    <fontDescription key="fontDescription" name="ProximaNovaSoft-Regular" family="ProximaNovaSoft-Regular" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="X-Men tonight at 7:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRZ-yg-Cyz">
+                                                    <rect key="frame" x="8" y="13" width="192" height="26"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNovaSoft-Medium" family="ProximaNovaSoft-Medium" pointSize="20"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="invited by Daniel Christopher" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yQ-Nq-TEX">
-                                                    <rect key="frame" x="8" y="38" width="160" height="14"/>
-                                                    <fontDescription key="fontDescription" name="ProximaNovaSoft-Medium" family="ProximaNovaSoft-Medium" pointSize="12"/>
+                                                    <rect key="frame" x="8" y="38" width="193" height="17"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNovaSoft-Medium" family="ProximaNovaSoft-Medium" pointSize="15"/>
                                                     <color key="textColor" red="0.61176470589999998" green="0.6705882353" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="with 7 friends and 3 others" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPf-5e-Zcj">
-                                                    <rect key="frame" x="8" y="52" width="160" height="14"/>
-                                                    <fontDescription key="fontDescription" name="ProximaNovaSoft-Medium" family="ProximaNovaSoft-Medium" pointSize="12"/>
+                                                    <rect key="frame" x="8" y="55" width="193" height="17"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNovaSoft-Medium" family="ProximaNovaSoft-Medium" pointSize="15"/>
                                                     <color key="textColor" red="0.61176470589999998" green="0.6705882353" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -120,124 +118,8 @@
                                         <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="8"/>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="0.0" rowHeight="80" id="U2Q-69-kUQ" customClass="InvitationTableViewCell" customModule="friendly" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="80" width="600" height="80"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U2Q-69-kUQ" id="I6D-NJ-GbV">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="x" translatesAutoresizingMaskIntoConstraints="NO" id="Bwh-Ai-lRt">
-                                                    <rect key="frame" x="520" y="24" width="32" height="32"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="32" id="zrF-WU-9Im"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check" translatesAutoresizingMaskIntoConstraints="NO" id="KKZ-aK-20g">
-                                                    <rect key="frame" x="560" y="24" width="32" height="32"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="32" id="cTu-Nb-C25"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X-Men tonight at 7:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ho-LM-lxN">
-                                                    <rect key="frame" x="8" y="13" width="160" height="26"/>
-                                                    <fontDescription key="fontDescription" name="ProximaNovaSoft-Regular" family="ProximaNovaSoft-Regular" pointSize="17"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="invited by Daniel Christopher" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ssk-Wl-hGP">
-                                                    <rect key="frame" x="8" y="38" width="160" height="14"/>
-                                                    <fontDescription key="fontDescription" name="ProximaNovaSoft-Medium" family="ProximaNovaSoft-Medium" pointSize="12"/>
-                                                    <color key="textColor" red="0.61176470589999998" green="0.6705882353" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="with 7 friends and 3 others" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9LU-3w-kbp">
-                                                    <rect key="frame" x="8" y="52" width="160" height="14"/>
-                                                    <fontDescription key="fontDescription" name="ProximaNovaSoft-Medium" family="ProximaNovaSoft-Medium" pointSize="12"/>
-                                                    <color key="textColor" red="0.61176470589999998" green="0.6705882353" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="Ssk-Wl-hGP" firstAttribute="top" secondItem="I6D-NJ-GbV" secondAttribute="topMargin" constant="30" id="5eD-pF-fjz"/>
-                                                <constraint firstItem="Ssk-Wl-hGP" firstAttribute="trailing" secondItem="9LU-3w-kbp" secondAttribute="trailing" id="63c-90-hgT"/>
-                                                <constraint firstItem="9LU-3w-kbp" firstAttribute="top" secondItem="4ho-LM-lxN" secondAttribute="bottom" constant="13" id="9gk-7K-DdV"/>
-                                                <constraint firstItem="4ho-LM-lxN" firstAttribute="leading" secondItem="I6D-NJ-GbV" secondAttribute="leadingMargin" id="A9Y-ka-zvD"/>
-                                                <constraint firstItem="Bwh-Ai-lRt" firstAttribute="bottom" secondItem="KKZ-aK-20g" secondAttribute="bottom" id="Cv0-jh-bd5"/>
-                                                <constraint firstItem="Bwh-Ai-lRt" firstAttribute="top" secondItem="KKZ-aK-20g" secondAttribute="top" id="IfW-AB-qlc"/>
-                                                <constraint firstItem="Ssk-Wl-hGP" firstAttribute="leading" secondItem="9LU-3w-kbp" secondAttribute="leading" id="KCd-iH-SYc"/>
-                                                <constraint firstItem="Bwh-Ai-lRt" firstAttribute="centerY" secondItem="I6D-NJ-GbV" secondAttribute="centerY" id="SN4-vu-2DD"/>
-                                                <constraint firstItem="9LU-3w-kbp" firstAttribute="top" secondItem="Ssk-Wl-hGP" secondAttribute="bottom" id="ZLX-Iv-Eca"/>
-                                                <constraint firstItem="KKZ-aK-20g" firstAttribute="leading" secondItem="Bwh-Ai-lRt" secondAttribute="trailing" constant="8" symbolic="YES" id="cxQ-Hq-ayX"/>
-                                                <constraint firstItem="4ho-LM-lxN" firstAttribute="top" secondItem="I6D-NJ-GbV" secondAttribute="topMargin" constant="5" id="hSi-1H-Fnp"/>
-                                                <constraint firstItem="4ho-LM-lxN" firstAttribute="leading" secondItem="Ssk-Wl-hGP" secondAttribute="leading" id="j1f-dc-zVO"/>
-                                                <constraint firstItem="KKZ-aK-20g" firstAttribute="trailing" secondItem="I6D-NJ-GbV" secondAttribute="trailingMargin" id="nX5-6s-Pd5"/>
-                                                <constraint firstItem="Bwh-Ai-lRt" firstAttribute="top" secondItem="I6D-NJ-GbV" secondAttribute="topMargin" constant="16" id="oDC-UQ-blX"/>
-                                                <constraint firstItem="4ho-LM-lxN" firstAttribute="trailing" secondItem="Ssk-Wl-hGP" secondAttribute="trailing" id="pAr-XH-0ns"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="8"/>
-                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="0.0" rowHeight="80" id="eRg-Os-eWR" customClass="InvitationTableViewCell" customModule="friendly" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="160" width="600" height="80"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eRg-Os-eWR" id="brf-uw-CTI">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="x" translatesAutoresizingMaskIntoConstraints="NO" id="A53-k3-btB">
-                                                    <rect key="frame" x="520" y="24" width="32" height="32"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="32" id="PEm-AI-BJ0"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check" translatesAutoresizingMaskIntoConstraints="NO" id="fET-Ot-H9x">
-                                                    <rect key="frame" x="560" y="24" width="32" height="32"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="32" id="nLG-K9-6xY"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X-Men tonight at 7:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7PL-id-srK">
-                                                    <rect key="frame" x="8" y="13" width="160" height="26"/>
-                                                    <fontDescription key="fontDescription" name="ProximaNovaSoft-Regular" family="ProximaNovaSoft-Regular" pointSize="17"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="invited by Daniel Christopher" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTm-Yr-NU1">
-                                                    <rect key="frame" x="8" y="38" width="160" height="14"/>
-                                                    <fontDescription key="fontDescription" name="ProximaNovaSoft-Medium" family="ProximaNovaSoft-Medium" pointSize="12"/>
-                                                    <color key="textColor" red="0.61176470589999998" green="0.6705882353" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="with 7 friends and 3 others" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wxe-kE-dvE">
-                                                    <rect key="frame" x="8" y="52" width="160" height="14"/>
-                                                    <fontDescription key="fontDescription" name="ProximaNovaSoft-Medium" family="ProximaNovaSoft-Medium" pointSize="12"/>
-                                                    <color key="textColor" red="0.61176470589999998" green="0.6705882353" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="HTm-Yr-NU1" firstAttribute="top" secondItem="brf-uw-CTI" secondAttribute="topMargin" constant="30" id="E2f-Mw-zdR"/>
-                                                <constraint firstItem="Wxe-kE-dvE" firstAttribute="top" secondItem="7PL-id-srK" secondAttribute="bottom" constant="13" id="GWt-x8-gEt"/>
-                                                <constraint firstItem="fET-Ot-H9x" firstAttribute="leading" secondItem="A53-k3-btB" secondAttribute="trailing" constant="8" symbolic="YES" id="Guv-zo-QxC"/>
-                                                <constraint firstItem="7PL-id-srK" firstAttribute="leading" secondItem="brf-uw-CTI" secondAttribute="leadingMargin" id="MT9-7Z-WBC"/>
-                                                <constraint firstItem="A53-k3-btB" firstAttribute="bottom" secondItem="fET-Ot-H9x" secondAttribute="bottom" id="Puo-ik-9vk"/>
-                                                <constraint firstItem="fET-Ot-H9x" firstAttribute="trailing" secondItem="brf-uw-CTI" secondAttribute="trailingMargin" id="SJO-hn-JF3"/>
-                                                <constraint firstItem="HTm-Yr-NU1" firstAttribute="trailing" secondItem="Wxe-kE-dvE" secondAttribute="trailing" id="ZKD-oq-HUA"/>
-                                                <constraint firstItem="A53-k3-btB" firstAttribute="centerY" secondItem="brf-uw-CTI" secondAttribute="centerY" id="gMK-Qt-33v"/>
-                                                <constraint firstItem="7PL-id-srK" firstAttribute="leading" secondItem="HTm-Yr-NU1" secondAttribute="leading" id="iQQ-Uj-ssw"/>
-                                                <constraint firstItem="7PL-id-srK" firstAttribute="trailing" secondItem="HTm-Yr-NU1" secondAttribute="trailing" id="ifo-tp-isk"/>
-                                                <constraint firstItem="A53-k3-btB" firstAttribute="top" secondItem="brf-uw-CTI" secondAttribute="topMargin" constant="16" id="nh3-2U-n8Z"/>
-                                                <constraint firstItem="A53-k3-btB" firstAttribute="top" secondItem="fET-Ot-H9x" secondAttribute="top" id="pO8-VW-q9v"/>
-                                                <constraint firstItem="HTm-Yr-NU1" firstAttribute="leading" secondItem="Wxe-kE-dvE" secondAttribute="leading" id="qKf-Jk-IjJ"/>
-                                                <constraint firstItem="Wxe-kE-dvE" firstAttribute="top" secondItem="HTm-Yr-NU1" secondAttribute="bottom" id="y52-mQ-lav"/>
-                                                <constraint firstItem="7PL-id-srK" firstAttribute="top" secondItem="brf-uw-CTI" secondAttribute="topMargin" constant="5" id="zYK-Ui-TR0"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="8"/>
-                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="0.0" rowHeight="80" id="gVo-U5-GTA" customClass="InvitationTableViewCell" customModule="friendly" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="240" width="600" height="80"/>
+                                        <rect key="frame" x="0.0" y="80" width="600" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gVo-U5-GTA" id="nTw-xt-9Rr">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
@@ -255,20 +137,20 @@
                                                         <constraint firstAttribute="width" constant="32" id="EyP-aQ-fXc"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X-Men tonight at 7:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Wt-Ha-cR7">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="X-Men tonight at 7:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Wt-Ha-cR7">
                                                     <rect key="frame" x="8" y="13" width="160" height="26"/>
-                                                    <fontDescription key="fontDescription" name="ProximaNovaSoft-Regular" family="ProximaNovaSoft-Regular" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNovaSoft-Medium" family="ProximaNovaSoft-Medium" pointSize="20"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="invited by Daniel Christopher" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06W-69-Uj7">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="invited by Daniel Christopher" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06W-69-Uj7">
                                                     <rect key="frame" x="8" y="38" width="160" height="14"/>
-                                                    <fontDescription key="fontDescription" name="ProximaNovaSoft-Medium" family="ProximaNovaSoft-Medium" pointSize="12"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNovaSoft-Medium" family="ProximaNovaSoft-Medium" pointSize="15"/>
                                                     <color key="textColor" red="0.61176470589999998" green="0.6705882353" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="with 7 friends and 3 others" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L0C-Od-xTT">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="with 7 friends and 3 others" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L0C-Od-xTT">
                                                     <rect key="frame" x="8" y="52" width="160" height="14"/>
-                                                    <fontDescription key="fontDescription" name="ProximaNovaSoft-Medium" family="ProximaNovaSoft-Medium" pointSize="12"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNovaSoft-Medium" family="ProximaNovaSoft-Medium" pointSize="15"/>
                                                     <color key="textColor" red="0.61176470589999998" green="0.6705882353" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -289,55 +171,6 @@
                                                 <constraint firstItem="6HH-bK-mp9" firstAttribute="top" secondItem="dAS-Cx-r6k" secondAttribute="top" id="ohF-1w-tpJ"/>
                                                 <constraint firstItem="06W-69-Uj7" firstAttribute="trailing" secondItem="L0C-Od-xTT" secondAttribute="trailing" id="qPt-cR-sKb"/>
                                                 <constraint firstItem="7Wt-Ha-cR7" firstAttribute="trailing" secondItem="06W-69-Uj7" secondAttribute="trailing" id="wbW-Ix-C6X"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="8"/>
-                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="0.0" shouldIndentWhileEditing="NO" reuseIdentifier="MoveTableViewCell" rowHeight="80" id="uvN-go-06h" customClass="AcceptedMoveTableViewCell" customModule="friendly" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="320" width="600" height="80"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uvN-go-06h" id="zAk-uB-MrD">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ok" translatesAutoresizingMaskIntoConstraints="NO" id="jMp-RY-bqg">
-                                                    <rect key="frame" x="560" y="24" width="32" height="32"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="32" id="Xyr-og-hnG"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X-Men tonight at 7:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2v9-sp-IyD">
-                                                    <rect key="frame" x="8" y="13" width="160" height="26"/>
-                                                    <fontDescription key="fontDescription" name="ProximaNovaSoft-Regular" family="ProximaNovaSoft-Regular" pointSize="17"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="invited by Daniel Christopher" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Moa-gM-KVh">
-                                                    <rect key="frame" x="8" y="38" width="160" height="14"/>
-                                                    <fontDescription key="fontDescription" name="ProximaNovaSoft-Medium" family="ProximaNovaSoft-Medium" pointSize="12"/>
-                                                    <color key="textColor" red="0.61176470589999998" green="0.6705882353" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="with 7 friends and 3 others" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fop-iq-wIi">
-                                                    <rect key="frame" x="8" y="52" width="160" height="14"/>
-                                                    <fontDescription key="fontDescription" name="ProximaNovaSoft-Medium" family="ProximaNovaSoft-Medium" pointSize="12"/>
-                                                    <color key="textColor" red="0.61176470589999998" green="0.6705882353" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="2v9-sp-IyD" firstAttribute="trailing" secondItem="Moa-gM-KVh" secondAttribute="trailing" id="7WZ-UL-FwM"/>
-                                                <constraint firstItem="fop-iq-wIi" firstAttribute="top" secondItem="Moa-gM-KVh" secondAttribute="bottom" id="BFz-35-8Fc"/>
-                                                <constraint firstItem="2v9-sp-IyD" firstAttribute="leading" secondItem="Moa-gM-KVh" secondAttribute="leading" id="Cwe-Ee-q06"/>
-                                                <constraint firstItem="Moa-gM-KVh" firstAttribute="top" secondItem="zAk-uB-MrD" secondAttribute="topMargin" constant="30" id="JJ4-Ly-XsG"/>
-                                                <constraint firstItem="Moa-gM-KVh" firstAttribute="trailing" secondItem="fop-iq-wIi" secondAttribute="trailing" id="Mw7-iY-N3y"/>
-                                                <constraint firstItem="jMp-RY-bqg" firstAttribute="centerY" secondItem="zAk-uB-MrD" secondAttribute="centerY" id="NkS-Wv-6y1"/>
-                                                <constraint firstItem="2v9-sp-IyD" firstAttribute="leading" secondItem="zAk-uB-MrD" secondAttribute="leadingMargin" id="R1v-X6-Nsi"/>
-                                                <constraint firstItem="jMp-RY-bqg" firstAttribute="top" secondItem="zAk-uB-MrD" secondAttribute="topMargin" constant="16" id="WYA-Ld-XpK"/>
-                                                <constraint firstItem="fop-iq-wIi" firstAttribute="top" secondItem="2v9-sp-IyD" secondAttribute="bottom" constant="13" id="d0J-P7-Wks"/>
-                                                <constraint firstItem="Moa-gM-KVh" firstAttribute="leading" secondItem="fop-iq-wIi" secondAttribute="leading" id="lIC-8J-gcf"/>
-                                                <constraint firstItem="2v9-sp-IyD" firstAttribute="top" secondItem="zAk-uB-MrD" secondAttribute="topMargin" constant="5" id="sUA-zv-Sxn"/>
-                                                <constraint firstItem="jMp-RY-bqg" firstAttribute="trailing" secondItem="zAk-uB-MrD" secondAttribute="trailingMargin" id="xfw-O8-cJZ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="8"/>
@@ -369,71 +202,133 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What are you down to do?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="156-zV-QWj" customClass="KaedeTextField" customModule="friendly" customModuleProvider="target">
-                                <rect key="frame" x="167" y="177" width="266" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Eat, run, hike, movies, etc" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nUL-FY-XFE">
+                                <rect key="frame" x="193" y="155" width="207" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="266" id="eZK-Pe-90s"/>
+                                    <constraint firstAttribute="width" constant="207" id="Pwa-gZ-UfW"/>
+                                    <constraint firstAttribute="height" constant="30" id="qhW-1N-ARY"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
-                                        <color key="value" red="0.31372549019607843" green="0.37254901960784315" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to make moves!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6fH-GJ-l3Q">
-                                <rect key="frame" x="224" y="524" width="153" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rocket_large" translatesAutoresizingMaskIntoConstraints="NO" id="ya9-mv-jp1">
-                                <rect key="frame" x="268" y="452" width="64" height="64"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rocket_large" translatesAutoresizingMaskIntoConstraints="NO" id="UXx-Iy-4vV">
+                                <rect key="frame" x="153" y="154" width="32" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="64" id="bcR-k5-DlM"/>
-                                    <constraint firstAttribute="height" constant="64" id="iXK-jR-bEz"/>
+                                    <constraint firstAttribute="width" constant="32" id="B8p-cv-GMA"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8r-Fz-Nnf">
-                                <rect key="frame" x="263" y="233" width="74" height="30"/>
-                                <state key="normal" title="Add a time"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cRZ-OZ-x59">
+                                <rect key="frame" x="193" y="216" width="105" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="105" id="bC4-Nq-hyp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNovaSoft-Regular" family="ProximaNovaSoft-Regular" pointSize="21"/>
+                                <state key="normal" title="Add a time">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
-                                    <action selector="onAddTimeClicked:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="KLR-l8-ZU6"/>
+                                    <action selector="onAddTimeClicked:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="6BP-1L-nai"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alarm" translatesAutoresizingMaskIntoConstraints="NO" id="kbt-35-l1i">
+                                <rect key="frame" x="153" y="217" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="SWU-0c-Gur"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What are you down to do?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2pW-Gf-xR5">
+                                <rect key="frame" x="20" y="83" width="560" height="38"/>
+                                <fontDescription key="fontDescription" name="ProximaNovaSoft-Medium" family="ProximaNovaSoft-Medium" pointSize="34"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Moves" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LyK-mT-tbv">
+                                <rect key="frame" x="20" y="559" width="87" height="21"/>
+                                <fontDescription key="fontDescription" name="ProximaNovaSoft-Regular" family="ProximaNovaSoft-Regular" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="left" translatesAutoresizingMaskIntoConstraints="NO" id="RY5-tI-GkQ">
+                                <rect key="frame" x="45" y="521" width="36" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="q3V-2k-RKa"/>
+                                    <constraint firstAttribute="width" constant="36" id="usZ-MZ-YUV"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friends' Moves" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IRk-10-Yxf">
+                                <rect key="frame" x="467" y="557" width="113" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="qv9-v3-uMC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNovaSoft-Regular" family="ProximaNovaSoft-Regular" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right" translatesAutoresizingMaskIntoConstraints="NO" id="p3e-vN-qV2">
+                                <rect key="frame" x="506" y="519" width="36" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="7RN-YQ-r49"/>
+                                    <constraint firstAttribute="height" constant="36" id="K1N-2x-xxR"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90T-f8-7RD">
+                                <rect key="frame" x="153" y="271" width="295" height="35"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="295" id="tIQ-lK-af0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNovaSoft-Regular" family="ProximaNovaSoft-Regular" pointSize="20"/>
+                                <state key="normal" title="Tap to make moves!">
+                                    <color key="titleColor" red="0.12941177189350128" green="0.58823531866073608" blue="0.9529411792755127" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.12941177189350128" green="0.58823531866073608" blue="0.9529411792755127" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="156-zV-QWj" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="Dr7-UZ-dmY"/>
-                            <constraint firstItem="a8r-Fz-Nnf" firstAttribute="top" secondItem="156-zV-QWj" secondAttribute="bottom" constant="26" id="Q63-u7-hvU"/>
-                            <constraint firstItem="156-zV-QWj" firstAttribute="centerX" secondItem="a8r-Fz-Nnf" secondAttribute="centerX" id="TvN-Pz-mgt"/>
-                            <constraint firstItem="156-zV-QWj" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="157" id="c4j-aN-gii"/>
-                            <constraint firstItem="6fH-GJ-l3Q" firstAttribute="top" secondItem="ya9-mv-jp1" secondAttribute="bottom" constant="8" symbolic="YES" id="dkT-Ff-Qc3"/>
-                            <constraint firstItem="a8r-Fz-Nnf" firstAttribute="centerX" secondItem="ya9-mv-jp1" secondAttribute="centerX" id="fox-cl-tNK"/>
-                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="6fH-GJ-l3Q" secondAttribute="bottom" constant="55" id="o0n-Y6-mVe"/>
-                            <constraint firstItem="ya9-mv-jp1" firstAttribute="centerX" secondItem="6fH-GJ-l3Q" secondAttribute="centerX" id="xiu-s5-sZO"/>
+                            <constraint firstItem="90T-f8-7RD" firstAttribute="leading" secondItem="kbt-35-l1i" secondAttribute="leading" id="49Z-wk-nLY"/>
+                            <constraint firstItem="p3e-vN-qV2" firstAttribute="centerX" secondItem="IRk-10-Yxf" secondAttribute="centerX" id="7Q7-Qv-gyp"/>
+                            <constraint firstItem="2pW-Gf-xR5" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="938-3r-V8U"/>
+                            <constraint firstItem="LyK-mT-tbv" firstAttribute="top" secondItem="RY5-tI-GkQ" secondAttribute="bottom" constant="2" id="9ME-60-K9s"/>
+                            <constraint firstItem="LyK-mT-tbv" firstAttribute="leading" secondItem="2pW-Gf-xR5" secondAttribute="leading" id="A7z-x7-gWe"/>
+                            <constraint firstItem="nUL-FY-XFE" firstAttribute="top" secondItem="2pW-Gf-xR5" secondAttribute="bottom" constant="34" id="HXt-z9-9jz"/>
+                            <constraint firstItem="kbt-35-l1i" firstAttribute="top" secondItem="UXx-Iy-4vV" secondAttribute="bottom" constant="31" id="JFc-QB-DDr"/>
+                            <constraint firstItem="IRk-10-Yxf" firstAttribute="baseline" secondItem="LyK-mT-tbv" secondAttribute="firstBaseline" id="KgU-AG-rN6"/>
+                            <constraint firstItem="IRk-10-Yxf" firstAttribute="trailing" secondItem="2pW-Gf-xR5" secondAttribute="trailing" id="P3B-Je-yg7"/>
+                            <constraint firstItem="nUL-FY-XFE" firstAttribute="leading" secondItem="UXx-Iy-4vV" secondAttribute="trailing" constant="8" symbolic="YES" id="Pz1-gC-tks"/>
+                            <constraint firstItem="2pW-Gf-xR5" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="QDU-s8-2Lc"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="IRk-10-Yxf" secondAttribute="bottom" constant="22" id="QGt-ZM-ehk"/>
+                            <constraint firstItem="RY5-tI-GkQ" firstAttribute="centerX" secondItem="LyK-mT-tbv" secondAttribute="centerX" id="ULf-pN-jio"/>
+                            <constraint firstItem="cRZ-OZ-x59" firstAttribute="top" secondItem="nUL-FY-XFE" secondAttribute="bottom" constant="31" id="UMr-eq-LbU"/>
+                            <constraint firstItem="UXx-Iy-4vV" firstAttribute="top" secondItem="2pW-Gf-xR5" secondAttribute="bottom" constant="33" id="V6N-nQ-U2X"/>
+                            <constraint firstItem="cRZ-OZ-x59" firstAttribute="leading" secondItem="kbt-35-l1i" secondAttribute="trailing" constant="8" symbolic="YES" id="Xnj-Pv-oJJ"/>
+                            <constraint firstItem="kbt-35-l1i" firstAttribute="centerY" secondItem="cRZ-OZ-x59" secondAttribute="centerY" id="d9B-qg-iUC"/>
+                            <constraint firstItem="90T-f8-7RD" firstAttribute="centerX" secondItem="2pW-Gf-xR5" secondAttribute="centerX" id="dzA-O0-JOU"/>
+                            <constraint firstItem="2pW-Gf-xR5" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="63" id="eCQ-95-bBI"/>
+                            <constraint firstItem="90T-f8-7RD" firstAttribute="top" secondItem="cRZ-OZ-x59" secondAttribute="bottom" constant="21" id="fhW-Kz-8iu"/>
+                            <constraint firstItem="IRk-10-Yxf" firstAttribute="top" secondItem="p3e-vN-qV2" secondAttribute="bottom" constant="2" id="g4G-02-hht"/>
+                            <constraint firstItem="UXx-Iy-4vV" firstAttribute="leading" secondItem="kbt-35-l1i" secondAttribute="leading" id="gBt-71-Kds"/>
+                            <constraint firstItem="nUL-FY-XFE" firstAttribute="leading" secondItem="cRZ-OZ-x59" secondAttribute="leading" id="iWb-T4-vNu"/>
+                            <constraint firstItem="UXx-Iy-4vV" firstAttribute="centerY" secondItem="nUL-FY-XFE" secondAttribute="centerY" id="rdJ-YS-aZZ"/>
+                            <constraint firstAttribute="bottom" secondItem="LyK-mT-tbv" secondAttribute="bottom" constant="20" symbolic="YES" id="xbc-9f-vVq"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Make Moves" image="calendar" selectedImage="calendar" id="cPa-gy-q4n"/>
                     <connections>
-                        <outlet property="addTimeButton" destination="a8r-Fz-Nnf" id="226-si-eXw"/>
-                        <outlet property="messageTextField" destination="156-zV-QWj" id="Oad-Wt-bLb"/>
+                        <outlet property="sendButton" destination="90T-f8-7RD" id="piI-Gh-CFz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1441" y="-74"/>
+            <point key="canvasLocation" x="-1433" y="-88"/>
         </scene>
         <!--Find Moves View Controller-->
         <scene sceneID="vRg-xr-u5d">
             <objects>
                 <tableViewController id="mCR-Ta-Lhc" customClass="FindMovesViewController" customModule="friendly" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="nD7-mv-DXx">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -441,7 +336,7 @@
                             <tableViewSection id="dFH-aa-DMP">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="0.0" rowHeight="80" id="ed8-AC-Zml" customClass="InvitationTableViewCell" customModule="friendly" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="64" width="600" height="80"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ed8-AC-Zml" id="4BF-Ub-MEp">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
@@ -460,19 +355,19 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X-Men tonight at 7:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ap-rQ-QKd">
-                                                    <rect key="frame" x="8" y="13" width="160" height="26"/>
-                                                    <fontDescription key="fontDescription" name="ProximaNovaSoft-Regular" family="ProximaNovaSoft-Regular" pointSize="17"/>
+                                                    <rect key="frame" x="8" y="13" width="194" height="26"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNovaSoft-Medium" family="ProximaNovaSoft-Medium" pointSize="20"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="invited by Daniel Christopher" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZ3-pm-kKq">
-                                                    <rect key="frame" x="8" y="38" width="160" height="14"/>
-                                                    <fontDescription key="fontDescription" name="ProximaNovaSoft-Medium" family="ProximaNovaSoft-Medium" pointSize="12"/>
+                                                    <rect key="frame" x="8" y="38" width="193" height="17"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNovaSoft-Medium" family="ProximaNovaSoft-Medium" pointSize="15"/>
                                                     <color key="textColor" red="0.61176470589999998" green="0.6705882353" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="with 7 friends and 3 others" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDh-yW-3rw">
-                                                    <rect key="frame" x="8" y="52" width="160" height="14"/>
-                                                    <fontDescription key="fontDescription" name="ProximaNovaSoft-Medium" family="ProximaNovaSoft-Medium" pointSize="12"/>
+                                                    <rect key="frame" x="8" y="55" width="193" height="17"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNovaSoft-Medium" family="ProximaNovaSoft-Medium" pointSize="15"/>
                                                     <color key="textColor" red="0.61176470589999998" green="0.6705882353" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -489,10 +384,10 @@
                                                 <constraint firstItem="tgM-FL-Ffo" firstAttribute="leading" secondItem="qX0-qQ-Ded" secondAttribute="trailing" constant="8" symbolic="YES" id="Z1F-4l-iQ2"/>
                                                 <constraint firstItem="qX0-qQ-Ded" firstAttribute="centerY" secondItem="4BF-Ub-MEp" secondAttribute="centerY" id="bG6-dt-XPO"/>
                                                 <constraint firstItem="9Ap-rQ-QKd" firstAttribute="top" secondItem="4BF-Ub-MEp" secondAttribute="topMargin" constant="5" id="iRe-1F-Kwq"/>
-                                                <constraint firstItem="sDh-yW-3rw" firstAttribute="top" secondItem="9Ap-rQ-QKd" secondAttribute="bottom" constant="13" id="lWm-uR-Cgd"/>
+                                                <constraint firstItem="sDh-yW-3rw" firstAttribute="top" secondItem="9Ap-rQ-QKd" secondAttribute="bottom" constant="16" id="lWm-uR-Cgd"/>
                                                 <constraint firstItem="qX0-qQ-Ded" firstAttribute="bottom" secondItem="tgM-FL-Ffo" secondAttribute="bottom" id="m4S-Dg-Fv3"/>
                                                 <constraint firstItem="9Ap-rQ-QKd" firstAttribute="leading" secondItem="MZ3-pm-kKq" secondAttribute="leading" id="ob7-mB-KZa"/>
-                                                <constraint firstItem="9Ap-rQ-QKd" firstAttribute="trailing" secondItem="MZ3-pm-kKq" secondAttribute="trailing" id="yOO-A8-BA0"/>
+                                                <constraint firstItem="9Ap-rQ-QKd" firstAttribute="trailing" secondItem="MZ3-pm-kKq" secondAttribute="trailing" constant="1" id="yOO-A8-BA0"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="8"/>
@@ -507,6 +402,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="bgH-Lr-q2O"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZyA-Pn-q7P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -591,7 +487,8 @@
             <objects>
                 <navigationController storyboardIdentifier="find_moves" automaticallyAdjustsScrollViewInsets="NO" id="RuO-fb-Q84" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="N4H-iV-F2e">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="N4H-iV-F2e">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -606,9 +503,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="alarm" width="72" height="72"/>
         <image name="calendar" width="24" height="24"/>
         <image name="check" width="128" height="128"/>
-        <image name="ok" width="24" height="24"/>
+        <image name="left" width="72" height="72"/>
+        <image name="ok" width="72" height="72"/>
+        <image name="right" width="72" height="72"/>
         <image name="rocket_large" width="72" height="72"/>
         <image name="x" width="128" height="128"/>
     </resources>

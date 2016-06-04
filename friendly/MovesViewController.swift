@@ -17,7 +17,7 @@ class MovesViewController: UIViewController {
     
         let myMovesController = storyboard!.instantiateViewControllerWithIdentifier("accepted_moves")
         myMovesController.view.frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height)
-        myMovesController.title = "My Moves"
+        myMovesController.title = "Your Moves"
 
         self.addChildViewController(myMovesController)
         self.view.addSubview(myMovesController.view)
