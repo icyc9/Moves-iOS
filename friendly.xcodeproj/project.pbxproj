@@ -21,6 +21,11 @@
 		0212DCA21D00F7C200D7F9FD /* TextFieldEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0212DCA11D00F7C200D7F9FD /* TextFieldEffects.swift */; };
 		0220361E1D010DF000831162 /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0220361D1D010DF000831162 /* SCLAlertView.swift */; };
 		022036201D010E0700831162 /* SCLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0220361F1D010E0700831162 /* SCLExtensions.swift */; };
+		022036271D0261AA00831162 /* DGElasticPullToRefreshConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022036221D0261AA00831162 /* DGElasticPullToRefreshConstants.swift */; };
+		022036281D0261AA00831162 /* DGElasticPullToRefreshExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022036231D0261AA00831162 /* DGElasticPullToRefreshExtensions.swift */; };
+		022036291D0261AA00831162 /* DGElasticPullToRefreshLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022036241D0261AA00831162 /* DGElasticPullToRefreshLoadingView.swift */; };
+		0220362A1D0261AA00831162 /* DGElasticPullToRefreshLoadingViewCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022036251D0261AA00831162 /* DGElasticPullToRefreshLoadingViewCircle.swift */; };
+		0220362B1D0261AA00831162 /* DGElasticPullToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022036261D0261AA00831162 /* DGElasticPullToRefreshView.swift */; };
 		0232096D1CFD0C9E00BB21A6 /* CreateHangoutOrMeetPeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0232096C1CFD0C9E00BB21A6 /* CreateHangoutOrMeetPeopleViewController.swift */; };
 		023209741CFD3E0C00BB21A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 023209721CFD3E0C00BB21A6 /* Main.storyboard */; };
 		023209891CFE9BA500BB21A6 /* CAPSPageMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023209881CFE9BA500BB21A6 /* CAPSPageMenu.swift */; };
@@ -46,6 +51,11 @@
 		0212DCA11D00F7C200D7F9FD /* TextFieldEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldEffects.swift; sourceTree = "<group>"; };
 		0220361D1D010DF000831162 /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLAlertView.swift; sourceTree = "<group>"; };
 		0220361F1D010E0700831162 /* SCLExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLExtensions.swift; sourceTree = "<group>"; };
+		022036221D0261AA00831162 /* DGElasticPullToRefreshConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshConstants.swift; sourceTree = "<group>"; };
+		022036231D0261AA00831162 /* DGElasticPullToRefreshExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshExtensions.swift; sourceTree = "<group>"; };
+		022036241D0261AA00831162 /* DGElasticPullToRefreshLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshLoadingView.swift; sourceTree = "<group>"; };
+		022036251D0261AA00831162 /* DGElasticPullToRefreshLoadingViewCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshLoadingViewCircle.swift; sourceTree = "<group>"; };
+		022036261D0261AA00831162 /* DGElasticPullToRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshView.swift; sourceTree = "<group>"; };
 		0232096C1CFD0C9E00BB21A6 /* CreateHangoutOrMeetPeopleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateHangoutOrMeetPeopleViewController.swift; sourceTree = "<group>"; };
 		023209731CFD3E0C00BB21A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		023209881CFE9BA500BB21A6 /* CAPSPageMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAPSPageMenu.swift; sourceTree = "<group>"; };
@@ -81,6 +91,7 @@
 		0212DC8C1CFF9FB400D7F9FD /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				022036211D0261AA00831162 /* DGElasticPullToRefresh */,
 				023209881CFE9BA500BB21A6 /* CAPSPageMenu.swift */,
 				02D4731D1CFD017C007BA0F8 /* MainNavigationTabBarViewController.swift */,
 				0212DC9D1D00E65F00D7F9FD /* MainNavigationViewController.swift */,
@@ -132,6 +143,19 @@
 				0212DC941CFFBA8F00D7F9FD /* proxima-nova-soft-normal-webfont.ttf */,
 			);
 			name = resources;
+			sourceTree = "<group>";
+		};
+		022036211D0261AA00831162 /* DGElasticPullToRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				022036221D0261AA00831162 /* DGElasticPullToRefreshConstants.swift */,
+				022036231D0261AA00831162 /* DGElasticPullToRefreshExtensions.swift */,
+				022036241D0261AA00831162 /* DGElasticPullToRefreshLoadingView.swift */,
+				022036251D0261AA00831162 /* DGElasticPullToRefreshLoadingViewCircle.swift */,
+				022036261D0261AA00831162 /* DGElasticPullToRefreshView.swift */,
+			);
+			name = DGElasticPullToRefresh;
+			path = "../../../Downloads/DGElasticPullToRefresh-master/DGElasticPullToRefresh";
 			sourceTree = "<group>";
 		};
 		02D472FD1CFCF766007BA0F8 = {
@@ -238,16 +262,21 @@
 			files = (
 				0212DC9E1D00E65F00D7F9FD /* MainNavigationViewController.swift in Sources */,
 				0232096D1CFD0C9E00BB21A6 /* CreateHangoutOrMeetPeopleViewController.swift in Sources */,
+				022036281D0261AA00831162 /* DGElasticPullToRefreshExtensions.swift in Sources */,
 				0220361E1D010DF000831162 /* SCLAlertView.swift in Sources */,
+				0220362A1D0261AA00831162 /* DGElasticPullToRefreshLoadingViewCircle.swift in Sources */,
 				0212DCA01D00F78E00D7F9FD /* KaedeTextField.swift in Sources */,
 				0212DC821CFF98DA00D7F9FD /* FindMovesViewController.swift in Sources */,
 				023209891CFE9BA500BB21A6 /* CAPSPageMenu.swift in Sources */,
 				0212DC9A1D00C80A00D7F9FD /* InvitationTableViewCell.swift in Sources */,
 				02D4730A1CFCF766007BA0F8 /* AppDelegate.swift in Sources */,
+				0220362B1D0261AA00831162 /* DGElasticPullToRefreshView.swift in Sources */,
+				022036271D0261AA00831162 /* DGElasticPullToRefreshConstants.swift in Sources */,
 				0212DC9C1D00DCA500D7F9FD /* AcceptedMoveTableViewCell.swift in Sources */,
 				022036201D010E0700831162 /* SCLExtensions.swift in Sources */,
 				0212DC861CFF9EEB00D7F9FD /* MoveInvitationsViewController.swift in Sources */,
 				0212DC881CFF9F3B00D7F9FD /* FriendsMovesViewController.swift in Sources */,
+				022036291D0261AA00831162 /* DGElasticPullToRefreshLoadingView.swift in Sources */,
 				0212DC8A1CFF9F6500D7F9FD /* AreaMovesViewController.swift in Sources */,
 				0212DC841CFF9ECB00D7F9FD /* AcceptedMovesViewController.swift in Sources */,
 				0232098B1CFE9BCE00BB21A6 /* MovesViewController.swift in Sources */,
