@@ -10,8 +10,6 @@ import UIKit
 
 class CreateHangoutOrMeetPeopleViewController: UIViewController {
     
-    @IBOutlet weak var messageTextField: KaedeTextField!
-
     @IBOutlet weak var addTimeButton: UIButton!
     
     @IBOutlet weak var sendButton: UIButton!
