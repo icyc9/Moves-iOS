@@ -21,7 +21,6 @@ class MovesViewController: UIViewController {
         self.addChildViewController(myMovesController)
         self.view.addSubview(myMovesController.view)
         myMovesController.didMoveToParentViewController(self)
-
     }
     
     override func didReceiveMemoryWarning() {

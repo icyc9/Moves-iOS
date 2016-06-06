@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 NSForegroundColorAttributeName: UIColor.darkGrayColor()],
             forState: .Normal)
         
+        UINavigationBar.appearance().tintColor = UIColor.blackColor()
         UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().setBackgroundImage(UIImage(), forBarMetrics: .Default)
         

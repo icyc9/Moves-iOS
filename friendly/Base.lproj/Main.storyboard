@@ -71,10 +71,10 @@
             </objects>
             <point key="canvasLocation" x="-2258" y="-83"/>
         </scene>
-        <!--Accepted Moves View Controller-->
+        <!--User Moves Table View Controller-->
         <scene sceneID="fao-9h-taG">
             <objects>
-                <tableViewController id="XWd-em-Cdl" customClass="AcceptedMovesViewController" customModule="friendly" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="XWd-em-Cdl" customClass="UserMovesTableViewController" customModule="friendly" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="j2b-c3-5AN">
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

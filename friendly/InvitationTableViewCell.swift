@@ -11,14 +11,10 @@ import UIKit
 class InvitationTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+        super.awakeFromNib()    }
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
 }

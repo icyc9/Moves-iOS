@@ -11,7 +11,6 @@
 		02117E081D052AF200F2893E /* MainSignUpOrInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02117E071D052AF200F2893E /* MainSignUpOrInViewController.swift */; };
 		02117E0A1D052E6B00F2893E /* IntroPagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02117E091D052E6B00F2893E /* IntroPagesViewController.swift */; };
 		0212DC821CFF98DA00D7F9FD /* FindMovesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0212DC811CFF98DA00D7F9FD /* FindMovesViewController.swift */; };
-		0212DC841CFF9ECB00D7F9FD /* AcceptedMovesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0212DC831CFF9ECB00D7F9FD /* AcceptedMovesViewController.swift */; };
 		0212DC951CFFBA8F00D7F9FD /* proxima-nova-soft-light-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0212DC931CFFBA8F00D7F9FD /* proxima-nova-soft-light-webfont.ttf */; };
 		0212DC961CFFBA8F00D7F9FD /* proxima-nova-soft-normal-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0212DC941CFFBA8F00D7F9FD /* proxima-nova-soft-normal-webfont.ttf */; };
 		0212DC9A1D00C80A00D7F9FD /* InvitationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0212DC991D00C80A00D7F9FD /* InvitationTableViewCell.swift */; };
@@ -34,6 +33,10 @@
 		02D473161CFCF766007BA0F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02D473141CFCF766007BA0F8 /* LaunchScreen.storyboard */; };
 		02FED6171D0538D900347BD3 /* ProfileAndCreateMovesNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FED6161D0538D900347BD3 /* ProfileAndCreateMovesNavigationViewController.swift */; };
 		02FED6191D053A7F00347BD3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FED6181D053A7F00347BD3 /* ProfileViewController.swift */; };
+		02FED61C1D05A7FC00347BD3 /* BasePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FED61B1D05A7FC00347BD3 /* BasePageViewController.swift */; };
+		02FED6231D05B40600347BD3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FED6221D05B40600347BD3 /* Constants.swift */; };
+		02FED6251D05B55C00347BD3 /* PullToRefreshTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FED6241D05B55C00347BD3 /* PullToRefreshTableViewController.swift */; };
+		02FED6271D05B64F00347BD3 /* UserMovesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FED6261D05B64F00347BD3 /* UserMovesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +45,6 @@
 		02117E071D052AF200F2893E /* MainSignUpOrInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSignUpOrInViewController.swift; sourceTree = "<group>"; };
 		02117E091D052E6B00F2893E /* IntroPagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroPagesViewController.swift; sourceTree = "<group>"; };
 		0212DC811CFF98DA00D7F9FD /* FindMovesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindMovesViewController.swift; sourceTree = "<group>"; };
-		0212DC831CFF9ECB00D7F9FD /* AcceptedMovesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptedMovesViewController.swift; sourceTree = "<group>"; };
 		0212DC931CFFBA8F00D7F9FD /* proxima-nova-soft-light-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "proxima-nova-soft-light-webfont.ttf"; path = "../../../Desktop/proxima-nova-soft-light-webfont.ttf"; sourceTree = "<group>"; };
 		0212DC941CFFBA8F00D7F9FD /* proxima-nova-soft-normal-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "proxima-nova-soft-normal-webfont.ttf"; path = "../../../Desktop/proxima-nova-soft-normal-webfont.ttf"; sourceTree = "<group>"; };
 		0212DC991D00C80A00D7F9FD /* InvitationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvitationTableViewCell.swift; sourceTree = "<group>"; };
@@ -67,6 +69,10 @@
 		02D473171CFCF766007BA0F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02FED6161D0538D900347BD3 /* ProfileAndCreateMovesNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileAndCreateMovesNavigationViewController.swift; sourceTree = "<group>"; };
 		02FED6181D053A7F00347BD3 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		02FED61B1D05A7FC00347BD3 /* BasePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePageViewController.swift; sourceTree = "<group>"; };
+		02FED6221D05B40600347BD3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		02FED6241D05B55C00347BD3 /* PullToRefreshTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToRefreshTableViewController.swift; sourceTree = "<group>"; };
+		02FED6261D05B64F00347BD3 /* UserMovesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMovesTableViewController.swift; sourceTree = "<group>"; };
 		038CA62B8B6354146503AFD2 /* Pods-friendly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-friendly.release.xcconfig"; path = "Pods/Target Support Files/Pods-friendly/Pods-friendly.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,12 +100,14 @@
 			isa = PBXGroup;
 			children = (
 				022036301D03302700831162 /* external */,
+				02FED61A1D05A7EC00347BD3 /* base */,
 				02FED6151D0538A600347BD3 /* profile */,
 				022036361D03E79B00831162 /* sign_in_and_sign_up */,
 				0220362F1D03301000831162 /* main_navigation */,
 				0212DC901CFF9FF100D7F9FD /* find_moves */,
 				0212DC8F1CFF9FE100D7F9FD /* make_moves */,
 				0212DC8E1CFF9FDC00D7F9FD /* my_moves */,
+				02FED6221D05B40600347BD3 /* Constants.swift */,
 			);
 			name = ui;
 			sourceTree = "<group>";
@@ -108,8 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				0220362C1D032F6300831162 /* MovesViewController.swift */,
-				0212DC831CFF9ECB00D7F9FD /* AcceptedMovesViewController.swift */,
 				0212DC991D00C80A00D7F9FD /* InvitationTableViewCell.swift */,
+				02FED6261D05B64F00347BD3 /* UserMovesTableViewController.swift */,
 			);
 			name = my_moves;
 			sourceTree = "<group>";
@@ -244,6 +252,15 @@
 				02FED6181D053A7F00347BD3 /* ProfileViewController.swift */,
 			);
 			name = profile;
+			sourceTree = "<group>";
+		};
+		02FED61A1D05A7EC00347BD3 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				02FED61B1D05A7FC00347BD3 /* BasePageViewController.swift */,
+				02FED6241D05B55C00347BD3 /* PullToRefreshTableViewController.swift */,
+			);
+			name = base;
 			sourceTree = "<group>";
 		};
 		8F9B712FD379879516895C64 /* Pods */ = {
@@ -386,6 +403,7 @@
 				022036281D0261AA00831162 /* DGElasticPullToRefreshExtensions.swift in Sources */,
 				0220361E1D010DF000831162 /* SCLAlertView.swift in Sources */,
 				02FED6191D053A7F00347BD3 /* ProfileViewController.swift in Sources */,
+				02FED6251D05B55C00347BD3 /* PullToRefreshTableViewController.swift in Sources */,
 				0220362A1D0261AA00831162 /* DGElasticPullToRefreshLoadingViewCircle.swift in Sources */,
 				02117E061D051DD300F2893E /* SignUpViewController.swift in Sources */,
 				0212DC821CFF98DA00D7F9FD /* FindMovesViewController.swift in Sources */,
@@ -393,14 +411,16 @@
 				0212DC9A1D00C80A00D7F9FD /* InvitationTableViewCell.swift in Sources */,
 				02D4730A1CFCF766007BA0F8 /* AppDelegate.swift in Sources */,
 				0220362B1D0261AA00831162 /* DGElasticPullToRefreshView.swift in Sources */,
+				02FED61C1D05A7FC00347BD3 /* BasePageViewController.swift in Sources */,
 				02117E081D052AF200F2893E /* MainSignUpOrInViewController.swift in Sources */,
 				022036271D0261AA00831162 /* DGElasticPullToRefreshConstants.swift in Sources */,
 				0220362D1D032F6300831162 /* MovesViewController.swift in Sources */,
 				022036201D010E0700831162 /* SCLExtensions.swift in Sources */,
 				02117E0A1D052E6B00F2893E /* IntroPagesViewController.swift in Sources */,
 				022036291D0261AA00831162 /* DGElasticPullToRefreshLoadingView.swift in Sources */,
-				0212DC841CFF9ECB00D7F9FD /* AcceptedMovesViewController.swift in Sources */,
+				02FED6271D05B64F00347BD3 /* UserMovesTableViewController.swift in Sources */,
 				022036331D03E4DD00831162 /* TextFieldEffects.swift in Sources */,
+				02FED6231D05B40600347BD3 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

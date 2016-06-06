@@ -1,23 +1,17 @@
 //
-//  AcceptedMovesViewController.swift
+//  PullToRefreshTableViewController.swift
 //  friendly
 //
-//  Created by Daniel Christopher on 6/1/16.
+//  Created by Daniel Christopher on 6/6/16.
 //  Copyright © 2016 Daniel Christopher. All rights reserved.
 //
-
 import UIKit
 
-class AcceptedMovesViewController: UITableViewController {
+class PullToRefreshTableViewController: UITableViewController {
     
     override func viewDidLoad() {
-        let primary = UIColor(red: 0.13, green: 0.59, blue: 0.95, alpha: 1)
-        let navigationBar = self.navigationController?.navigationBar
-        navigationBar?.barTintColor = primary
-        navigationBar?.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-        navigationBar?.topItem?.title = "My Moves"
-        
-        setUpPullToRefresh(UIColor(red: 0.10, green: 0.46, blue: 0.82, alpha: 1))
+        super.viewDidLoad()
+        setUpPullToRefresh(Color.primaryDark)
     }
     
     deinit {
@@ -39,9 +33,8 @@ class AcceptedMovesViewController: UITableViewController {
     func refresh(sender:AnyObject) {
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
 }
