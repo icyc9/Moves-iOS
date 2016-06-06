@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import Fabric
-import TwitterKit
 
 class SignInViewController: UIViewController {
 

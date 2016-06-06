@@ -1,19 +1,18 @@
 //
-//  MainNavigationViewController.swift
+//  ProfileAndCreateMovesNavigationViewController.swift
 //  friendly
 //
-//  Created by Daniel Christopher on 6/2/16.
+//  Created by Daniel Christopher on 6/6/16.
 //  Copyright © 2016 Daniel Christopher. All rights reserved.
 //
 
 import UIKit
 
-class MainNavigationViewController: UIPageViewController, UIPageViewControllerDataSource {
-    
+class ProfileAndCreateMovesNavigationViewController: UIPageViewController, UIPageViewControllerDataSource {
+
     private(set) lazy var pages: [UIViewController] = {
-        return [self.createPage("find_moves"),
-                self.createPage("make_moves_profile_navigation"),
-                self.createPage("moves")]
+        return [self.createPage("make_moves"),
+                self.createPage("profile")]
     }()
     
     override func viewDidLoad() {
@@ -23,14 +22,14 @@ class MainNavigationViewController: UIPageViewController, UIPageViewControllerDa
         
         dataSource = self
         
-        if let firstViewController = pages.last {
+        if let firstViewController = pages.first {
             setViewControllers([firstViewController],
                                direction: .Forward,
                                animated: true,
                                completion: nil)
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -67,5 +66,5 @@ class MainNavigationViewController: UIPageViewController, UIPageViewControllerDa
     private func createPage(storyboardId: String) -> UIViewController {
         return UIStoryboard(name: "Main", bundle:nil).instantiateViewControllerWithIdentifier(storyboardId)
     }
-}
 
+}
