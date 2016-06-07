@@ -1,24 +1,23 @@
 //
-//  FirstViewController.swift
+//  SignInViewController.swift
 //  friendly
 //
-//  Created by Daniel Christopher on 5/30/16.
+//  Created by Daniel Christopher on 6/5/16.
 //  Copyright © 2016 Daniel Christopher. All rights reserved.
 //
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class SignInViewController: UIViewController {
 
+    @IBOutlet weak var signInButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        signInButton.layer.cornerRadius = 5
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
-
 }
-

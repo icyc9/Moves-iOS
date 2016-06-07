@@ -17,7 +17,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.whiteColor()], forState: UIControlState.Selected)
-        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.whiteColor()], forState: UIControlState.Normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.darkGrayColor()], forState: UIControlState.Normal)
+        
+        // Change tab bar item appearance
+        UITabBarItem.appearance().setTitleTextAttributes(
+            [NSFontAttributeName: UIFont(name:"ProximaNovaSoft-Regular", size:13)!,
+                NSForegroundColorAttributeName: UIColor.darkGrayColor()],
+            forState: .Normal)
+        
+        UINavigationBar.appearance().tintColor = UIColor.blackColor()
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), forBarMetrics: .Default)
+        
         return true
     }
 
