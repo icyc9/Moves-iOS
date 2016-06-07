@@ -1,3 +1,21 @@
-PODFILE CHECKSUM: 5650cd52bd1d9ca166069bbfaa002001110ab550
+PODS:
+  - Alamofire (3.4.0)
+  - DGElasticPullToRefresh (1.0.3)
+  - SCLAlertView (0.5.8)
+  - TextFieldEffects (1.2.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 3.4)
+  - DGElasticPullToRefresh
+  - SCLAlertView
+  - TextFieldEffects
+
+SPEC CHECKSUMS:
+  Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
+  DGElasticPullToRefresh: 040f39ae69840b3261d163fe6735c5901bf851e9
+  SCLAlertView: 653e84d1f9fd95333bc54671fbadb7d0c47fce49
+  TextFieldEffects: bc4fd3bd557321bd61a0762f3f50965477a36f62
+
+PODFILE CHECKSUM: 9904d0fce87d1d2581f7254f955a4737febbf295
 
 COCOAPODS: 1.0.0
