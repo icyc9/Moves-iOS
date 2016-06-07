@@ -69,7 +69,7 @@ class BasePageViewController: UIPageViewController, UIPageViewControllerDataSour
         }
     }
     
-    internal func createPage(storyboardId: String) -> UIViewController {
-        return UIStoryboard(name: "Main", bundle:nil).instantiateViewControllerWithIdentifier(storyboardId)
+    internal func createPage(storyboardId: String, storyboardName: String) -> UIViewController {
+        return UIStoryboard(name: storyboardName, bundle:nil).instantiateViewControllerWithIdentifier(storyboardId)
     }
 }

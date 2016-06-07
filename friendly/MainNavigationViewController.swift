@@ -17,9 +17,9 @@ class MainNavigationViewController: BasePageViewController {
         
         dataSource = self
         
-        self.pages = [self.createPage("find_moves"),
-                      self.createPage("make_moves_profile_navigation"),
-                      self.createPage("moves")]
+        self.pages = [self.createPage("find_moves", storyboardName: "Main"),
+                      self.createPage("make_moves_profile_navigation", storyboardName: "Main"),
+                      self.createPage("moves", storyboardName: "Main")]
         
         self.showLastPage()
     }

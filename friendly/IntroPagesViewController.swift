@@ -14,9 +14,9 @@ class IntroPagesViewController: BasePageViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.whiteColor()
         
-        self.pages = [self.createPage("sign_up"),
-                 self.createPage("intro_1"),
-                 self.createPage("intro_2"),
-                 self.createPage("intro_3")]
+        self.pages = [self.createPage("sign_up", storyboardName: "SignInOrUp"),
+                 self.createPage("intro_1", storyboardName: "SignInOrUp"),
+                 self.createPage("intro_2", storyboardName: "SignInOrUp"),
+                 self.createPage("intro_3", storyboardName: "SignInOrUp")]
     }
 }

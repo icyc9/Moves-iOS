@@ -21,7 +21,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
         addFriendButton.layer.cornerRadius = 5
         navigationController?.navigationBar.barTintColor = Color.primary
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		02117E061D051DD300F2893E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02117E051D051DD300F2893E /* SignUpViewController.swift */; };
-		02117E081D052AF200F2893E /* MainSignUpOrInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02117E071D052AF200F2893E /* MainSignUpOrInViewController.swift */; };
 		02117E0A1D052E6B00F2893E /* IntroPagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02117E091D052E6B00F2893E /* IntroPagesViewController.swift */; };
 		0212DC821CFF98DA00D7F9FD /* FindMovesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0212DC811CFF98DA00D7F9FD /* FindMovesViewController.swift */; };
 		0212DC951CFFBA8F00D7F9FD /* proxima-nova-soft-light-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0212DC931CFFBA8F00D7F9FD /* proxima-nova-soft-light-webfont.ttf */; };
@@ -39,12 +38,12 @@
 		02FED6271D05B64F00347BD3 /* UserMovesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FED6261D05B64F00347BD3 /* UserMovesTableViewController.swift */; };
 		02FED6291D0669E200347BD3 /* FriendsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FED6281D0669E200347BD3 /* FriendsListTableViewController.swift */; };
 		02FED62D1D067DB400347BD3 /* RootFriendsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FED62C1D067DB400347BD3 /* RootFriendsListViewController.swift */; };
+		02FED62F1D07647500347BD3 /* SignInOrUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02FED62E1D07647500347BD3 /* SignInOrUp.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		01CCDD45D8877F60F8389F9D /* Pods-friendly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-friendly.debug.xcconfig"; path = "Pods/Target Support Files/Pods-friendly/Pods-friendly.debug.xcconfig"; sourceTree = "<group>"; };
 		02117E051D051DD300F2893E /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		02117E071D052AF200F2893E /* MainSignUpOrInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSignUpOrInViewController.swift; sourceTree = "<group>"; };
 		02117E091D052E6B00F2893E /* IntroPagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroPagesViewController.swift; sourceTree = "<group>"; };
 		0212DC811CFF98DA00D7F9FD /* FindMovesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindMovesViewController.swift; sourceTree = "<group>"; };
 		0212DC931CFFBA8F00D7F9FD /* proxima-nova-soft-light-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "proxima-nova-soft-light-webfont.ttf"; path = "../../../Desktop/proxima-nova-soft-light-webfont.ttf"; sourceTree = "<group>"; };
@@ -77,6 +76,7 @@
 		02FED6261D05B64F00347BD3 /* UserMovesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMovesTableViewController.swift; sourceTree = "<group>"; };
 		02FED6281D0669E200347BD3 /* FriendsListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListTableViewController.swift; sourceTree = "<group>"; };
 		02FED62C1D067DB400347BD3 /* RootFriendsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootFriendsListViewController.swift; sourceTree = "<group>"; };
+		02FED62E1D07647500347BD3 /* SignInOrUp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignInOrUp.storyboard; sourceTree = "<group>"; };
 		038CA62B8B6354146503AFD2 /* Pods-friendly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-friendly.release.xcconfig"; path = "Pods/Target Support Files/Pods-friendly/Pods-friendly.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,6 +96,7 @@
 			children = (
 				02D473141CFCF766007BA0F8 /* LaunchScreen.storyboard */,
 				023209721CFD3E0C00BB21A6 /* Main.storyboard */,
+				02FED62E1D07647500347BD3 /* SignInOrUp.storyboard */,
 			);
 			name = storyboards;
 			sourceTree = "<group>";
@@ -103,7 +104,6 @@
 		0212DC8C1CFF9FB400D7F9FD /* ui */ = {
 			isa = PBXGroup;
 			children = (
-				022036301D03302700831162 /* external */,
 				02FED61A1D05A7EC00347BD3 /* base */,
 				02FED6151D0538A600347BD3 /* profile */,
 				022036361D03E79B00831162 /* sign_in_and_sign_up */,
@@ -205,8 +205,6 @@
 			isa = PBXGroup;
 			children = (
 				022036371D03E7EF00831162 /* SignInViewController.swift */,
-				02117E051D051DD300F2893E /* SignUpViewController.swift */,
-				02117E071D052AF200F2893E /* MainSignUpOrInViewController.swift */,
 				02117E091D052E6B00F2893E /* IntroPagesViewController.swift */,
 			);
 			name = sign_in_and_sign_up;
@@ -240,8 +238,12 @@
 		02D473081CFCF766007BA0F8 /* friendly */ = {
 			isa = PBXGroup;
 			children = (
+				022036301D03302700831162 /* external */,
 				0212DC921CFFB9EC00D7F9FD /* resources */,
 				0212DC8B1CFF9F8700D7F9FD /* storyboards */,
+				02FED6311D076A8300347BD3 /* viewmodel */,
+				02FED6331D076AAA00347BD3 /* model */,
+				02FED6321D076A9A00347BD3 /* controller */,
 				0212DC8C1CFF9FB400D7F9FD /* ui */,
 				02D473091CFCF766007BA0F8 /* AppDelegate.swift */,
 				02D473121CFCF766007BA0F8 /* Assets.xcassets */,
@@ -267,6 +269,28 @@
 				02FED6241D05B55C00347BD3 /* PullToRefreshTableViewController.swift */,
 			);
 			name = base;
+			sourceTree = "<group>";
+		};
+		02FED6311D076A8300347BD3 /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = viewmodel;
+			sourceTree = "<group>";
+		};
+		02FED6321D076A9A00347BD3 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				02117E051D051DD300F2893E /* SignUpViewController.swift */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		02FED6331D076AAA00347BD3 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = model;
 			sourceTree = "<group>";
 		};
 		8F9B712FD379879516895C64 /* Pods */ = {
@@ -339,6 +363,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02FED62F1D07647500347BD3 /* SignInOrUp.storyboard in Resources */,
 				0212DC951CFFBA8F00D7F9FD /* proxima-nova-soft-light-webfont.ttf in Resources */,
 				0212DC961CFFBA8F00D7F9FD /* proxima-nova-soft-normal-webfont.ttf in Resources */,
 				023209741CFD3E0C00BB21A6 /* Main.storyboard in Resources */,
@@ -419,7 +444,6 @@
 				02D4730A1CFCF766007BA0F8 /* AppDelegate.swift in Sources */,
 				0220362B1D0261AA00831162 /* DGElasticPullToRefreshView.swift in Sources */,
 				02FED61C1D05A7FC00347BD3 /* BasePageViewController.swift in Sources */,
-				02117E081D052AF200F2893E /* MainSignUpOrInViewController.swift in Sources */,
 				02FED6291D0669E200347BD3 /* FriendsListTableViewController.swift in Sources */,
 				022036271D0261AA00831162 /* DGElasticPullToRefreshConstants.swift in Sources */,
 				0220362D1D032F6300831162 /* MovesViewController.swift in Sources */,

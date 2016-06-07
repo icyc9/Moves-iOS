@@ -16,8 +16,8 @@ class ProfileAndCreateMovesNavigationViewController: BasePageViewController {
         
         self.view.backgroundColor = UIColor.whiteColor()
         
-        self.pages = [self.createPage("make_moves"),
-                      self.createPage("profile")]
+        self.pages = [self.createPage("make_moves", storyboardName: "Main"),
+                      self.createPage("profile", storyboardName: "Main")]
         
         self.showFirstPage()
     }

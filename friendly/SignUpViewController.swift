@@ -14,6 +14,7 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         signUpButton.layer.cornerRadius = 5
     }
     
