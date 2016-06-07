@@ -37,6 +37,8 @@
 		02FED6231D05B40600347BD3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FED6221D05B40600347BD3 /* Constants.swift */; };
 		02FED6251D05B55C00347BD3 /* PullToRefreshTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FED6241D05B55C00347BD3 /* PullToRefreshTableViewController.swift */; };
 		02FED6271D05B64F00347BD3 /* UserMovesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FED6261D05B64F00347BD3 /* UserMovesTableViewController.swift */; };
+		02FED6291D0669E200347BD3 /* FriendsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FED6281D0669E200347BD3 /* FriendsListTableViewController.swift */; };
+		02FED62D1D067DB400347BD3 /* RootFriendsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FED62C1D067DB400347BD3 /* RootFriendsListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +75,8 @@
 		02FED6221D05B40600347BD3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		02FED6241D05B55C00347BD3 /* PullToRefreshTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToRefreshTableViewController.swift; sourceTree = "<group>"; };
 		02FED6261D05B64F00347BD3 /* UserMovesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMovesTableViewController.swift; sourceTree = "<group>"; };
+		02FED6281D0669E200347BD3 /* FriendsListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListTableViewController.swift; sourceTree = "<group>"; };
+		02FED62C1D067DB400347BD3 /* RootFriendsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootFriendsListViewController.swift; sourceTree = "<group>"; };
 		038CA62B8B6354146503AFD2 /* Pods-friendly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-friendly.release.xcconfig"; path = "Pods/Target Support Files/Pods-friendly/Pods-friendly.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -250,6 +254,8 @@
 			isa = PBXGroup;
 			children = (
 				02FED6181D053A7F00347BD3 /* ProfileViewController.swift */,
+				02FED6281D0669E200347BD3 /* FriendsListTableViewController.swift */,
+				02FED62C1D067DB400347BD3 /* RootFriendsListViewController.swift */,
 			);
 			name = profile;
 			sourceTree = "<group>";
@@ -397,6 +403,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0212DC9E1D00E65F00D7F9FD /* MainNavigationViewController.swift in Sources */,
+				02FED62D1D067DB400347BD3 /* RootFriendsListViewController.swift in Sources */,
 				0232096D1CFD0C9E00BB21A6 /* CreateHangoutOrMeetPeopleViewController.swift in Sources */,
 				022036351D03E4FE00831162 /* KaedeTextField.swift in Sources */,
 				02FED6171D0538D900347BD3 /* ProfileAndCreateMovesNavigationViewController.swift in Sources */,
@@ -413,6 +420,7 @@
 				0220362B1D0261AA00831162 /* DGElasticPullToRefreshView.swift in Sources */,
 				02FED61C1D05A7FC00347BD3 /* BasePageViewController.swift in Sources */,
 				02117E081D052AF200F2893E /* MainSignUpOrInViewController.swift in Sources */,
+				02FED6291D0669E200347BD3 /* FriendsListTableViewController.swift in Sources */,
 				022036271D0261AA00831162 /* DGElasticPullToRefreshConstants.swift in Sources */,
 				0220362D1D032F6300831162 /* MovesViewController.swift in Sources */,
 				022036201D010E0700831162 /* SCLExtensions.swift in Sources */,

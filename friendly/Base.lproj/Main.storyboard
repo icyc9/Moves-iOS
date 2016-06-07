@@ -30,6 +30,8 @@
             <string>ProximaNovaSoft-Regular</string>
             <string>ProximaNovaSoft-Regular</string>
             <string>ProximaNovaSoft-Regular</string>
+            <string>ProximaNovaSoft-Regular</string>
+            <string>ProximaNovaSoft-Regular</string>
         </mutableArray>
         <mutableArray key="proxima-nova-soft-normal-webfont.ttf">
             <string>ProximaNovaSoft-Medium</string>
@@ -202,7 +204,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hdG-1w-NTy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="206" y="851"/>
+            <point key="canvasLocation" x="2642" y="851"/>
         </scene>
         <!--Profile And Create Moves Navigation View Controller-->
         <scene sceneID="Oee-uG-KJF">
@@ -364,12 +366,94 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1448" y="700"/>
+            <point key="canvasLocation" x="988" y="700"/>
+        </scene>
+        <!--Root Friends List View Controller-->
+        <scene sceneID="O98-44-ERo">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uaI-I2-ooT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="N6g-wM-YMu" customClass="RootFriendsListViewController" customModule="friendly" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BOO-Re-Ysd"/>
+                        <viewControllerLayoutGuide type="bottom" id="rFw-Wt-w9N"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YiL-6I-Y1h">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNI-ZD-UJC">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <color key="barTintColor" red="0.12941177189350128" green="0.58823531866073608" blue="0.9529411792755127" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Your Friends" id="PPS-Me-zJl">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="g3D-ky-kpu">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="goBack:" destination="N6g-wM-YMu" id="0mE-OJ-O9G"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uEM-Cc-LzY">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" red="0.12941177189350128" green="0.58823531866073608" blue="0.9529411792755127" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <segue destination="2QM-FV-kNM" kind="embed" id="fuf-qa-RgW"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12941177189350128" green="0.58823531866073608" blue="0.9529411792755127" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="uEM-Cc-LzY" secondAttribute="trailing" id="8oo-g1-jak"/>
+                            <constraint firstItem="uEM-Cc-LzY" firstAttribute="leading" secondItem="gNI-ZD-UJC" secondAttribute="leading" id="Cbc-HV-tVb"/>
+                            <constraint firstItem="uEM-Cc-LzY" firstAttribute="bottom" secondItem="rFw-Wt-w9N" secondAttribute="top" id="IUx-9r-kN5"/>
+                            <constraint firstItem="gNI-ZD-UJC" firstAttribute="top" secondItem="BOO-Re-Ysd" secondAttribute="bottom" id="KV1-2T-gr8"/>
+                            <constraint firstItem="uEM-Cc-LzY" firstAttribute="leading" secondItem="YiL-6I-Y1h" secondAttribute="leading" id="cC1-zE-YHT"/>
+                            <constraint firstItem="uEM-Cc-LzY" firstAttribute="top" secondItem="gNI-ZD-UJC" secondAttribute="bottom" id="pBV-E5-8Un"/>
+                            <constraint firstItem="uEM-Cc-LzY" firstAttribute="trailing" secondItem="gNI-ZD-UJC" secondAttribute="trailing" id="tas-uq-6lT"/>
+                        </constraints>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-1331" y="742"/>
+        </scene>
+        <!--Your Friends-->
+        <scene sceneID="xjc-i8-q5p">
+            <objects>
+                <tableViewController id="2QM-FV-kNM" customClass="FriendsListTableViewController" customModule="friendly" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="HCd-TR-alN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="7er-cw-pZw">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7er-cw-pZw" id="rhE-3k-ylq">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="2QM-FV-kNM" id="sR3-hG-RIM"/>
+                            <outlet property="delegate" destination="2QM-FV-kNM" id="mXU-Ym-aZL"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Your Friends" id="DDh-5j-Gup"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iaz-nf-hAM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1692" y="1448"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="QBd-cg-AZ1">
             <objects>
-                <viewController storyboardIdentifier="profile" id="fWm-Ji-99n" customClass="ProfileViewController" customModule="friendly" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fWm-Ji-99n" customClass="ProfileViewController" customModule="friendly" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LMP-mV-EEg"/>
                         <viewControllerLayoutGuide type="bottom" id="yjJ-b0-g6z"/>
@@ -381,7 +465,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Daniel Christopher" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gMi-9E-Hne" customClass="KaedeTextField" customModule="friendly" customModuleProvider="target">
                                 <rect key="frame" x="165" y="165" width="270" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="270" id="wMd-aL-i6y"/>
+                                    <constraint firstAttribute="width" constant="270" id="aZC-zV-hfJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ProximaNovaSoft-Regular" family="ProximaNovaSoft-Regular" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -397,16 +481,68 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="danielchr99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wwZ-6v-f1c">
                                 <rect key="frame" x="210" y="108" width="181" height="39"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="39" id="7yz-Yg-x2p"/>
+                                    <constraint firstAttribute="height" constant="39" id="vBa-1g-9KH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cvc-Ed-9WI" customClass="KaedeTextField" customModule="friendly" customModuleProvider="target">
-                                <rect key="frame" x="212" y="321" width="176" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your name is how you appear to other people in the app" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afc-Li-NYc">
+                                <rect key="frame" x="194" y="203" width="213" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="176" id="5sf-he-XBp"/>
+                                    <constraint firstAttribute="height" constant="30" id="QX9-ry-H7M"/>
+                                    <constraint firstAttribute="width" constant="213" id="zGZ-Fc-7lx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNovaSoft-Regular" family="ProximaNovaSoft-Regular" pointSize="12"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFI-vn-U5k">
+                                <rect key="frame" x="249" y="376" width="102" height="29"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="102" id="YbX-ho-eOM"/>
+                                    <constraint firstAttribute="height" constant="29" id="oUh-Az-fMJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNovaSoft-Regular" family="ProximaNovaSoft-Regular" pointSize="17"/>
+                                <state key="normal" title="Add Friend">
+                                    <color key="titleColor" red="0.12941177189350128" green="0.58823531866073608" blue="0.9529411792755127" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Moves" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OTN-pf-jvH">
+                                <rect key="frame" x="257" y="559" width="87" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Bh0-Xd-lmK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNovaSoft-Regular" family="ProximaNovaSoft-Regular" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="point_down" translatesAutoresizingMaskIntoConstraints="NO" id="Fc1-54-7ZL">
+                                <rect key="frame" x="282" y="521" width="36" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="pH5-PP-ZNe"/>
+                                    <constraint firstAttribute="width" constant="36" id="zbG-Qx-doC"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQz-S1-cUk">
+                                <rect key="frame" x="195" y="290" width="211" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Un5-uB-aQo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNovaSoft-Regular" family="ProximaNovaSoft-Regular" pointSize="17"/>
+                                <state key="normal" title="Tap To View Your Friends (0)">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="viewFriends:" destination="fWm-Ji-99n" eventType="touchUpInside" id="v3f-Bd-o5Z"/>
+                                    <segue destination="N6g-wM-YMu" kind="show" id="YG1-DR-o9r"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cvc-Ed-9WI" customClass="KaedeTextField" customModule="friendly" customModuleProvider="target">
+                                <rect key="frame" x="212" y="328" width="176" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="176" id="NpU-pD-lHg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ProximaNovaSoft-Regular" family="ProximaNovaSoft-Regular" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -419,59 +555,37 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Friends (14)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7Y-6r-QCS">
-                                <rect key="frame" x="173" y="272" width="254" height="41"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your name is how you appear to other people in the app" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afc-Li-NYc">
-                                <rect key="frame" x="194" y="203" width="213" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="BaJ-Wh-yLB"/>
-                                    <constraint firstAttribute="width" constant="213" id="qq7-jU-HtY"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="ProximaNovaSoft-Regular" family="ProximaNovaSoft-Regular" pointSize="12"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFI-vn-U5k">
-                                <rect key="frame" x="249" y="359" width="102" height="29"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="29" id="0hB-Zr-cWY"/>
-                                    <constraint firstAttribute="width" constant="102" id="Kcd-eq-I7p"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="ProximaNovaSoft-Regular" family="ProximaNovaSoft-Regular" pointSize="17"/>
-                                <state key="normal" title="Add Friend">
-                                    <color key="titleColor" red="0.12941177189350128" green="0.58823531866073608" blue="0.9529411792755127" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.12941177189350128" green="0.58823531866073608" blue="0.9529411792755127" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="F7Y-6r-QCS" firstAttribute="centerX" secondItem="cvc-Ed-9WI" secondAttribute="centerX" id="76z-FP-ae3"/>
-                            <constraint firstItem="afc-Li-NYc" firstAttribute="top" secondItem="gMi-9E-Hne" secondAttribute="bottom" constant="8" symbolic="YES" id="8fh-1e-gGP"/>
-                            <constraint firstItem="F7Y-6r-QCS" firstAttribute="top" secondItem="afc-Li-NYc" secondAttribute="bottom" constant="39" id="Afz-cg-gST"/>
-                            <constraint firstItem="afc-Li-NYc" firstAttribute="centerX" secondItem="F7Y-6r-QCS" secondAttribute="centerX" id="EWC-oQ-pAp"/>
-                            <constraint firstItem="wwZ-6v-f1c" firstAttribute="centerX" secondItem="gMi-9E-Hne" secondAttribute="centerX" id="Ozq-Ld-4KO"/>
-                            <constraint firstItem="wwZ-6v-f1c" firstAttribute="top" secondItem="LMP-mV-EEg" secondAttribute="bottom" constant="88" id="QSQ-g8-8BB"/>
-                            <constraint firstItem="gMi-9E-Hne" firstAttribute="centerX" secondItem="afc-Li-NYc" secondAttribute="centerX" id="YeZ-t7-iT0"/>
-                            <constraint firstItem="SFI-vn-U5k" firstAttribute="top" secondItem="cvc-Ed-9WI" secondAttribute="bottom" constant="8" symbolic="YES" id="dE4-nZ-VHz"/>
-                            <constraint firstItem="cvc-Ed-9WI" firstAttribute="centerX" secondItem="SFI-vn-U5k" secondAttribute="centerX" id="fr3-hs-tPE"/>
-                            <constraint firstItem="wwZ-6v-f1c" firstAttribute="centerX" secondItem="mGb-Cf-ukO" secondAttribute="centerX" id="ifk-ZY-o8W"/>
-                            <constraint firstItem="cvc-Ed-9WI" firstAttribute="top" secondItem="F7Y-6r-QCS" secondAttribute="bottom" constant="8" symbolic="YES" id="twG-rs-scs"/>
-                            <constraint firstItem="gMi-9E-Hne" firstAttribute="top" secondItem="wwZ-6v-f1c" secondAttribute="bottom" constant="18" id="wm3-gH-XLW"/>
+                            <constraint firstItem="OTN-pf-jvH" firstAttribute="top" secondItem="Fc1-54-7ZL" secondAttribute="bottom" constant="2" id="00L-AM-DWU"/>
+                            <constraint firstItem="wwZ-6v-f1c" firstAttribute="centerX" secondItem="mGb-Cf-ukO" secondAttribute="centerX" id="25V-ug-KFa"/>
+                            <constraint firstItem="SFI-vn-U5k" firstAttribute="centerX" secondItem="Fc1-54-7ZL" secondAttribute="centerX" id="7nB-z7-a4N"/>
+                            <constraint firstItem="afc-Li-NYc" firstAttribute="top" secondItem="gMi-9E-Hne" secondAttribute="bottom" constant="8" symbolic="YES" id="C9p-0l-EzG"/>
+                            <constraint firstAttribute="bottom" secondItem="OTN-pf-jvH" secondAttribute="bottom" constant="20" symbolic="YES" id="CUH-ws-DTX"/>
+                            <constraint firstItem="jQz-S1-cUk" firstAttribute="centerX" secondItem="cvc-Ed-9WI" secondAttribute="centerX" id="EV4-W0-jl8"/>
+                            <constraint firstItem="Fc1-54-7ZL" firstAttribute="centerX" secondItem="OTN-pf-jvH" secondAttribute="centerX" id="Ez4-oJ-U7b"/>
+                            <constraint firstItem="gMi-9E-Hne" firstAttribute="top" secondItem="wwZ-6v-f1c" secondAttribute="bottom" constant="18" id="UVV-Cf-skk"/>
+                            <constraint firstItem="afc-Li-NYc" firstAttribute="centerX" secondItem="jQz-S1-cUk" secondAttribute="centerX" id="YhF-0E-tJL"/>
+                            <constraint firstItem="jQz-S1-cUk" firstAttribute="top" secondItem="afc-Li-NYc" secondAttribute="bottom" constant="57" id="aeF-M2-h54"/>
+                            <constraint firstItem="wwZ-6v-f1c" firstAttribute="centerX" secondItem="gMi-9E-Hne" secondAttribute="centerX" id="bfl-n9-WOW"/>
+                            <constraint firstItem="gMi-9E-Hne" firstAttribute="centerX" secondItem="afc-Li-NYc" secondAttribute="centerX" id="c9t-7j-qYg"/>
+                            <constraint firstItem="cvc-Ed-9WI" firstAttribute="top" secondItem="jQz-S1-cUk" secondAttribute="bottom" constant="8" symbolic="YES" id="eP3-on-vjA"/>
+                            <constraint firstItem="SFI-vn-U5k" firstAttribute="top" secondItem="cvc-Ed-9WI" secondAttribute="bottom" constant="18" id="hW3-6S-AkU"/>
+                            <constraint firstItem="cvc-Ed-9WI" firstAttribute="centerX" secondItem="SFI-vn-U5k" secondAttribute="centerX" id="qIY-7l-Vuw"/>
+                            <constraint firstItem="wwZ-6v-f1c" firstAttribute="top" secondItem="LMP-mV-EEg" secondAttribute="bottom" constant="88" id="rCi-wN-0Yi"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="rDN-nL-jvd"/>
                     <connections>
                         <outlet property="addFriendButton" destination="SFI-vn-U5k" id="92f-7x-WnZ"/>
                         <outlet property="friendUsernameTextField" destination="cvc-Ed-9WI" id="ddt-LX-Y4W"/>
+                        <outlet property="tap" destination="jQz-S1-cUk" id="Vwz-Og-11K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CB3-kE-wWi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2083" y="700"/>
+            <point key="canvasLocation" x="361" y="809"/>
         </scene>
         <!--Find Moves View Controller-->
         <scene sceneID="vRg-xr-u5d">
@@ -780,7 +894,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Tm-Ou-wZW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1238" y="825"/>
+            <point key="canvasLocation" x="3674" y="825"/>
         </scene>
         <!--Main Navigation View Controller-->
         <scene sceneID="97W-ff-0Y7">
@@ -806,7 +920,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kUw-oP-2Wr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-517" y="780"/>
+            <point key="canvasLocation" x="1919" y="780"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xAq-gZ-PjE">
@@ -907,6 +1021,25 @@
             </objects>
             <point key="canvasLocation" x="1511" y="-1659"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vm6-AY-tAA">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KSc-CK-z0D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController storyboardIdentifier="profile" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="6XP-g6-S9i" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="s8I-ET-yvn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fWm-Ji-99n" kind="relationship" relationship="rootViewController" id="ZDc-CW-eos"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-390" y="1533"/>
+        </scene>
     </scenes>
     <resources>
         <image name="alarm" width="72" height="72"/>
@@ -914,6 +1047,7 @@
         <image name="check" width="128" height="128"/>
         <image name="left" width="72" height="72"/>
         <image name="ok" width="72" height="72"/>
+        <image name="point_down" width="72" height="72"/>
         <image name="point_up" width="72" height="72"/>
         <image name="right" width="72" height="72"/>
         <image name="rocket_large" width="72" height="72"/>
