@@ -10,5 +10,8 @@ target 'moves' do
     pod "DGElasticPullToRefresh"
     pod 'SCLAlertView'
     pod "TextFieldEffects"
-
+    pod 'Swinject', '~> 1.1.0'
+    pod 'RxAlamofire'
+    pod 'RxSwift'
+    
 end

@@ -87,13 +87,13 @@
         <!--Sign Up View Controller-->
         <scene sceneID="iHP-XJ-zLi">
             <objects>
-                <viewController id="bpj-Ed-VXt" customClass="SignUpViewController" customModule="moves" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bpj-Ed-VXt" customClass="SignUpViewController" customModule="moves" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dhi-30-3WH"/>
                         <viewControllerLayoutGuide type="bottom" id="6bg-J8-YqR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Z2q-5z-Ldr">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moves" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIz-nf-1o5">
@@ -102,7 +102,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MPM-1x-JfZ" customClass="KaedeTextField" customModule="moves" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MPM-1x-JfZ" customClass="KaedeTextField" customModule="TextFieldEffects">
                                 <rect key="frame" x="166" y="197" width="270" height="30"/>
                                 <fontDescription key="fontDescription" name="ProximaNovaSoft-Regular" family="ProximaNovaSoft-Regular" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -115,7 +115,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email or phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aox-ze-6i1" customClass="KaedeTextField" customModule="moves" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email or phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aox-ze-6i1" customClass="KaedeTextField" customModule="TextFieldEffects">
                                 <rect key="frame" x="166" y="159" width="270" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="270" id="Sa7-Rj-cHy"/>
@@ -140,8 +140,11 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ProximaNovaSoft-Regular" family="ProximaNovaSoft-Regular" pointSize="15"/>
                                 <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="signUp:" destination="bpj-Ed-VXt" eventType="touchUpInside" id="wpH-R7-xWi"/>
+                                </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="omG-9Z-kKA" customClass="KaedeTextField" customModule="moves" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="omG-9Z-kKA" customClass="KaedeTextField" customModule="TextFieldEffects">
                                 <rect key="frame" x="165" y="273" width="270" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="270" id="dDt-DP-snG"/>
@@ -157,7 +160,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wiM-KC-b1x" customClass="KaedeTextField" customModule="moves" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wiM-KC-b1x" customClass="KaedeTextField" customModule="TextFieldEffects">
                                 <rect key="frame" x="166" y="235" width="270" height="30"/>
                                 <fontDescription key="fontDescription" name="ProximaNovaSoft-Regular" family="ProximaNovaSoft-Regular" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -171,7 +174,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xMf-XI-GDL">
-                                <rect key="frame" x="213" y="550" width="176" height="30"/>
+                                <rect key="frame" x="213" y="486" width="176" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="aQg-SW-nzt"/>
                                     <constraint firstAttribute="width" constant="176" id="vI8-CY-ngK"/>
@@ -181,6 +184,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="signIn:" destination="bpj-Ed-VXt" eventType="touchUpInside" id="Isc-Tb-1hU"/>
                                     <segue destination="MRS-9m-TkI" kind="show" id="hYt-Ex-0te">
                                         <nil key="action"/>
                                     </segue>
@@ -209,7 +213,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="IJh-8T-g36"/>
                     <connections>
-                        <outlet property="signUpButton" destination="RLX-WH-oSw" id="5cH-kb-fWI"/>
+                        <outlet property="emailOrPhoneTextField" destination="Aox-ze-6i1" id="D0c-z1-YxG"/>
+                        <outlet property="nameTextField" destination="wiM-KC-b1x" id="6Qz-M6-ewD"/>
+                        <outlet property="passwordTextField" destination="omG-9Z-kKA" id="fG7-wv-SdE"/>
+                        <outlet property="usernameTextField" destination="MPM-1x-JfZ" id="4CU-Uc-Wpf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IXC-z7-JKJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -219,22 +226,22 @@
         <!--Sign In View Controller-->
         <scene sceneID="4Le-h1-p5x">
             <objects>
-                <viewController id="MRS-9m-TkI" customClass="SignInViewController" customModule="moves" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="MRS-9m-TkI" customClass="SignInViewController" customModule="moves" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EE1-4Y-nxq"/>
                         <viewControllerLayoutGuide type="bottom" id="ZxP-Dn-2fB"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9iZ-OL-nmN">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moves" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lo5-TC-4sJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Moves" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lo5-TC-4sJ">
                                 <rect key="frame" x="229" y="69" width="145" height="56"/>
                                 <fontDescription key="fontDescription" name="ProximaNovaSoft-Regular" family="ProximaNovaSoft-Regular" pointSize="50"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="27t-ze-9Wp">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="27t-ze-9Wp">
                                 <rect key="frame" x="230" y="259" width="141" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -244,7 +251,7 @@
                                 <fontDescription key="fontDescription" name="ProximaNovaSoft-Regular" family="ProximaNovaSoft-Regular" pointSize="15"/>
                                 <state key="normal" title="Sign In"/>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username or email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7TH-0i-rOt" customClass="KaedeTextField" customModule="moves" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username or email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7TH-0i-rOt" customClass="KaedeTextField" customModule="TextFieldEffects">
                                 <rect key="frame" x="166" y="165" width="270" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="270" id="wPx-eq-2C4"/>
@@ -260,7 +267,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6r-8B-jdL">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6r-8B-jdL">
                                 <rect key="frame" x="242" y="297" width="118" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="LHu-Kl-z3g"/>
@@ -270,7 +277,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XNV-ZF-dzW" customClass="KaedeTextField" customModule="moves" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XNV-ZF-dzW" customClass="KaedeTextField" customModule="TextFieldEffects">
                                 <rect key="frame" x="166" y="203" width="270" height="30"/>
                                 <fontDescription key="fontDescription" name="ProximaNovaSoft-Regular" family="ProximaNovaSoft-Regular" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -315,7 +322,8 @@
             <objects>
                 <navigationController storyboardIdentifier="sign_up" automaticallyAdjustsScrollViewInsets="NO" id="jyn-Cd-dz7" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fjg-QT-eRj">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="fjg-QT-eRj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

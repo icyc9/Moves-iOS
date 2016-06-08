@@ -1,21 +1,34 @@
 PODS:
   - Alamofire (3.4.0)
   - DGElasticPullToRefresh (1.0.3)
+  - RxAlamofire (2.5):
+    - RxAlamofire/Core (= 2.5)
+  - RxAlamofire/Core (2.5):
+    - Alamofire (~> 3.4)
+    - RxSwift (~> 2.5)
+  - RxSwift (2.5.0)
   - SCLAlertView (0.5.8)
+  - Swinject (1.1.2)
   - TextFieldEffects (1.2.0)
 
 DEPENDENCIES:
   - Alamofire (~> 3.4)
   - DGElasticPullToRefresh
+  - RxAlamofire
+  - RxSwift
   - SCLAlertView
+  - Swinject (~> 1.1.0)
   - TextFieldEffects
 
 SPEC CHECKSUMS:
   Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
   DGElasticPullToRefresh: 040f39ae69840b3261d163fe6735c5901bf851e9
+  RxAlamofire: b4572a077b6b2410c8732a27266299df4c00736e
+  RxSwift: 402b41a50e922a0368fc14cb3bc9f4427920e8ae
   SCLAlertView: 653e84d1f9fd95333bc54671fbadb7d0c47fce49
+  Swinject: 3debc5ac926dcd1be00947265a9db7a5f31b272a
   TextFieldEffects: bc4fd3bd557321bd61a0762f3f50965477a36f62
 
-PODFILE CHECKSUM: 9904d0fce87d1d2581f7254f955a4737febbf295
+PODFILE CHECKSUM: ecbb031e614efebaaba82405b18ea81720662320
 
 COCOAPODS: 1.0.0
