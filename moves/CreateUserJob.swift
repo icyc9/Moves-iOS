@@ -30,7 +30,6 @@ class CreateUserJob: MovesJob {
                 if let dict = json as? [String: AnyObject] {
                     let accessToken = dict["access_token"]!
                     let user_id = dict["_id"]
-                    print("Access token \(accessToken)")
                     
                     // Save off authentication token
                     self.authenticationService.setAuthToken(accessToken as! String)
@@ -47,6 +46,8 @@ class CreateUserJob: MovesJob {
                         
                         print("User wrote to database")
                     }
+                    
+                    print("Auth token: \(self.authenticationService.getAuthToken()))")
                 }
             }, onError: {(e) -> Void in
                 print(e)

@@ -14,4 +14,5 @@ target 'moves' do
     pod 'RxAlamofire'
     pod 'RxSwift'
     pod 'RealmSwift'
+    pod 'Locksmith'
 end
