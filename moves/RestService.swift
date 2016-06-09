@@ -11,7 +11,6 @@ import RxSwift
 
 class RestService {
     private var authenticationService: AuthenticationService
-    private let disposeBag = DisposeBag()
     
     init(authenticationService: AuthenticationService) {
         self.authenticationService = authenticationService
@@ -141,7 +140,7 @@ class RestService {
         return "Basic \(base64Credentials)"
     }
     
-    func createUser(data: CreateUserJobData) {
+    func createUser(data: CreateUserJobData) -> Observable<(NSHTTPURLResponse, AnyObject)> {
         let url = "http://moves-api.us-east-1.elasticbeanstalk.com/user"
         let headers = ["Content-Type": "application/json"]
         
@@ -150,15 +149,10 @@ class RestService {
             "username": data.username,
             "password": data.password,
             "email": data.emailOrPhone,
-            "phone_number": "7033623714" // hardcoded
+            "phone_number": "7033623714" // hardcoded until api change
         ]
         
-        requestJSON(.POST, url, parameters: parameters, headers:headers,
-            encoding: .JSON)
-            .observeOn(MainScheduler.instance)
-            .subscribeOn(MainScheduler.instance)
-            .subscribe({response in
-                print(response)
-            }).addDisposableTo(disposeBag)
+        return requestJSON(.POST, url, parameters: parameters, headers:headers,
+                           encoding: .JSON)
     }
 }

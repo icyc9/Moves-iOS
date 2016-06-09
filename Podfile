@@ -13,5 +13,5 @@ target 'moves' do
     pod 'Swinject', '~> 1.1.0'
     pod 'RxAlamofire'
     pod 'RxSwift'
-    
+    pod 'RealmSwift'
 end

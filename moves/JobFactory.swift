@@ -10,11 +10,11 @@ import Foundation
 
 class JobFactory {
     private var restService: RestService
-    private var userRepository: UserRepository
+    private var authenticationService: AuthenticationService
     
-    init(restService: RestService, userRepository: UserRepository) {
+    init(restService: RestService, authenticationService: AuthenticationService) {
         self.restService = restService
-        self.userRepository = userRepository
+        self.authenticationService = authenticationService
     }
     
     func enqueueJob(job: MovesJob) {
@@ -24,6 +24,6 @@ class JobFactory {
     func createUserJob(username: String, password: String, name: String, emailOrPhone: String) -> CreateUserJob {
         let data = CreateUserJobData(username: username, password: password, name: name, emailOrPhone: emailOrPhone)
         
-        return CreateUserJob(restService: restService, data: data, userRepository: userRepository)
+        return CreateUserJob(restService: restService, authenticationService: authenticationService, data: data)
     }
 }

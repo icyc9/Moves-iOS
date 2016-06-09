@@ -1,6 +1,11 @@
 PODS:
   - Alamofire (3.4.0)
   - DGElasticPullToRefresh (1.0.3)
+  - Realm (1.0.0):
+    - Realm/Headers (= 1.0.0)
+  - Realm/Headers (1.0.0)
+  - RealmSwift (1.0.0):
+    - Realm (= 1.0.0)
   - RxAlamofire (2.5):
     - RxAlamofire/Core (= 2.5)
   - RxAlamofire/Core (2.5):
@@ -14,6 +19,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 3.4)
   - DGElasticPullToRefresh
+  - RealmSwift
   - RxAlamofire
   - RxSwift
   - SCLAlertView
@@ -23,12 +29,14 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
   DGElasticPullToRefresh: 040f39ae69840b3261d163fe6735c5901bf851e9
+  Realm: e15cd8e7c11d3e576f628ba0b7cb855269b4991c
+  RealmSwift: 3229306d020d96f83b335f87a0dcbf2cef0e6a2b
   RxAlamofire: b4572a077b6b2410c8732a27266299df4c00736e
   RxSwift: 402b41a50e922a0368fc14cb3bc9f4427920e8ae
   SCLAlertView: 653e84d1f9fd95333bc54671fbadb7d0c47fce49
   Swinject: 3debc5ac926dcd1be00947265a9db7a5f31b272a
   TextFieldEffects: bc4fd3bd557321bd61a0762f3f50965477a36f62
 
-PODFILE CHECKSUM: ecbb031e614efebaaba82405b18ea81720662320
+PODFILE CHECKSUM: c7697369ac1e3cb84c913576a8cedf6cd19d0ecd
 
 COCOAPODS: 1.0.0
