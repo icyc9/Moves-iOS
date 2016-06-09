@@ -13,6 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
+    var authenticationService: AuthenticationService = AuthenticationService()
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -28,6 +29,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().tintColor = UIColor.blackColor()
         UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().setBackgroundImage(UIImage(), forBarMetrics: .Default)
+        
+        if(authenticationService.getAuthToken() != "") {
+            // User is signed in
+            let mainViewController = UIStoryboard(name: "Main", bundle:nil).instantiateViewControllerWithIdentifier("my_moves")
+            self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+            self.window?.rootViewController = mainViewController
+            self.window?.makeKeyAndVisible()
+        }
+        else {
+            // User is not signed in
+            let signInViewController = UIStoryboard(name: "SignInOrUp", bundle:nil).instantiateViewControllerWithIdentifier("sign_up")
+            self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+            self.window?.rootViewController = signInViewController
+            self.window?.makeKeyAndVisible()
+        }
         
         return true
     }
