@@ -18,7 +18,7 @@ class RestService {
     
     func markAsNotDownToHang(hangoutId: String) {
         let url = "http://moves-api.us-east-1.elasticbeanstalk.com/hangout/\(hangoutId)/denied"
-        let headers = ["JWT-Auth": "Bearer \(authenticationService.getAuthToken())"]
+        let headers = ["Content-Type": "application/json", "JWT-Auth": "Bearer \(authenticationService.getAuthToken())"]
         
         Alamofire.request(.PATCH, url, headers: headers, encoding: .JSON)
             .validate()
@@ -29,7 +29,7 @@ class RestService {
     
     func markAsDownToHang(hangoutId: String) {
         let url = "http://moves-api.us-east-1.elasticbeanstalk.com/hangout/\(hangoutId)/available"
-        let headers = ["JWT-Auth": "Bearer \(authenticationService.getAuthToken())"]
+        let headers = ["Content-Type": "application/json", "JWT-Auth": "Bearer \(authenticationService.getAuthToken())"]
         
         Alamofire.request(.PATCH, url, headers: headers, encoding: .JSON)
             .validate()
@@ -40,7 +40,7 @@ class RestService {
     
     func sendMove(hangoutId: String, friendIds: [String]) {
         let url = "http://moves-api.us-east-1.elasticbeanstalk.com/hangout/\(hangoutId)/send"
-        let headers = ["JWT-Auth": "Bearer \(authenticationService.getAuthToken())"]
+        let headers = ["Content-Type": "application/json", "JWT-Auth": "Bearer \(authenticationService.getAuthToken())"]
         let body = [
             "users": friendIds
         ];
@@ -53,7 +53,7 @@ class RestService {
     
     func createMove(message: String, scope: String) {
         let url = "http://moves-api.us-east-1.elasticbeanstalk.com/authenticate"
-        let headers = ["JWT-Auth": "Bearer \(authenticationService.getAuthToken())"]
+        let headers = ["Content-Type": "application/json", "JWT-Auth": "Bearer \(authenticationService.getAuthToken())"]
         let body = [
             "message": message,
             "scope": scope
@@ -67,7 +67,7 @@ class RestService {
     
     func addFriend(username: String) {
         let url = "http://moves-api.us-east-1.elasticbeanstalk.com/user/friends"
-        let headers = ["JWT-Auth": "Bearer \(authenticationService.getAuthToken())"]
+        let headers = ["Content-Type": "application/json", "JWT-Auth": "Bearer \(authenticationService.getAuthToken())"]
         let body = [
             "friend_id": username
         ];
@@ -81,7 +81,7 @@ class RestService {
     
     func getUserFriends() {
         let url = "http://moves-api.us-east-1.elasticbeanstalk.com/user/friends"
-        let headers = ["JWT-Auth": "Bearer \(authenticationService.getAuthToken())"]
+        let headers = ["Content-Type": "application/json", "JWT-Auth": "Bearer \(authenticationService.getAuthToken())"]
         
         Alamofire.request(.GET, url, headers: headers, encoding: .JSON)
             .validate()
@@ -91,15 +91,15 @@ class RestService {
     }
     
     func getUserByUsername(username: String) -> Observable<(NSHTTPURLResponse, AnyObject)> {
-        let url = "http://moves-api.us-east-1.elasticbeanstalk.com/user?username=x"
-        let headers = ["JWT-Auth": "Bearer \(authenticationService.getAuthToken())"]
+        let url = "http://moves-api.us-east-1.elasticbeanstalk.com/user?username=\(username)"
+        let headers = ["Content-Type": "application/json", "JWT-Auth": "Bearer \(authenticationService.getAuthToken())"]
         
         return requestJSON(.GET, url, headers: headers, encoding: .JSON)
     }
     
     func getFriendsInPhoneBook(phoneNumber: String) {
         let url = "http://moves-api.us-east-1.elasticbeanstalk.com/user?phone_number=\(phoneNumber)"
-        let headers = ["JWT-Auth": "Bearer \(authenticationService.getAuthToken())"]
+        let headers = ["Content-Type": "application/json", "JWT-Auth": "Bearer \(authenticationService.getAuthToken())"]
         
         Alamofire.request(.GET, url, headers: headers, encoding: .JSON)
             .validate()
@@ -110,7 +110,7 @@ class RestService {
     
     func getUserMoves(scope: String) {
         let url = "http://moves-api.us-east-1.elasticbeanstalk.com/hangout?scope=\(scope)"
-        let headers = ["JWT-Auth": "Bearer \(authenticationService.getAuthToken())"]
+        let headers = ["Content-Type": "application/json", "JWT-Auth": "Bearer \(authenticationService.getAuthToken())"]
         
         Alamofire.request(.GET, url, headers: headers, encoding: .JSON)
             .validate()
@@ -121,7 +121,7 @@ class RestService {
     
     func authenticate(username: String, password: String) {
         let url = "http://moves-api.us-east-1.elasticbeanstalk.com/authenticate"
-        let headers = ["JWT-Auth": basicAuthHeader(username, password: password)]
+        let headers = ["Content-Type": "application/json", "JWT-Auth": basicAuthHeader(username, password: password)]
         
         Alamofire.request(.POST, url, headers: headers, encoding: .JSON)
             .responseJSON { response in

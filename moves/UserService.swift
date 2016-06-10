@@ -21,14 +21,25 @@ class UserService {
     
     func getUserByUsername(username: String) -> Observable<UserModel> {
         return restService.getUserByUsername(username)
-            .map({(response, a) -> UserModel in
-                if let dict = a as? [String: AnyObject] {
-                    print(dict)
+            .observeOn(MainScheduler.instance)
+            .map({(response, json) -> UserModel in
+                if let data = json as? Array<[String: AnyObject]> {
+                    let model = UserModel()
+                    model.id = data[0]["_id"] as! String
+                    model.name = data[0]["name"] as! String
+                    model.username = data[0]["username"] as! String
+                    
+                    return model
                 }
                 
+                // Something went wrong, just grab user from cache
+                if let user = self.getSignedInUserFromCache() {
+                    return user
+                }
+                
+                // At this point just return a blank model
                 return UserModel()
-        })
-        .observeOn(MainScheduler.instance)
+            })
     }
     
     func getSignedInUserFromCache() -> UserModel? {

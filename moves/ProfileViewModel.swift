@@ -13,15 +13,17 @@ class ProfileViewModel {
     private var userService: UserService
     var username = BehaviorSubject(value: "")
     var name = BehaviorSubject(value: "")
+    var disposeBag = DisposeBag()
     
     init(userService: UserService) {
         self.userService = userService
     }
     
     func getUserDetails() {
+        var username = ""
+        
         if let userModel = userService.getSignedInUserFromCache() {
-            print(userModel.name)
-            print(userModel.username)
+            username = userModel.username
             dispatch_async(dispatch_get_main_queue()) {
                 self.name.onNext(userModel.name)
             }
@@ -29,5 +31,12 @@ class ProfileViewModel {
                 self.username.onNext(userModel.username)
             }
         }
+        
+        // Invalidate cache
+        userService.getUserByUsername(username)
+            .subscribe(onNext: {user -> Void in
+                self.name.onNext(user.name)
+                self.username.onNext(user.username)
+            }).addDisposableTo(disposeBag)
     }
 }
