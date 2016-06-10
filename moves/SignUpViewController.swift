@@ -16,7 +16,8 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var passwordTextField: KaedeTextField!
     @IBOutlet weak var emailOrPhoneTextField: KaedeTextField!
     
-    private var viewModel: SignUpViewModel = SignUpViewModel(jobFactory: JobFactory(restService: RestService(authenticationService: AuthenticationService()), authenticationService: AuthenticationService()))
+    private var viewModel: SignUpViewModel = SignUpViewModel(userService: UserService(restService: RestService(authenticationService: AuthenticationService()),
+        authenticationService: AuthenticationService()))
     
     override func viewDidLoad() {
         super.viewDidLoad()

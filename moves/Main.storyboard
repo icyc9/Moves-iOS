@@ -450,7 +450,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Daniel Christopher" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gMi-9E-Hne" customClass="KaedeTextField" customModule="moves" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Daniel Christopher" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gMi-9E-Hne" customClass="KaedeTextField" customModule="TextFieldEffects">
                                 <rect key="frame" x="165" y="165" width="270" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="270" id="aZC-zV-hfJ"/>
@@ -514,12 +514,12 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQz-S1-cUk">
-                                <rect key="frame" x="195" y="290" width="211" height="30"/>
+                                <rect key="frame" x="207" y="289" width="188" height="31"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Un5-uB-aQo"/>
+                                    <constraint firstAttribute="height" constant="31" id="Un5-uB-aQo"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ProximaNovaSoft-Regular" family="ProximaNovaSoft-Regular" pointSize="17"/>
-                                <state key="normal" title="Tap To View Your Friends (0)">
+                                <state key="normal" title="Tap To View Your Friends">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -527,7 +527,7 @@
                                     <segue destination="N6g-wM-YMu" kind="show" id="YG1-DR-o9r"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cvc-Ed-9WI" customClass="KaedeTextField" customModule="moves" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cvc-Ed-9WI" customClass="KaedeTextField" customModule="TextFieldEffects">
                                 <rect key="frame" x="212" y="328" width="176" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="176" id="NpU-pD-lHg"/>
@@ -551,11 +551,11 @@
                             <constraint firstItem="SFI-vn-U5k" firstAttribute="centerX" secondItem="Fc1-54-7ZL" secondAttribute="centerX" id="7nB-z7-a4N"/>
                             <constraint firstItem="afc-Li-NYc" firstAttribute="top" secondItem="gMi-9E-Hne" secondAttribute="bottom" constant="8" symbolic="YES" id="C9p-0l-EzG"/>
                             <constraint firstAttribute="bottom" secondItem="OTN-pf-jvH" secondAttribute="bottom" constant="20" symbolic="YES" id="CUH-ws-DTX"/>
-                            <constraint firstItem="jQz-S1-cUk" firstAttribute="centerX" secondItem="cvc-Ed-9WI" secondAttribute="centerX" id="EV4-W0-jl8"/>
+                            <constraint firstItem="jQz-S1-cUk" firstAttribute="centerX" secondItem="cvc-Ed-9WI" secondAttribute="centerX" constant="1" id="EV4-W0-jl8"/>
                             <constraint firstItem="Fc1-54-7ZL" firstAttribute="centerX" secondItem="OTN-pf-jvH" secondAttribute="centerX" id="Ez4-oJ-U7b"/>
                             <constraint firstItem="gMi-9E-Hne" firstAttribute="top" secondItem="wwZ-6v-f1c" secondAttribute="bottom" constant="18" id="UVV-Cf-skk"/>
                             <constraint firstItem="afc-Li-NYc" firstAttribute="centerX" secondItem="jQz-S1-cUk" secondAttribute="centerX" id="YhF-0E-tJL"/>
-                            <constraint firstItem="jQz-S1-cUk" firstAttribute="top" secondItem="afc-Li-NYc" secondAttribute="bottom" constant="57" id="aeF-M2-h54"/>
+                            <constraint firstItem="jQz-S1-cUk" firstAttribute="top" secondItem="afc-Li-NYc" secondAttribute="bottom" constant="56" id="aeF-M2-h54"/>
                             <constraint firstItem="wwZ-6v-f1c" firstAttribute="centerX" secondItem="gMi-9E-Hne" secondAttribute="centerX" id="bfl-n9-WOW"/>
                             <constraint firstItem="gMi-9E-Hne" firstAttribute="centerX" secondItem="afc-Li-NYc" secondAttribute="centerX" id="c9t-7j-qYg"/>
                             <constraint firstItem="cvc-Ed-9WI" firstAttribute="top" secondItem="jQz-S1-cUk" secondAttribute="bottom" constant="8" symbolic="YES" id="eP3-on-vjA"/>
@@ -568,7 +568,10 @@
                     <connections>
                         <outlet property="addFriendButton" destination="SFI-vn-U5k" id="92f-7x-WnZ"/>
                         <outlet property="friendUsernameTextField" destination="cvc-Ed-9WI" id="ddt-LX-Y4W"/>
+                        <outlet property="friendsNumberLabel" destination="jQz-S1-cUk" id="xxy-BT-rlK"/>
+                        <outlet property="nameTextView" destination="gMi-9E-Hne" id="71Z-bH-yde"/>
                         <outlet property="tap" destination="jQz-S1-cUk" id="Vwz-Og-11K"/>
+                        <outlet property="usernameTextView" destination="wwZ-6v-f1c" id="WRZ-0K-99h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CB3-kE-wWi" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -12,6 +12,8 @@ PODS:
   - RxAlamofire/Core (2.5):
     - Alamofire (~> 3.4)
     - RxSwift (~> 2.5)
+  - RxCocoa (2.5.0):
+    - RxSwift (~> 2.5)
   - RxSwift (2.5.0)
   - SCLAlertView (0.5.8)
   - Swinject (1.1.2)
@@ -23,6 +25,7 @@ DEPENDENCIES:
   - Locksmith
   - RealmSwift
   - RxAlamofire
+  - RxCocoa
   - RxSwift
   - SCLAlertView
   - Swinject (~> 1.1.0)
@@ -35,11 +38,12 @@ SPEC CHECKSUMS:
   Realm: e15cd8e7c11d3e576f628ba0b7cb855269b4991c
   RealmSwift: 3229306d020d96f83b335f87a0dcbf2cef0e6a2b
   RxAlamofire: b4572a077b6b2410c8732a27266299df4c00736e
+  RxCocoa: e1b1562e57a554d0fb2aabf9d71b637f177257c7
   RxSwift: 402b41a50e922a0368fc14cb3bc9f4427920e8ae
   SCLAlertView: 653e84d1f9fd95333bc54671fbadb7d0c47fce49
   Swinject: 3debc5ac926dcd1be00947265a9db7a5f31b272a
   TextFieldEffects: bc4fd3bd557321bd61a0762f3f50965477a36f62
 
-PODFILE CHECKSUM: f9a14b4d79264f6e9325885fccd61cad9045e192
+PODFILE CHECKSUM: 1a3736faa9df86bdebc3a48ccc4fb732078c5194
 
 COCOAPODS: 1.0.0

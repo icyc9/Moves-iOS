@@ -1,56 +1,68 @@
 //
-//  CreateUserJob.swift
+//  UserService.swift
 //  moves
 //
-//  Created by Daniel Christopher on 6/8/16.
+//  Created by Daniel Christopher on 6/9/16.
 //  Copyright © 2016 Daniel Christopher. All rights reserved.
 //
 
-import RxAlamofire
 import RxSwift
 import RealmSwift
 
-class CreateUserJob: MovesJob {
+class UserService {
     private var restService: RestService
     private var authenticationService: AuthenticationService
-    private var data: CreateUserJobData
     private var disposeBag: DisposeBag = DisposeBag()
     
-    init(restService: RestService, authenticationService: AuthenticationService, data: CreateUserJobData) {
+    init(restService: RestService, authenticationService: AuthenticationService) {
         self.restService = restService
         self.authenticationService = authenticationService
-        self.data = data
     }
     
-    func run() {
+    func getUserByUsername(username: String) -> Observable<UserModel> {
+        return restService.getUserByUsername(username)
+            .map({(response, a) -> UserModel in
+                if let dict = a as? [String: AnyObject] {
+                    print(dict)
+                }
+                
+                return UserModel()
+        })
+        .observeOn(MainScheduler.instance)
+    }
+    
+    func getSignedInUserFromCache() -> UserModel? {
+        let realm = try! Realm()
+        return realm.objects(UserModel.self).filter("id = '\(authenticationService.getUserId())'").first
+    }
+    
+    func createUser(data: CreateUserJobData) {
         restService.createUser(data)
             .observeOn(MainScheduler.instance)
-            .subscribeOn(MainScheduler.instance)
             .subscribe(onNext: {(r, json) -> Void in
                 if let dict = json as? [String: AnyObject] {
                     let accessToken = dict["access_token"]!
                     let user_id = dict["_id"]
                     
                     // Save off authentication token
-                    self.authenticationService.setAuthToken(accessToken as! String)
+                    self.authenticationService.authenticate(accessToken as! String, userId: user_id as! String)
                     
                     let realm = try! Realm()
                     
                     // Write user to the database
                     try! realm.write {
                         let model: UserModel = UserModel()
-                        model.name = self.data.name
-                        model.username = self.data.username
+                        model.name = data.name
+                        model.username = data.username
                         model.id = user_id as! String
                         realm.add(model)
-                        
                         print("User wrote to database")
                     }
                     
                     print("Auth token: \(self.authenticationService.getAuthToken()))")
                 }
-            }, onError: {(e) -> Void in
-                print(e)
+                }, onError: {(e) -> Void in
+                    print(e)
             }).addDisposableTo(disposeBag)
     }
 }

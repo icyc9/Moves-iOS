@@ -9,7 +9,7 @@ import RealmSwift
 import Realm
 
 class UserModel: Object {
-    dynamic var id = NSUUID().UUIDString
+    dynamic var id = ""
     dynamic var name = ""
     dynamic var username = ""
     

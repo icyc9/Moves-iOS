@@ -90,15 +90,11 @@ class RestService {
         }
     }
     
-    func getUserByUsername(username: String) {
+    func getUserByUsername(username: String) -> Observable<(NSHTTPURLResponse, AnyObject)> {
         let url = "http://moves-api.us-east-1.elasticbeanstalk.com/user?username=x"
         let headers = ["JWT-Auth": "Bearer \(authenticationService.getAuthToken())"]
         
-        Alamofire.request(.GET, url, headers: headers, encoding: .JSON)
-            .validate()
-            .responseJSON { response in
-                print("Response JSON: \(response)")
-        }
+        return requestJSON(.GET, url, headers: headers, encoding: .JSON)
     }
     
     func getFriendsInPhoneBook(phoneNumber: String) {

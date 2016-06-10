@@ -10,15 +10,19 @@ import Locksmith
 
 class AuthenticationService {
     
-    func setAuthToken(authToken: String) {
+    func authenticate(authToken: String, userId: String) {
         do {
-            try Locksmith.saveData(["authToken": authToken], forUserAccount: "Moves")
+            try Locksmith.updateData(["authToken": authToken, "userId": userId], forUserAccount: "Moves")
         } catch {
             print("Unable to set auth token")
         }
     }
     
+    func getUserId() -> String {
+        return Locksmith.loadDataForUserAccount("Moves")!["userId"] as! String
+    }
+    
     func getAuthToken() -> String {
-        return String(Locksmith.loadDataForUserAccount("Moves")!["authToken"])
+        return Locksmith.loadDataForUserAccount("Moves")!["authToken"] as! String
     }
 }

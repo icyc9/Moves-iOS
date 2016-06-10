@@ -9,14 +9,13 @@
 import Foundation
 
 class SignUpViewModel {
-    private var jobFactory: JobFactory
+    private var userService: UserService
     
-    init(jobFactory: JobFactory) {
-        self.jobFactory = jobFactory
+    init(userService: UserService) {
+        self.userService = userService
     }
     
     func signUserUp(username: String, password: String, emailOrPhone: String, name: String) {
-        let job = jobFactory.createUserJob(username, password: password, name: name, emailOrPhone: emailOrPhone)
-        jobFactory.enqueueJob(job)
+        userService.createUser(CreateUserJobData(username: username, password: password, name: name, emailOrPhone: emailOrPhone))
     }
 }
