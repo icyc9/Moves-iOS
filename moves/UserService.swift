@@ -19,6 +19,16 @@ class UserService {
         self.authenticationService = authenticationService
     }
     
+    func addFriend(username: String) -> Observable<Void> {
+        return restService.addFriend(username)
+            .observeOn(MainScheduler.instance)
+            .map({(response, json) -> Void in
+                print(response)
+                print(json)
+                return Void()
+            })
+    }
+    
     func getUserByUsername(username: String) -> Observable<UserModel> {
         return restService.getUserByUsername(username)
             .observeOn(MainScheduler.instance)
@@ -47,33 +57,40 @@ class UserService {
         return realm.objects(UserModel.self).filter("id = '\(authenticationService.getUserId())'").first
     }
     
-    func createUser(data: CreateUserJobData) {
-        restService.createUser(data)
+    func createUser(data: CreateUserJobData) -> Observable<UserModel?> {
+        return restService.createUser(data)
             .observeOn(MainScheduler.instance)
-            .subscribe(onNext: {(r, json) -> Void in
+            .map({(r, json) -> UserModel? in
+                guard r.statusCode == 201 else {
+                    return nil
+                }
+                
                 if let dict = json as? [String: AnyObject] {
-                    let accessToken = dict["access_token"]!
+                    let accessToken = dict["access_token"]
                     let user_id = dict["_id"]
                     
                     // Save off authentication token
                     self.authenticationService.authenticate(accessToken as! String, userId: user_id as! String)
                     
                     let realm = try! Realm()
+                    var model: UserModel? = nil
                     
                     // Write user to the database
                     try! realm.write {
-                        let model: UserModel = UserModel()
-                        model.name = data.name
-                        model.username = data.username
-                        model.id = user_id as! String
-                        realm.add(model)
+                        model = UserModel()
+                        model!.name = data.name
+                        model!.username = data.username
+                        model!.id = user_id as! String
+                        realm.add(model!)
                         print("User wrote to database")
                     }
                     
                     print("Auth token: \(self.authenticationService.getAuthToken()))")
+                    
+                    return model
                 }
-                }, onError: {(e) -> Void in
-                    print(e)
-            }).addDisposableTo(disposeBag)
+                
+                return nil
+            })
     }
 }

@@ -19,6 +19,13 @@ class ProfileViewModel {
         self.userService = userService
     }
     
+    func addFriend(username: String) {
+        userService.addFriend(username)
+            .subscribe(onNext: {
+                print("friend added")
+            })
+    }
+    
     func getUserDetails() {
         var username = ""
         

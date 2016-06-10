@@ -496,6 +496,9 @@
                                 <state key="normal" title="Add Friend">
                                     <color key="titleColor" red="0.12941177189350128" green="0.58823531866073608" blue="0.9529411792755127" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="addFriend:" destination="fWm-Ji-99n" eventType="touchUpInside" id="TWe-mO-Oaa"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Moves" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OTN-pf-jvH">
                                 <rect key="frame" x="257" y="559" width="87" height="21"/>

@@ -21,6 +21,10 @@ class MainNavigationViewController: BasePageViewController {
                       self.createPage("make_moves_profile_navigation", storyboardName: "Main"),
                       self.createPage("moves", storyboardName: "Main")]
         
-        self.showLastPage()
+        // Show second page
+        setViewControllers([pages[1]],
+                           direction: .Forward,
+                           animated: true,
+                           completion: nil)
     }
 }

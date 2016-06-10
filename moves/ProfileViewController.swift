@@ -37,6 +37,10 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
         profileViewModel.getUserDetails()
     }
     
+    @IBAction func addFriend(sender: UIButton) {
+        profileViewModel.addFriend(friendUsernameTextField.text!)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

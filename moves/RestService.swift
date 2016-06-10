@@ -65,18 +65,14 @@ class RestService {
         }
     }
     
-    func addFriend(username: String) {
+    func addFriend(username: String) -> Observable<(NSHTTPURLResponse, AnyObject)> {
         let url = "http://moves-api.us-east-1.elasticbeanstalk.com/user/friends"
         let headers = ["Content-Type": "application/json", "JWT-Auth": "Bearer \(authenticationService.getAuthToken())"]
         let body = [
             "friend_id": username
         ];
         
-        Alamofire.request(.PATCH, url, headers: headers, parameters: body, encoding: .JSON)
-            .validate()
-            .responseJSON { response in
-                print("Response JSON: \(response)")
-        }
+        return requestJSON(.PATCH, url, headers: headers, parameters: body, encoding: .JSON)
     }
     
     func getUserFriends() {

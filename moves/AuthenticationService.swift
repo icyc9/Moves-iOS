@@ -19,10 +19,22 @@ class AuthenticationService {
     }
     
     func getUserId() -> String {
-        return Locksmith.loadDataForUserAccount("Moves")!["userId"] as! String
+        if let x = Locksmith.loadDataForUserAccount("Moves") {
+            if let y = x["userId"] {
+                return y as! String
+            }
+        }
+        
+        return ""
     }
     
     func getAuthToken() -> String {
-        return Locksmith.loadDataForUserAccount("Moves")!["authToken"] as! String
+        if let x = Locksmith.loadDataForUserAccount("Moves") {
+            if let y = x["authToken"] {
+                return y as! String
+            }
+        }
+        
+        return ""
     }
 }
