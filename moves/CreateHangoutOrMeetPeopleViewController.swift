@@ -15,6 +15,8 @@ class CreateHangoutOrMeetPeopleViewController: UIViewController {
     
     @IBOutlet weak var sendButton: UIButton!
     
+    @IBOutlet weak var message: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,5 +50,11 @@ class CreateHangoutOrMeetPeopleViewController: UIViewController {
     
     @IBAction func makeMoves(sender: UIButton) {
         
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let destinationVC = segue.destinationViewController as! SendMoveViewController
+        
+        destinationVC.moveMessage = message.text!
     }
 }

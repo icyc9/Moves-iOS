@@ -39,7 +39,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func updateName(sender: UIButton) {
         // Update model
-        profileViewModel.updateUsername(usernameTextView.text!)
+        profileViewModel.updateName(usernameTextView.text!)
     }
     
     @IBAction func viewFriendRequests(sender: UIButton) {

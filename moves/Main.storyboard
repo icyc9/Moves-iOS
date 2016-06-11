@@ -39,7 +39,6 @@
             <string>ProximaNovaSoft-Medium</string>
             <string>ProximaNovaSoft-Medium</string>
             <string>ProximaNovaSoft-Medium</string>
-            <string>ProximaNovaSoft-Medium</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -68,7 +67,7 @@
                                                         <constraint firstAttribute="width" constant="32" id="xLd-cE-j35"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X-Men tonight at 7:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRZ-yg-Cyz">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chill @ Atlas Walk" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRZ-yg-Cyz">
                                                     <rect key="frame" x="8" y="13" width="192" height="26"/>
                                                     <fontDescription key="fontDescription" name="ProximaNovaSoft-Medium" family="ProximaNovaSoft-Medium" pointSize="20"/>
                                                     <nil key="highlightedColor"/>
@@ -123,7 +122,7 @@
                                                         <constraint firstAttribute="width" constant="32" id="EyP-aQ-fXc"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X-Men tonight at 7:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Wt-Ha-cR7">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smoke Sess" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Wt-Ha-cR7">
                                                     <rect key="frame" x="8" y="13" width="193" height="29"/>
                                                     <fontDescription key="fontDescription" name="ProximaNovaSoft-Medium" family="ProximaNovaSoft-Medium" pointSize="20"/>
                                                     <nil key="highlightedColor"/>
@@ -335,6 +334,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="4go-Pf-dhk"/>
                     <connections>
+                        <outlet property="message" destination="nUL-FY-XFE" id="3ud-lD-eZX"/>
                         <outlet property="sendButton" destination="90T-f8-7RD" id="piI-Gh-CFz"/>
                     </connections>
                 </viewController>
@@ -657,19 +657,19 @@
                                                         <constraint firstAttribute="width" constant="32" id="JPz-wq-kbY"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X-Men tonight at 7:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ap-rQ-QKd">
-                                                    <rect key="frame" x="8" y="13" width="192" height="26"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="House Party" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ap-rQ-QKd">
+                                                    <rect key="frame" x="8" y="13" width="179" height="26"/>
                                                     <fontDescription key="fontDescription" name="ProximaNovaSoft-Medium" family="ProximaNovaSoft-Medium" pointSize="20"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daniel Christopher" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZ3-pm-kKq">
-                                                    <rect key="frame" x="8" y="38" width="189" height="17"/>
+                                                    <rect key="frame" x="8" y="38" width="176" height="17"/>
                                                     <fontDescription key="fontDescription" name="ProximaNovaSoft-Medium" family="ProximaNovaSoft-Medium" pointSize="15"/>
                                                     <color key="textColor" red="0.61176470589999998" green="0.6705882353" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="with 7 friends and 3 others" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDh-yW-3rw">
-                                                    <rect key="frame" x="8" y="55" width="189" height="17"/>
+                                                    <rect key="frame" x="8" y="55" width="176" height="17"/>
                                                     <fontDescription key="fontDescription" name="ProximaNovaSoft-Medium" family="ProximaNovaSoft-Medium" pointSize="15"/>
                                                     <color key="textColor" red="0.61176470589999998" green="0.6705882353" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -834,71 +834,50 @@
                                 <state key="normal" title="Send your move!">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="sendMove:" destination="cdT-0D-rqY" eventType="touchUpInside" id="Vk9-Az-p7f"/>
+                                </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jwZ-oZ-aCc">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="56" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jwZ-oZ-aCc">
                                 <rect key="frame" x="0.0" y="64" width="600" height="490"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="8"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="M45-sa-wNP">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="80"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendTableCell" rowHeight="56" id="M45-sa-wNP" customClass="FriendTableViewCell" customModule="moves" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="M45-sa-wNP" id="GVO-OD-TlA">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="55"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X-Men tonight at 7:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJG-V6-05u">
-                                                    <rect key="frame" x="8" y="10" width="192" height="26"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daniel Christopher" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJG-V6-05u">
+                                                    <rect key="frame" x="8" y="5" width="192" height="26"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="192" id="7ev-hz-eB8"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="ProximaNovaSoft-Medium" family="ProximaNovaSoft-Medium" pointSize="20"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="invited by Daniel Christopher" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKh-Py-N08">
-                                                    <rect key="frame" x="8" y="35" width="193" height="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="danielchristopher1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKh-Py-N08">
+                                                    <rect key="frame" x="8" y="30" width="121" height="17"/>
                                                     <fontDescription key="fontDescription" name="ProximaNovaSoft-Medium" family="ProximaNovaSoft-Medium" pointSize="15"/>
                                                     <color key="textColor" red="0.61176470589999998" green="0.6705882353" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="with 7 friends and 3 others" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKa-3K-taX">
-                                                    <rect key="frame" x="8" y="52" width="193" height="17"/>
-                                                    <fontDescription key="fontDescription" name="ProximaNovaSoft-Medium" family="ProximaNovaSoft-Medium" pointSize="15"/>
-                                                    <color key="textColor" red="0.61176470589999998" green="0.6705882353" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DGW-QM-c6k">
-                                                    <rect key="frame" x="556" y="22" width="36" height="36"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="jJG-V6-05u" firstAttribute="top" secondItem="GVO-OD-TlA" secondAttribute="topMargin" constant="2" id="0QL-xw-JXG"/>
-                                                <constraint firstItem="DGW-QM-c6k" firstAttribute="leading" secondItem="GVO-OD-TlA" secondAttribute="leading" constant="556" id="1A4-uA-OrQ"/>
-                                                <constraint firstItem="jJG-V6-05u" firstAttribute="leading" secondItem="YKh-Py-N08" secondAttribute="leading" id="2qZ-7Q-And"/>
-                                                <constraint firstItem="DGW-QM-c6k" firstAttribute="trailing" secondItem="GVO-OD-TlA" secondAttribute="trailingMargin" id="4JZ-gH-rzs"/>
-                                                <constraint firstItem="YKh-Py-N08" firstAttribute="leading" secondItem="mKa-3K-taX" secondAttribute="leading" id="51b-Gc-Suz"/>
-                                                <constraint firstItem="mKa-3K-taX" firstAttribute="top" secondItem="YKh-Py-N08" secondAttribute="bottom" id="63M-SZ-F2M"/>
-                                                <constraint firstItem="jJG-V6-05u" firstAttribute="leading" secondItem="GVO-OD-TlA" secondAttribute="leadingMargin" id="Jf5-tS-eGT"/>
-                                                <constraint firstItem="DGW-QM-c6k" firstAttribute="top" secondItem="GVO-OD-TlA" secondAttribute="topMargin" constant="14" id="KdE-aG-SHd"/>
-                                                <constraint firstItem="YKh-Py-N08" firstAttribute="top" secondItem="GVO-OD-TlA" secondAttribute="topMargin" constant="27" id="QC2-o0-jqA"/>
-                                                <constraint firstItem="DGW-QM-c6k" firstAttribute="centerY" secondItem="GVO-OD-TlA" secondAttribute="centerY" id="dFB-BO-bVh"/>
-                                                <constraint firstItem="mKa-3K-taX" firstAttribute="top" secondItem="jJG-V6-05u" secondAttribute="bottom" constant="16" id="rI5-qT-biH"/>
-                                                <constraint firstItem="YKh-Py-N08" firstAttribute="trailing" secondItem="mKa-3K-taX" secondAttribute="trailing" id="zEi-V4-CNz"/>
+                                                <constraint firstItem="jJG-V6-05u" firstAttribute="leading" secondItem="YKh-Py-N08" secondAttribute="leading" id="DoW-Es-30E"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="jJG-V6-05u" secondAttribute="bottom" constant="16" id="asK-Zi-5nT"/>
+                                                <constraint firstItem="YKh-Py-N08" firstAttribute="bottom" secondItem="GVO-OD-TlA" secondAttribute="bottomMargin" id="cjb-7o-dOd"/>
+                                                <constraint firstItem="jJG-V6-05u" firstAttribute="top" secondItem="GVO-OD-TlA" secondAttribute="topMargin" constant="-3" id="fFO-c0-P6k"/>
+                                                <constraint firstItem="jJG-V6-05u" firstAttribute="leading" secondItem="GVO-OD-TlA" secondAttribute="leadingMargin" id="zmn-Qz-Qgl"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="RRp-RH-sJ2">
-                                        <rect key="frame" x="0.0" y="108" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RRp-RH-sJ2" id="vmC-bU-xbi">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="vkG-bD-a6h">
-                                        <rect key="frame" x="0.0" y="152" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vkG-bD-a6h" id="ebb-vF-a58">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="jJG-V6-05u" id="yPD-3x-Wsp"/>
+                                            <outlet property="usernameLabel" destination="YKh-Py-N08" id="PsT-HJ-727"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
@@ -918,6 +897,9 @@
                             <constraint firstItem="jwZ-oZ-aCc" firstAttribute="leading" secondItem="BAX-24-dEH" secondAttribute="leading" id="nwp-Eb-zNm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="jwZ-oZ-aCc" id="wl4-55-UZc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R21-Yj-bNs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -19,8 +19,8 @@ class ProfileViewModel {
         self.userService = userService
     }
     
-    func updateUsername(username: String) {
-        userService.updateUsername(username)
+    func updateName(username: String) {
+        userService.updateName(username)
             .subscribe(onNext: { success in
                 if success {
                     print("Username updated")

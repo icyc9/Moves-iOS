@@ -32,9 +32,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if(authenticationService.getAuthToken() != "") {
             // User is signed in
-            let mainViewController = UIStoryboard(name: "Main", bundle:nil).instantiateViewControllerWithIdentifier("my_moves")
+            let signInViewController = UIStoryboard(name: "SignInOrUp", bundle:nil).instantiateViewControllerWithIdentifier("sign_up")
             self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-            self.window?.rootViewController = mainViewController
+            self.window?.rootViewController = signInViewController
             self.window?.makeKeyAndVisible()
         }
         else {

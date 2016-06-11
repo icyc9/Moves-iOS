@@ -16,13 +16,13 @@ class RestService {
         self.authenticationService = authenticationService
     }
     
-    func updateUsername(username: String) -> Observable<(NSHTTPURLResponse, AnyObject)> {
+    func updateName(name: String) -> Observable<(NSHTTPURLResponse, AnyObject)> {
         let url = "http://moves-api.us-east-1.elasticbeanstalk.com/user/"
         let headers = ["Content-Type": "application/json", "JWT-Auth": "Bearer \(authenticationService.getAuthToken())"]
         
         let body = [
             "_id": authenticationService.getUserId(),
-            "username": username
+            "name": name
         ];
         
         return requestJSON(.PATCH, url, headers: headers, parameters: body, encoding: .JSON)
@@ -84,15 +84,11 @@ class RestService {
         return requestJSON(.PATCH, url, headers: headers, parameters: body, encoding: .JSON)
     }
     
-    func getUserFriends() {
+    func getUserFriends() -> Observable<(NSHTTPURLResponse, AnyObject)> {
         let url = "http://moves-api.us-east-1.elasticbeanstalk.com/user/friends"
         let headers = ["Content-Type": "application/json", "JWT-Auth": "Bearer \(authenticationService.getAuthToken())"]
         
-        Alamofire.request(.GET, url, headers: headers, encoding: .JSON)
-            .validate()
-            .responseJSON { response in
-                print("Response JSON: \(response)")
-        }
+        return requestJSON(.GET, url, headers: headers, encoding: .JSON)
     }
     
     func getUserByUsername(username: String) -> Observable<(NSHTTPURLResponse, AnyObject)> {
