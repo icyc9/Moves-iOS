@@ -16,6 +16,18 @@ class RestService {
         self.authenticationService = authenticationService
     }
     
+    func updateUsername(username: String) -> Observable<(NSHTTPURLResponse, AnyObject)> {
+        let url = "http://moves-api.us-east-1.elasticbeanstalk.com/user/"
+        let headers = ["Content-Type": "application/json", "JWT-Auth": "Bearer \(authenticationService.getAuthToken())"]
+        
+        let body = [
+            "_id": authenticationService.getUserId(),
+            "username": username
+        ];
+        
+        return requestJSON(.PATCH, url, headers: headers, parameters: body, encoding: .JSON)
+    }
+    
     func markAsNotDownToHang(hangoutId: String) {
         let url = "http://moves-api.us-east-1.elasticbeanstalk.com/hangout/\(hangoutId)/denied"
         let headers = ["Content-Type": "application/json", "JWT-Auth": "Bearer \(authenticationService.getAuthToken())"]

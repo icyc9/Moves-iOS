@@ -19,11 +19,23 @@ class ProfileViewModel {
         self.userService = userService
     }
     
+    func updateUsername(username: String) {
+        userService.updateUsername(username)
+            .subscribe(onNext: { success in
+                if success {
+                    print("Username updated")
+                }
+                else {
+                    print("Username failed to update")
+                }
+            }).addDisposableTo(disposeBag)
+    }
+    
     func addFriend(username: String) {
         userService.addFriend(username)
             .subscribe(onNext: {
                 print("friend added")
-            })
+            }).addDisposableTo(disposeBag)
     }
     
     func getUserDetails() {

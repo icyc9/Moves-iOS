@@ -19,6 +19,18 @@ class UserService {
         self.authenticationService = authenticationService
     }
     
+    func updateUsername(username: String) -> Observable<DarwinBoolean> {
+        return restService.updateUsername(username)
+            .observeOn(MainScheduler.instance)
+            .map({(response, json) -> DarwinBoolean in
+                guard response.statusCode == 200 else {
+                    return false
+                }
+                
+                return true
+            })
+    }
+    
     func addFriend(username: String) -> Observable<Void> {
         return restService.addFriend(username)
             .observeOn(MainScheduler.instance)
