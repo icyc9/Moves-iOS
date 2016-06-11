@@ -45,4 +45,8 @@ class CreateHangoutOrMeetPeopleViewController: UIViewController {
             colorTextButton: 0xFFFFFF
         )
     }
+    
+    @IBAction func makeMoves(sender: UIButton) {
+        
+    }
 }

@@ -37,6 +37,10 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
         profileViewModel.getUserDetails()
     }
     
+    @IBAction func viewFriendRequests(sender: UIButton) {
+        
+    }
+    
     @IBAction func addFriend(sender: UIButton) {
         profileViewModel.addFriend(friendUsernameTextField.text!)
     }
@@ -48,27 +52,5 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return false
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        let verticalPageController = self.parentViewController?.parentViewController as! UIPageViewController
-        let horizontalPageController = self.parentViewController?.parentViewController?.parentViewController as! UIPageViewController
-        self.toggleScrollOnPageViewController(true, pageViewController: verticalPageController)
-        self.toggleScrollOnPageViewController(true, pageViewController: horizontalPageController)
-    }
-    
-    @IBAction func viewFriends(sender: UIButton) {
-        let verticalPageController = self.parentViewController?.parentViewController as! UIPageViewController
-        let horizontalPageController = self.parentViewController?.parentViewController?.parentViewController as! UIPageViewController
-        self.toggleScrollOnPageViewController(false, pageViewController: verticalPageController)
-        self.toggleScrollOnPageViewController(false, pageViewController: horizontalPageController)
-    }
-    
-    private func toggleScrollOnPageViewController(scrollEnabled: Bool, pageViewController: UIPageViewController) {
-        for view in pageViewController.view.subviews {
-            if let subView = view as? UIScrollView {
-                subView.scrollEnabled = scrollEnabled
-            }
-        }
     }
 }

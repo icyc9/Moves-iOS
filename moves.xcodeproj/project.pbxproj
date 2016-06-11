@@ -14,7 +14,6 @@
 		023D05071D0786FD003D19A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 023D05051D0786FD003D19A4 /* Main.storyboard */; };
 		023D05091D0786FD003D19A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 023D05081D0786FD003D19A4 /* Assets.xcassets */; };
 		023D050C1D0786FD003D19A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 023D050A1D0786FD003D19A4 /* LaunchScreen.storyboard */; };
-		023D054D1D078AD3003D19A4 /* MovesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023D054A1D078AD3003D19A4 /* MovesViewController.swift */; };
 		023D054E1D078AD3003D19A4 /* InvitationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023D054B1D078AD3003D19A4 /* InvitationTableViewCell.swift */; };
 		023D054F1D078AD3003D19A4 /* UserMovesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023D054C1D078AD3003D19A4 /* UserMovesTableViewController.swift */; };
 		023D05511D078ADC003D19A4 /* CreateHangoutOrMeetPeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023D05501D078ADC003D19A4 /* CreateHangoutOrMeetPeopleViewController.swift */; };
@@ -27,7 +26,6 @@
 		023D05601D078AF0003D19A4 /* FriendsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023D055D1D078AF0003D19A4 /* FriendsListTableViewController.swift */; };
 		023D05611D078AF0003D19A4 /* RootFriendsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023D055E1D078AF0003D19A4 /* RootFriendsListViewController.swift */; };
 		023D05641D078AF5003D19A4 /* BasePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023D05621D078AF5003D19A4 /* BasePageViewController.swift */; };
-		023D05651D078AF5003D19A4 /* PullToRefreshTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023D05631D078AF5003D19A4 /* PullToRefreshTableViewController.swift */; };
 		023D05671D078B52003D19A4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023D05661D078B52003D19A4 /* Constants.swift */; };
 		028A80361D0854CD000328B2 /* JobData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028A80351D0854CD000328B2 /* JobData.swift */; };
 		029793231D078C6500E20C77 /* proxima-nova-soft-light-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 029793211D078C6500E20C77 /* proxima-nova-soft-light-webfont.ttf */; };
@@ -38,6 +36,14 @@
 		0297933A1D083F9500E20C77 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029793391D083F9500E20C77 /* SignUpViewModel.swift */; };
 		029793421D0841F800E20C77 /* RestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029793411D0841F800E20C77 /* RestService.swift */; };
 		029793441D08429200E20C77 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029793431D08429200E20C77 /* AuthenticationService.swift */; };
+		02B5993D1D0A7132005C7169 /* MoveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B5993C1D0A7132005C7169 /* MoveModel.swift */; };
+		02B5993F1D0A714D005C7169 /* MoveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B5993E1D0A714D005C7169 /* MoveService.swift */; };
+		02B599431D0A7410005C7169 /* SendMoveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B599421D0A7410005C7169 /* SendMoveViewModel.swift */; };
+		02B599451D0B4ECA005C7169 /* SendMoveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B599441D0B4ECA005C7169 /* SendMoveViewController.swift */; };
+		02F4E0FE1D0B658100AF5970 /* FriendRequestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F4E0FD1D0B658100AF5970 /* FriendRequestsViewController.swift */; };
+		02F4E1001D0B666200AF5970 /* NonSwipableProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F4E0FF1D0B666200AF5970 /* NonSwipableProfileViewController.swift */; };
+		02F4E1041D0B6CF200AF5970 /* PullToRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F4E1031D0B6CF200AF5970 /* PullToRefresh.swift */; };
+		02F4E1061D0B729C00AF5970 /* MovesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F4E1051D0B729C00AF5970 /* MovesViewController.swift */; };
 		19FC656ABE82AE9F5B8D25BE /* Pods_moves.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC4D6783CFB41F7F96F518E7 /* Pods_moves.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +57,6 @@
 		023D05081D0786FD003D19A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		023D050B1D0786FD003D19A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		023D050D1D0786FD003D19A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		023D054A1D078AD3003D19A4 /* MovesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovesViewController.swift; sourceTree = "<group>"; };
 		023D054B1D078AD3003D19A4 /* InvitationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvitationTableViewCell.swift; sourceTree = "<group>"; };
 		023D054C1D078AD3003D19A4 /* UserMovesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMovesTableViewController.swift; sourceTree = "<group>"; };
 		023D05501D078ADC003D19A4 /* CreateHangoutOrMeetPeopleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateHangoutOrMeetPeopleViewController.swift; sourceTree = "<group>"; };
@@ -64,7 +69,6 @@
 		023D055D1D078AF0003D19A4 /* FriendsListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListTableViewController.swift; sourceTree = "<group>"; };
 		023D055E1D078AF0003D19A4 /* RootFriendsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootFriendsListViewController.swift; sourceTree = "<group>"; };
 		023D05621D078AF5003D19A4 /* BasePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePageViewController.swift; sourceTree = "<group>"; };
-		023D05631D078AF5003D19A4 /* PullToRefreshTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToRefreshTableViewController.swift; sourceTree = "<group>"; };
 		023D05661D078B52003D19A4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		028A80351D0854CD000328B2 /* JobData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobData.swift; sourceTree = "<group>"; };
 		029793211D078C6500E20C77 /* proxima-nova-soft-light-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "proxima-nova-soft-light-webfont.ttf"; sourceTree = "<group>"; };
@@ -75,6 +79,14 @@
 		029793391D083F9500E20C77 /* SignUpViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		029793411D0841F800E20C77 /* RestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestService.swift; sourceTree = "<group>"; };
 		029793431D08429200E20C77 /* AuthenticationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		02B5993C1D0A7132005C7169 /* MoveModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveModel.swift; sourceTree = "<group>"; };
+		02B5993E1D0A714D005C7169 /* MoveService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveService.swift; sourceTree = "<group>"; };
+		02B599421D0A7410005C7169 /* SendMoveViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendMoveViewModel.swift; sourceTree = "<group>"; };
+		02B599441D0B4ECA005C7169 /* SendMoveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendMoveViewController.swift; sourceTree = "<group>"; };
+		02F4E0FD1D0B658100AF5970 /* FriendRequestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendRequestsViewController.swift; sourceTree = "<group>"; };
+		02F4E0FF1D0B666200AF5970 /* NonSwipableProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NonSwipableProfileViewController.swift; sourceTree = "<group>"; };
+		02F4E1031D0B6CF200AF5970 /* PullToRefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToRefresh.swift; sourceTree = "<group>"; };
+		02F4E1051D0B729C00AF5970 /* MovesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovesViewController.swift; sourceTree = "<group>"; };
 		6F7436A6F0DF14497EE1EF87 /* Pods-moves.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moves.debug.xcconfig"; path = "Pods/Target Support Files/Pods-moves/Pods-moves.debug.xcconfig"; sourceTree = "<group>"; };
 		B698EBEE843337F33FBE5B3F /* Pods-moves.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moves.release.xcconfig"; path = "Pods/Target Support Files/Pods-moves/Pods-moves.release.xcconfig"; sourceTree = "<group>"; };
 		CC4D6783CFB41F7F96F518E7 /* Pods_moves.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_moves.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,14 +104,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0204C22E1D0A1F6500E0B9AE /* services */ = {
-			isa = PBXGroup;
-			children = (
-				0204C22F1D0A1F7200E0B9AE /* UserService.swift */,
-			);
-			name = services;
-			sourceTree = "<group>";
-		};
 		023D04F51D0786FD003D19A4 = {
 			isa = PBXGroup;
 			children = (
@@ -125,7 +129,6 @@
 				023D05131D0787B0003D19A4 /* storyboards */,
 				029793401D0841E100E20C77 /* services */,
 				028A803A1D0860C6000328B2 /* models */,
-				0204C22E1D0A1F6500E0B9AE /* services */,
 				0297933B1D08408500E20C77 /* jobs */,
 				029793321D078DBE00E20C77 /* viewmodel */,
 				023D05241D078867003D19A4 /* viewcontroller */,
@@ -175,7 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				023D05621D078AF5003D19A4 /* BasePageViewController.swift */,
-				023D05631D078AF5003D19A4 /* PullToRefreshTableViewController.swift */,
+				02F4E1031D0B6CF200AF5970 /* PullToRefresh.swift */,
 			);
 			name = base;
 			sourceTree = "<group>";
@@ -186,6 +189,8 @@
 				023D055C1D078AF0003D19A4 /* ProfileViewController.swift */,
 				023D055D1D078AF0003D19A4 /* FriendsListTableViewController.swift */,
 				023D055E1D078AF0003D19A4 /* RootFriendsListViewController.swift */,
+				02F4E0FD1D0B658100AF5970 /* FriendRequestsViewController.swift */,
+				02F4E0FF1D0B666200AF5970 /* NonSwipableProfileViewController.swift */,
 			);
 			name = profile;
 			sourceTree = "<group>";
@@ -221,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				023D05501D078ADC003D19A4 /* CreateHangoutOrMeetPeopleViewController.swift */,
+				02B599441D0B4ECA005C7169 /* SendMoveViewController.swift */,
 			);
 			name = make_moves;
 			sourceTree = "<group>";
@@ -228,7 +234,7 @@
 		023D05431D0789B9003D19A4 /* my_moves */ = {
 			isa = PBXGroup;
 			children = (
-				023D054A1D078AD3003D19A4 /* MovesViewController.swift */,
+				02F4E1051D0B729C00AF5970 /* MovesViewController.swift */,
 				023D054B1D078AD3003D19A4 /* InvitationTableViewCell.swift */,
 				023D054C1D078AD3003D19A4 /* UserMovesTableViewController.swift */,
 			);
@@ -239,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				0204C2221D08CA2300E0B9AE /* UserModel.swift */,
+				02B5993C1D0A7132005C7169 /* MoveModel.swift */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -248,6 +255,7 @@
 			children = (
 				029793391D083F9500E20C77 /* SignUpViewModel.swift */,
 				0204C2241D091E6B00E0B9AE /* ProfileViewModel.swift */,
+				02B599421D0A7410005C7169 /* SendMoveViewModel.swift */,
 			);
 			name = viewmodel;
 			sourceTree = "<group>";
@@ -263,8 +271,10 @@
 		029793401D0841E100E20C77 /* services */ = {
 			isa = PBXGroup;
 			children = (
+				0204C22F1D0A1F7200E0B9AE /* UserService.swift */,
 				029793411D0841F800E20C77 /* RestService.swift */,
 				029793431D08429200E20C77 /* AuthenticationService.swift */,
+				02B5993E1D0A714D005C7169 /* MoveService.swift */,
 			);
 			name = services;
 			sourceTree = "<group>";
@@ -415,24 +425,30 @@
 				023D055A1D078AEB003D19A4 /* SignInViewController.swift in Sources */,
 				023D05021D0786FD003D19A4 /* AppDelegate.swift in Sources */,
 				023D05561D078AE6003D19A4 /* MainNavigationViewController.swift in Sources */,
-				023D054D1D078AD3003D19A4 /* MovesViewController.swift in Sources */,
+				02F4E1001D0B666200AF5970 /* NonSwipableProfileViewController.swift in Sources */,
 				0297933A1D083F9500E20C77 /* SignUpViewModel.swift in Sources */,
 				023D05611D078AF0003D19A4 /* RootFriendsListViewController.swift in Sources */,
+				02B5993D1D0A7132005C7169 /* MoveModel.swift in Sources */,
 				029793341D078DFA00E20C77 /* SignUpViewController.swift in Sources */,
 				023D055B1D078AEB003D19A4 /* IntroPagesViewController.swift in Sources */,
 				029793421D0841F800E20C77 /* RestService.swift in Sources */,
 				023D05531D078AE1003D19A4 /* FindMovesViewController.swift in Sources */,
 				0204C2251D091E6B00E0B9AE /* ProfileViewModel.swift in Sources */,
+				02F4E1041D0B6CF200AF5970 /* PullToRefresh.swift in Sources */,
 				023D05511D078ADC003D19A4 /* CreateHangoutOrMeetPeopleViewController.swift in Sources */,
 				023D054F1D078AD3003D19A4 /* UserMovesTableViewController.swift in Sources */,
 				0204C2301D0A1F7200E0B9AE /* UserService.swift in Sources */,
+				02B599451D0B4ECA005C7169 /* SendMoveViewController.swift in Sources */,
 				023D05571D078AE6003D19A4 /* ProfileAndCreateMovesNavigationViewController.swift in Sources */,
 				023D055F1D078AF0003D19A4 /* ProfileViewController.swift in Sources */,
+				02F4E0FE1D0B658100AF5970 /* FriendRequestsViewController.swift in Sources */,
 				029793441D08429200E20C77 /* AuthenticationService.swift in Sources */,
 				0204C2231D08CA2300E0B9AE /* UserModel.swift in Sources */,
 				023D054E1D078AD3003D19A4 /* InvitationTableViewCell.swift in Sources */,
+				02F4E1061D0B729C00AF5970 /* MovesViewController.swift in Sources */,
+				02B599431D0A7410005C7169 /* SendMoveViewModel.swift in Sources */,
 				023D05641D078AF5003D19A4 /* BasePageViewController.swift in Sources */,
-				023D05651D078AF5003D19A4 /* PullToRefreshTableViewController.swift in Sources */,
+				02B5993F1D0A714D005C7169 /* MoveService.swift in Sources */,
 				023D05601D078AF0003D19A4 /* FriendsListTableViewController.swift in Sources */,
 				028A80361D0854CD000328B2 /* JobData.swift in Sources */,
 				023D05671D078B52003D19A4 /* Constants.swift in Sources */,

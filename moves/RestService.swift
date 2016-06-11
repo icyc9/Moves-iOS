@@ -51,7 +51,7 @@ class RestService {
         }
     }
     
-    func createMove(message: String, scope: String) {
+    func createMove(message: String, scope: String) -> Observable<(NSHTTPURLResponse, AnyObject)> {
         let url = "http://moves-api.us-east-1.elasticbeanstalk.com/authenticate"
         let headers = ["Content-Type": "application/json", "JWT-Auth": "Bearer \(authenticationService.getAuthToken())"]
         let body = [
@@ -59,10 +59,7 @@ class RestService {
             "scope": scope
         ];
         
-        Alamofire.request(.POST, url, headers: headers, parameters: body, encoding: .JSON)
-            .responseJSON { response in
-                print("Response JSON: \(response)")
-        }
+        return requestJSON(.PUT, url, headers: headers, parameters: body, encoding: .JSON)
     }
     
     func addFriend(username: String) -> Observable<(NSHTTPURLResponse, AnyObject)> {
@@ -104,15 +101,11 @@ class RestService {
         }
     }
     
-    func getUserMoves(scope: String) {
+    func getUserMoves(scope: String) -> Observable<(NSHTTPURLResponse, AnyObject)> {
         let url = "http://moves-api.us-east-1.elasticbeanstalk.com/hangout?scope=\(scope)"
         let headers = ["Content-Type": "application/json", "JWT-Auth": "Bearer \(authenticationService.getAuthToken())"]
         
-        Alamofire.request(.GET, url, headers: headers, encoding: .JSON)
-            .validate()
-            .responseJSON { response in
-                print("Response JSON: \(response)")
-        }
+        return requestJSON(.GET, url, headers: headers, encoding: .JSON)
     }
     
     func authenticate(username: String, password: String) {

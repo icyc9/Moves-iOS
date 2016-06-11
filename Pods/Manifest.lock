@@ -2,6 +2,7 @@ PODS:
   - Alamofire (3.4.0)
   - DGElasticPullToRefresh (1.0.3)
   - Locksmith (2.0.8)
+  - M13Checkbox (2.1.2)
   - Realm (1.0.0):
     - Realm/Headers (= 1.0.0)
   - Realm/Headers (1.0.0)
@@ -23,6 +24,7 @@ DEPENDENCIES:
   - Alamofire (~> 3.4)
   - DGElasticPullToRefresh
   - Locksmith
+  - M13Checkbox
   - RealmSwift
   - RxAlamofire
   - RxCocoa
@@ -35,6 +37,7 @@ SPEC CHECKSUMS:
   Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
   DGElasticPullToRefresh: 040f39ae69840b3261d163fe6735c5901bf851e9
   Locksmith: a8ed41ac4c06506ea8cb199d8ec8a8d3d108eb2a
+  M13Checkbox: fbc53145e3ca8ecd1c444a76439bdc0ddb17b008
   Realm: e15cd8e7c11d3e576f628ba0b7cb855269b4991c
   RealmSwift: 3229306d020d96f83b335f87a0dcbf2cef0e6a2b
   RxAlamofire: b4572a077b6b2410c8732a27266299df4c00736e
@@ -44,6 +47,6 @@ SPEC CHECKSUMS:
   Swinject: 3debc5ac926dcd1be00947265a9db7a5f31b272a
   TextFieldEffects: bc4fd3bd557321bd61a0762f3f50965477a36f62
 
-PODFILE CHECKSUM: 1a3736faa9df86bdebc3a48ccc4fb732078c5194
+PODFILE CHECKSUM: 58c9d6c39bb8c21d20e50d4d538983dee536cfd3
 
 COCOAPODS: 1.0.0

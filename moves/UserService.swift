@@ -30,6 +30,7 @@ class UserService {
     }
     
     func getUserByUsername(username: String) -> Observable<UserModel> {
+        print(authenticationService.getAuthToken())
         return restService.getUserByUsername(username)
             .observeOn(MainScheduler.instance)
             .map({(response, json) -> UserModel in

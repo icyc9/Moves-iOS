@@ -8,15 +8,20 @@
 
 import UIKit
 
-class FindMovesViewController: PullToRefreshTableViewController {
+class FindMovesViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.setUpPullToRefresh(Color.primaryDark)
         
         let navigationBar = self.navigationController?.navigationBar
         navigationBar?.barTintColor = Color.primary
         navigationBar?.topItem?.title = "What your friends want to do"
         navigationBar?.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+    }
+    
+    deinit {
+        self.tableView.dg_removePullToRefresh()
     }
     
 }
