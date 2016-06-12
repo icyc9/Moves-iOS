@@ -28,6 +28,10 @@
 		023D05641D078AF5003D19A4 /* BasePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023D05621D078AF5003D19A4 /* BasePageViewController.swift */; };
 		023D05671D078B52003D19A4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023D05661D078B52003D19A4 /* Constants.swift */; };
 		028A80361D0854CD000328B2 /* JobData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028A80351D0854CD000328B2 /* JobData.swift */; };
+		028C86451D0D3EDB00194CC1 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C86431D0D3EDB00194CC1 /* SettingsTableViewController.swift */; };
+		028C864A1D0D3EE900194CC1 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C86471D0D3EE900194CC1 /* ChatViewController.swift */; };
+		028C864B1D0D3EE900194CC1 /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C86481D0D3EE900194CC1 /* Conversation.swift */; };
+		028C864C1D0D3EE900194CC1 /* DemoConversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C86491D0D3EE900194CC1 /* DemoConversation.swift */; };
 		029793231D078C6500E20C77 /* proxima-nova-soft-light-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 029793211D078C6500E20C77 /* proxima-nova-soft-light-webfont.ttf */; };
 		029793241D078C6500E20C77 /* proxima-nova-soft-normal-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 029793221D078C6500E20C77 /* proxima-nova-soft-normal-webfont.ttf */; };
 		0297932E1D078D5300E20C77 /* SignInOrUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0297932D1D078D5300E20C77 /* SignInOrUp.storyboard */; };
@@ -71,6 +75,11 @@
 		023D05621D078AF5003D19A4 /* BasePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePageViewController.swift; sourceTree = "<group>"; };
 		023D05661D078B52003D19A4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		028A80351D0854CD000328B2 /* JobData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobData.swift; sourceTree = "<group>"; };
+		028C86431D0D3EDB00194CC1 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsTableViewController.swift; path = "../../../Downloads/JSQMessagesViewController-develop/SwiftExample/SwiftExample/SettingsTableViewController.swift"; sourceTree = "<group>"; };
+		028C86471D0D3EE900194CC1 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatViewController.swift; path = "../../../Downloads/JSQMessagesViewController-develop/SwiftExample/SwiftExample/ChatViewController.swift"; sourceTree = "<group>"; };
+		028C86481D0D3EE900194CC1 /* Conversation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Conversation.swift; path = "../../../Downloads/JSQMessagesViewController-develop/SwiftExample/SwiftExample/Conversation.swift"; sourceTree = "<group>"; };
+		028C86491D0D3EE900194CC1 /* DemoConversation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DemoConversation.swift; path = "../../../Downloads/JSQMessagesViewController-develop/SwiftExample/SwiftExample/DemoConversation.swift"; sourceTree = "<group>"; };
+		028C86521D0D424F00194CC1 /* moves-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "moves-Bridging-Header.h"; sourceTree = "<group>"; };
 		029793211D078C6500E20C77 /* proxima-nova-soft-light-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "proxima-nova-soft-light-webfont.ttf"; sourceTree = "<group>"; };
 		029793221D078C6500E20C77 /* proxima-nova-soft-normal-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "proxima-nova-soft-normal-webfont.ttf"; sourceTree = "<group>"; };
 		0297932D1D078D5300E20C77 /* SignInOrUp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignInOrUp.storyboard; sourceTree = "<group>"; };
@@ -163,6 +172,7 @@
 		023D05241D078867003D19A4 /* viewcontroller */ = {
 			isa = PBXGroup;
 			children = (
+				028C86021D0D397500194CC1 /* messaging */,
 				023D05431D0789B9003D19A4 /* my_moves */,
 				023D05401D0789AF003D19A4 /* make_moves */,
 				023D053D1D0789A5003D19A4 /* find_moves */,
@@ -237,6 +247,7 @@
 				02F4E1051D0B729C00AF5970 /* MovesViewController.swift */,
 				023D054B1D078AD3003D19A4 /* InvitationTableViewCell.swift */,
 				023D054C1D078AD3003D19A4 /* UserMovesTableViewController.swift */,
+				028C86521D0D424F00194CC1 /* moves-Bridging-Header.h */,
 			);
 			name = my_moves;
 			sourceTree = "<group>";
@@ -248,6 +259,17 @@
 				02B5993C1D0A7132005C7169 /* MoveModel.swift */,
 			);
 			name = models;
+			sourceTree = "<group>";
+		};
+		028C86021D0D397500194CC1 /* messaging */ = {
+			isa = PBXGroup;
+			children = (
+				028C86471D0D3EE900194CC1 /* ChatViewController.swift */,
+				028C86481D0D3EE900194CC1 /* Conversation.swift */,
+				028C86491D0D3EE900194CC1 /* DemoConversation.swift */,
+				028C86431D0D3EDB00194CC1 /* SettingsTableViewController.swift */,
+			);
+			name = messaging;
 			sourceTree = "<group>";
 		};
 		029793321D078DBE00E20C77 /* viewmodel */ = {
@@ -435,18 +457,22 @@
 				023D05531D078AE1003D19A4 /* FindMovesViewController.swift in Sources */,
 				0204C2251D091E6B00E0B9AE /* ProfileViewModel.swift in Sources */,
 				02F4E1041D0B6CF200AF5970 /* PullToRefresh.swift in Sources */,
+				028C864A1D0D3EE900194CC1 /* ChatViewController.swift in Sources */,
 				023D05511D078ADC003D19A4 /* CreateHangoutOrMeetPeopleViewController.swift in Sources */,
 				023D054F1D078AD3003D19A4 /* UserMovesTableViewController.swift in Sources */,
 				0204C2301D0A1F7200E0B9AE /* UserService.swift in Sources */,
 				02B599451D0B4ECA005C7169 /* SendMoveViewController.swift in Sources */,
+				028C86451D0D3EDB00194CC1 /* SettingsTableViewController.swift in Sources */,
 				023D05571D078AE6003D19A4 /* ProfileAndCreateMovesNavigationViewController.swift in Sources */,
 				023D055F1D078AF0003D19A4 /* ProfileViewController.swift in Sources */,
 				02F4E0FE1D0B658100AF5970 /* FriendRequestsViewController.swift in Sources */,
 				029793441D08429200E20C77 /* AuthenticationService.swift in Sources */,
 				0204C2231D08CA2300E0B9AE /* UserModel.swift in Sources */,
+				028C864C1D0D3EE900194CC1 /* DemoConversation.swift in Sources */,
 				023D054E1D078AD3003D19A4 /* InvitationTableViewCell.swift in Sources */,
 				02F4E1061D0B729C00AF5970 /* MovesViewController.swift in Sources */,
 				02B599431D0A7410005C7169 /* SendMoveViewModel.swift in Sources */,
+				028C864B1D0D3EE900194CC1 /* Conversation.swift in Sources */,
 				023D05641D078AF5003D19A4 /* BasePageViewController.swift in Sources */,
 				02B5993F1D0A714D005C7169 /* MoveService.swift in Sources */,
 				023D05601D078AF0003D19A4 /* FriendsListTableViewController.swift in Sources */,
@@ -565,10 +591,14 @@
 			baseConfigurationReference = 6F7436A6F0DF14497EE1EF87 /* Pods-moves.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = moves/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.moves.moves;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "moves/moves-Bridging-Header.h";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -577,10 +607,12 @@
 			baseConfigurationReference = B698EBEE843337F33FBE5B3F /* Pods-moves.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = moves/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.moves.moves;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "moves/moves-Bridging-Header.h";
 			};
 			name = Release;
 		};

@@ -21,6 +21,10 @@ class UserMovesTableViewController: UITableViewController {
         navigationBar?.topItem?.title = "My Moves"
     }
     
+    @IBAction func openMessenger(sender: UIButton) {
+        
+    }
+    
     deinit {
         tableView.dg_removePullToRefresh()
     }
