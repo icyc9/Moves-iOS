@@ -9,7 +9,6 @@
 import UIKit
 import RxSwift
 import RealmSwift
-import M13Checkbox
 
 class FriendTableViewCell: UITableViewCell {
     
@@ -59,8 +58,8 @@ class SendMoveViewController: UIViewController, UITableViewDelegate, UITableView
         if section == 0 {
             return 1
         }
-        else if section == 1 {
-            return 3
+        else if section == 1 && friends != nil {
+            return friends!.count
         }
         else if section == 2 && friends != nil {
             return friends!.count
@@ -146,6 +145,15 @@ class SendMoveViewController: UIViewController, UITableViewDelegate, UITableView
 
     @IBAction func sendMove(sender: UIButton) {
         sendMoveViewModel.createMove(moveMessage, scope: "user")
+    }
+    
+    func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        
+        // Custom header background color
+        view.tintColor = Color.primary
+        
+        let headerText = view as! UITableViewHeaderFooterView
+        headerText.textLabel?.textColor = UIColor.whiteColor()
     }
     
     @IBAction func goBack(sender: UIBarButtonItem) {

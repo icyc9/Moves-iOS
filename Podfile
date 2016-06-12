@@ -16,5 +16,4 @@ target 'moves' do
     pod 'RxCocoa'
     pod 'RealmSwift'
     pod 'Locksmith'
-    pod 'M13Checkbox'
 end
