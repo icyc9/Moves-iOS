@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -32,9 +33,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if(authenticationService.getAuthToken() != "") {
             // User is signed in
-            let signInViewController = UIStoryboard(name: "SignInOrUp", bundle:nil).instantiateViewControllerWithIdentifier("sign_up")
+            let mainViewController = UIStoryboard(name: "Main", bundle:nil).instantiateViewControllerWithIdentifier("my_moves")
             self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-            self.window?.rootViewController = signInViewController
+            self.window?.rootViewController = mainViewController
             self.window?.makeKeyAndVisible()
         }
         else {
@@ -44,6 +45,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.rootViewController = signInViewController
             self.window?.makeKeyAndVisible()
         }
+        
+        Realm.Configuration.defaultConfiguration = Realm.Configuration(
+            schemaVersion: 2,
+            migrationBlock: { migration, oldSchemaVersion in
+                // The enumerateObjects:block: method iterates
+                // over every 'Person' object stored in the Realm file
+                migration.enumerate(UserModel.className()) { oldObject, newObject in
+                    // Add the `isBestfriend` property to Realms with a schema version of 0 or 1
+                    if oldSchemaVersion < 2 {
+                        newObject!["isBestFriend"] = false
+                    }
+                }
+        })
         
         return true
     }

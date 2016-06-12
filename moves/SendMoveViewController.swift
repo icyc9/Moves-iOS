@@ -9,12 +9,14 @@
 import UIKit
 import RxSwift
 import RealmSwift
+import M13Checkbox
 
 class FriendTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var cellImage: UIImageView!
+    @IBOutlet weak var selectButton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
-    
 }
 
 class SendMoveViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -27,6 +29,10 @@ class SendMoveViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet weak var tableView: UITableView!
     
+    private var bestFriendImage: UIImage!
+    private var friendImage: UIImage!
+    private var recentImage: UIImage!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let verticalPageController = self.parentViewController?.parentViewController as! UIPageViewController
@@ -34,9 +40,13 @@ class SendMoveViewController: UIViewController, UITableViewDelegate, UITableView
         self.toggleScrollOnPageViewController(false, pageViewController: verticalPageController)
         self.toggleScrollOnPageViewController(false, pageViewController: horizontalPageController)
         
+        bestFriendImage = UIImage(named: "ok")
+        friendImage = UIImage(named: "sunglasses")
+        recentImage = UIImage(named: "alarm")
+        
         tableView.delegate = self
         tableView.dataSource = self
-   
+        
         sendMoveViewModel.friends.subscribe(onNext: { (friends) in
             self.friends = friends
             self.tableView.reloadData()
@@ -46,7 +56,13 @@ class SendMoveViewController: UIViewController, UITableViewDelegate, UITableView
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if (friends != nil) {
+        if section == 0 {
+            return 1
+        }
+        else if section == 1 {
+            return 3
+        }
+        else if section == 2 && friends != nil {
             return friends!.count
         }
         
@@ -54,21 +70,74 @@ class SendMoveViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        return 4
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell =
-            self.tableView.dequeueReusableCellWithIdentifier(
-                "FriendTableCell", forIndexPath: indexPath)
-                as? FriendTableViewCell
-    
-        let friend = friends![indexPath.item]
-        
-        cell!.nameLabel.text = friend.name
-        cell!.usernameLabel.text = friend.username
+        if indexPath.section == 0 {
+            let cell = self.tableView.dequeueReusableCellWithIdentifier(
+                "TimelineCell", forIndexPath: indexPath)
 
-        return cell!
+            return cell
+        }
+        else if indexPath.section == 1 && friends != nil {
+            let cell =
+                self.tableView.dequeueReusableCellWithIdentifier(
+                    "FriendTableViewCell", forIndexPath: indexPath)
+                as? FriendTableViewCell
+            
+            let friend = friends![indexPath.item]
+            
+            cell!.nameLabel.text = friend.name
+            cell!.usernameLabel.text = friend.username
+            cell?.cellImage.image = bestFriendImage
+            
+            return cell!
+        }
+        else if indexPath.section == 2 && friends != nil {
+            let cell =
+                self.tableView.dequeueReusableCellWithIdentifier(
+                    "FriendTableViewCell", forIndexPath: indexPath)
+                    as? FriendTableViewCell
+            
+            let friend = friends![indexPath.item]
+            
+            cell!.nameLabel.text = friend.name
+            cell!.usernameLabel.text = friend.username
+            cell?.cellImage.image = recentImage
+            
+            return cell!
+        }
+        else if indexPath.section == 3 && friends != nil {
+            let cell =
+                self.tableView.dequeueReusableCellWithIdentifier(
+                    "FriendTableViewCell", forIndexPath: indexPath)
+                    as? FriendTableViewCell
+            
+            let friend = friends![indexPath.item]
+            
+            cell!.nameLabel.text = friend.name
+            cell!.usernameLabel.text = friend.username
+            cell?.cellImage.image = friendImage
+            
+            return cell!
+        }
+        
+        return UITableViewCell()
+    }
+    
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "Everyone"
+        }
+        else if section == 1 {
+            return "Your Bestfriends"
+        }
+        else if section == 2 {
+            return "Your Recents"
+        }
+        
+        return "Your Friends"
     }
     
     override func didReceiveMemoryWarning() {

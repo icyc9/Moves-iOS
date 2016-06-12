@@ -12,6 +12,7 @@ class UserModel: Object {
     dynamic var id = ""
     dynamic var name = ""
     dynamic var username = ""
+    dynamic var isBestFriend = false
     
     override static func primaryKey() -> String? {
         return "id"

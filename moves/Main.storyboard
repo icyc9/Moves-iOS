@@ -39,6 +39,7 @@
             <string>ProximaNovaSoft-Medium</string>
             <string>ProximaNovaSoft-Medium</string>
             <string>ProximaNovaSoft-Medium</string>
+            <string>ProximaNovaSoft-Medium</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -842,42 +843,95 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="490"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="8"/>
-                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="separatorInset" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendTableCell" rowHeight="56" id="M45-sa-wNP" customClass="FriendTableViewCell" customModule="moves" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendTableViewCell" rowHeight="56" id="M45-sa-wNP" customClass="FriendTableViewCell" customModule="moves" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="M45-sa-wNP" id="GVO-OD-TlA">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="55"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daniel Christopher" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJG-V6-05u">
-                                                    <rect key="frame" x="8" y="5" width="192" height="26"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAJ-FL-Xjd">
+                                                    <rect key="frame" x="547" y="13" width="44" height="30"/>
+                                                    <state key="normal" title="Select"/>
+                                                </button>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="people" translatesAutoresizingMaskIntoConstraints="NO" id="BDs-1r-ZJs">
+                                                    <rect key="frame" x="8" y="10" width="36" height="36"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="192" id="7ev-hz-eB8"/>
+                                                        <constraint firstAttribute="width" constant="36" id="gHD-7E-DuP"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daniel Christopher" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJG-V6-05u">
+                                                    <rect key="frame" x="52" y="7" width="192" height="26"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="192" id="Flq-mr-RPU"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="ProximaNovaSoft-Medium" family="ProximaNovaSoft-Medium" pointSize="20"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="danielchristopher1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKh-Py-N08">
-                                                    <rect key="frame" x="8" y="30" width="121" height="17"/>
+                                                    <rect key="frame" x="52" y="32" width="121" height="17"/>
                                                     <fontDescription key="fontDescription" name="ProximaNovaSoft-Medium" family="ProximaNovaSoft-Medium" pointSize="15"/>
                                                     <color key="textColor" red="0.61176470589999998" green="0.6705882353" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="jJG-V6-05u" firstAttribute="leading" secondItem="YKh-Py-N08" secondAttribute="leading" id="DoW-Es-30E"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="jJG-V6-05u" secondAttribute="bottom" constant="16" id="asK-Zi-5nT"/>
-                                                <constraint firstItem="YKh-Py-N08" firstAttribute="bottom" secondItem="GVO-OD-TlA" secondAttribute="bottomMargin" id="cjb-7o-dOd"/>
-                                                <constraint firstItem="jJG-V6-05u" firstAttribute="top" secondItem="GVO-OD-TlA" secondAttribute="topMargin" constant="-3" id="fFO-c0-P6k"/>
-                                                <constraint firstItem="jJG-V6-05u" firstAttribute="leading" secondItem="GVO-OD-TlA" secondAttribute="leadingMargin" id="zmn-Qz-Qgl"/>
+                                                <constraint firstItem="hAJ-FL-Xjd" firstAttribute="centerY" secondItem="GVO-OD-TlA" secondAttribute="centerY" id="3bX-DY-7Za"/>
+                                                <constraint firstItem="BDs-1r-ZJs" firstAttribute="leading" secondItem="GVO-OD-TlA" secondAttribute="leadingMargin" id="7Te-QU-x1U"/>
+                                                <constraint firstItem="YKh-Py-N08" firstAttribute="top" secondItem="GVO-OD-TlA" secondAttribute="topMargin" constant="24" id="CRT-xZ-3Cu"/>
+                                                <constraint firstItem="BDs-1r-ZJs" firstAttribute="top" secondItem="GVO-OD-TlA" secondAttribute="topMargin" constant="2" id="Ita-FH-Ly7"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="jJG-V6-05u" secondAttribute="bottom" constant="14" id="McO-Tn-Yhg"/>
+                                                <constraint firstItem="jJG-V6-05u" firstAttribute="leading" secondItem="YKh-Py-N08" secondAttribute="leading" id="NKv-Mr-U28"/>
+                                                <constraint firstItem="jJG-V6-05u" firstAttribute="leading" secondItem="BDs-1r-ZJs" secondAttribute="trailing" constant="8" symbolic="YES" id="Nn2-eV-mFu"/>
+                                                <constraint firstItem="BDs-1r-ZJs" firstAttribute="centerY" secondItem="hAJ-FL-Xjd" secondAttribute="centerY" id="Pk6-TB-77x"/>
+                                                <constraint firstItem="hAJ-FL-Xjd" firstAttribute="trailing" secondItem="GVO-OD-TlA" secondAttribute="trailingMargin" constant="-1" id="grq-AC-Wx2"/>
+                                                <constraint firstItem="jJG-V6-05u" firstAttribute="top" secondItem="GVO-OD-TlA" secondAttribute="topMargin" constant="-1" id="kPK-Bw-PP1"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cellImage" destination="BDs-1r-ZJs" id="Edp-Io-fut"/>
                                             <outlet property="nameLabel" destination="jJG-V6-05u" id="yPD-3x-Wsp"/>
+                                            <outlet property="selectButton" destination="hAJ-FL-Xjd" id="uRg-hF-qzz"/>
                                             <outlet property="usernameLabel" destination="YKh-Py-N08" id="PsT-HJ-727"/>
                                         </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimelineCell" id="0a2-Gy-AEz">
+                                        <rect key="frame" x="0.0" y="84" width="600" height="56"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0a2-Gy-AEz" id="YpI-uo-eE7">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="55"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="people" translatesAutoresizingMaskIntoConstraints="NO" id="9X9-g2-Agh">
+                                                    <rect key="frame" x="8" y="10" width="36" height="36"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="36" id="Btv-4P-Da2"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add to timeline" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGx-vd-rja">
+                                                    <rect key="frame" x="52" y="16" width="135" height="23"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNovaSoft-Medium" family="ProximaNovaSoft-Medium" pointSize="20"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D75-cc-gxX">
+                                                    <rect key="frame" x="548" y="13" width="44" height="30"/>
+                                                    <state key="normal" title="Select"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="D75-cc-gxX" firstAttribute="trailing" secondItem="YpI-uo-eE7" secondAttribute="trailingMargin" id="0ky-WP-dq2"/>
+                                                <constraint firstItem="D75-cc-gxX" firstAttribute="baseline" secondItem="kGx-vd-rja" secondAttribute="baseline" id="1hf-Yt-exD"/>
+                                                <constraint firstItem="9X9-g2-Agh" firstAttribute="top" secondItem="YpI-uo-eE7" secondAttribute="topMargin" constant="2" id="Iei-9D-ImA"/>
+                                                <constraint firstItem="9X9-g2-Agh" firstAttribute="centerY" secondItem="kGx-vd-rja" secondAttribute="centerY" id="Lab-B1-6UB"/>
+                                                <constraint firstItem="9X9-g2-Agh" firstAttribute="leading" secondItem="YpI-uo-eE7" secondAttribute="leadingMargin" id="TZn-69-liV"/>
+                                                <constraint firstItem="9X9-g2-Agh" firstAttribute="centerY" secondItem="YpI-uo-eE7" secondAttribute="centerY" id="mED-12-RIC"/>
+                                                <constraint firstItem="kGx-vd-rja" firstAttribute="leading" secondItem="9X9-g2-Agh" secondAttribute="trailing" constant="8" symbolic="YES" id="uKG-v7-kB5"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
@@ -961,10 +1015,11 @@
     </scenes>
     <resources>
         <image name="alarm" width="72" height="72"/>
-        <image name="calendar" width="24" height="24"/>
+        <image name="calendar" width="72" height="72"/>
         <image name="check" width="128" height="128"/>
         <image name="left" width="72" height="72"/>
         <image name="ok" width="72" height="72"/>
+        <image name="people" width="72" height="72"/>
         <image name="point_up" width="72" height="72"/>
         <image name="right" width="72" height="72"/>
         <image name="rocket_large" width="72" height="72"/>
