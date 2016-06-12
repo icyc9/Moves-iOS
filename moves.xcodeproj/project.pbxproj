@@ -32,6 +32,8 @@
 		028C864A1D0D3EE900194CC1 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C86471D0D3EE900194CC1 /* ChatViewController.swift */; };
 		028C864B1D0D3EE900194CC1 /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C86481D0D3EE900194CC1 /* Conversation.swift */; };
 		028C864C1D0D3EE900194CC1 /* DemoConversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C86491D0D3EE900194CC1 /* DemoConversation.swift */; };
+		028C86571D0E0F3D00194CC1 /* WhoIsDownTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C86561D0E0F3D00194CC1 /* WhoIsDownTableViewController.swift */; };
+		028C865B1D0E1A8500194CC1 /* WhoIsDownViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C865A1D0E1A8500194CC1 /* WhoIsDownViewModel.swift */; };
 		029793231D078C6500E20C77 /* proxima-nova-soft-light-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 029793211D078C6500E20C77 /* proxima-nova-soft-light-webfont.ttf */; };
 		029793241D078C6500E20C77 /* proxima-nova-soft-normal-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 029793221D078C6500E20C77 /* proxima-nova-soft-normal-webfont.ttf */; };
 		0297932E1D078D5300E20C77 /* SignInOrUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0297932D1D078D5300E20C77 /* SignInOrUp.storyboard */; };
@@ -80,6 +82,8 @@
 		028C86481D0D3EE900194CC1 /* Conversation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Conversation.swift; path = "../../../Downloads/JSQMessagesViewController-develop/SwiftExample/SwiftExample/Conversation.swift"; sourceTree = "<group>"; };
 		028C86491D0D3EE900194CC1 /* DemoConversation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DemoConversation.swift; path = "../../../Downloads/JSQMessagesViewController-develop/SwiftExample/SwiftExample/DemoConversation.swift"; sourceTree = "<group>"; };
 		028C86521D0D424F00194CC1 /* moves-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "moves-Bridging-Header.h"; sourceTree = "<group>"; };
+		028C86561D0E0F3D00194CC1 /* WhoIsDownTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhoIsDownTableViewController.swift; sourceTree = "<group>"; };
+		028C865A1D0E1A8500194CC1 /* WhoIsDownViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhoIsDownViewModel.swift; sourceTree = "<group>"; };
 		029793211D078C6500E20C77 /* proxima-nova-soft-light-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "proxima-nova-soft-light-webfont.ttf"; sourceTree = "<group>"; };
 		029793221D078C6500E20C77 /* proxima-nova-soft-normal-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "proxima-nova-soft-normal-webfont.ttf"; sourceTree = "<group>"; };
 		0297932D1D078D5300E20C77 /* SignInOrUp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignInOrUp.storyboard; sourceTree = "<group>"; };
@@ -228,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				023D05521D078AE1003D19A4 /* FindMovesViewController.swift */,
+				028C86561D0E0F3D00194CC1 /* WhoIsDownTableViewController.swift */,
 			);
 			name = find_moves;
 			sourceTree = "<group>";
@@ -278,6 +283,7 @@
 				029793391D083F9500E20C77 /* SignUpViewModel.swift */,
 				0204C2241D091E6B00E0B9AE /* ProfileViewModel.swift */,
 				02B599421D0A7410005C7169 /* SendMoveViewModel.swift */,
+				028C865A1D0E1A8500194CC1 /* WhoIsDownViewModel.swift */,
 			);
 			name = viewmodel;
 			sourceTree = "<group>";
@@ -458,7 +464,9 @@
 				0204C2251D091E6B00E0B9AE /* ProfileViewModel.swift in Sources */,
 				02F4E1041D0B6CF200AF5970 /* PullToRefresh.swift in Sources */,
 				028C864A1D0D3EE900194CC1 /* ChatViewController.swift in Sources */,
+				028C865B1D0E1A8500194CC1 /* WhoIsDownViewModel.swift in Sources */,
 				023D05511D078ADC003D19A4 /* CreateHangoutOrMeetPeopleViewController.swift in Sources */,
+				028C86571D0E0F3D00194CC1 /* WhoIsDownTableViewController.swift in Sources */,
 				023D054F1D078AD3003D19A4 /* UserMovesTableViewController.swift in Sources */,
 				0204C2301D0A1F7200E0B9AE /* UserService.swift in Sources */,
 				02B599451D0B4ECA005C7169 /* SendMoveViewController.swift in Sources */,
@@ -593,6 +601,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = moves/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.moves.moves;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -609,6 +618,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = moves/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.moves.moves;
 				PRODUCT_NAME = "$(TARGET_NAME)";
