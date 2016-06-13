@@ -28,15 +28,11 @@ class RestService {
         return requestJSON(.PATCH, url, headers: headers, parameters: body, encoding: .JSON)
     }
     
-    func markAsNotDownToHang(hangoutId: String) {
+    func markAsNotDownToHang(hangoutId: String) -> Observable<(NSHTTPURLResponse, AnyObject)> {
         let url = "http://moves-api.us-east-1.elasticbeanstalk.com/hangout/\(hangoutId)/denied"
         let headers = ["Content-Type": "application/json", "JWT-Auth": "Bearer \(authenticationService.getAuthToken())"]
         
-        Alamofire.request(.PATCH, url, headers: headers, encoding: .JSON)
-            .validate()
-            .responseJSON { response in
-                print("Response JSON: \(response)")
-        }
+        return requestJSON(.PATCH, url, headers: headers, encoding: .JSON)
     }
     
     func markAsDownToHang(hangoutId: String) -> Observable<(NSHTTPURLResponse, AnyObject)> {

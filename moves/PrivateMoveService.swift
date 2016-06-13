@@ -66,9 +66,16 @@ class PrivateMoveService {
     //
     //    }
     
-    //    func decline() -> Observable<DarwinBoolean> {
-    //
-    //    }
+    func decline(moveId: String) -> Observable<DarwinBoolean> {
+        return restService.markAsNotDownToHang(moveId)
+            .map({ (response, json) -> DarwinBoolean in
+                if response.statusCode == 200 {
+                    return true
+                }
+                
+                return false
+            })
+    }
     
     func accept(moveId: String) -> Observable<DarwinBoolean> {
         return restService.markAsDownToHang(moveId)
