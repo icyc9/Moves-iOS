@@ -16,37 +16,29 @@ class PrivateMoveService {
         self.restService = restService
     }
     
-    //    func getUserMoves() -> AnyRealmCollection<MoveModel> {
-    //        restService.getUserMoves("user")
-    //            .observeOn(MainScheduler.instance)
-    //            .map({ (response, json) -> UserModel in
-    //                if let data = json as? Array<[String: AnyObject]> {
-    //                    let accessToken = data["access_token"]
-    //                    let user_id = data["_id"]
-    //
-    //                    // Save off authentication token
-    //                    self.authenticationService.authenticate(accessToken as! String, userId: user_id as! String)
-    //
-    //                    let realm = try! Realm()
-    //                    var model: UserModel? = nil
-    //
-    //                    // Write user to the database
-    //                    try! realm.write {
-    //                        model = UserModel()
-    //                        model!.name = data.name
-    //                        model!.username = data.username
-    //                        model!.id = user_id as! String
-    //                        realm.add(model!)
-    //                        print("User wrote to database")
-    //                    }
-    //
-    //                    print("Auth token: \(self.authenticationService.getAuthToken()))")
-    //
-    //                    return model
-    //                }
-    //            })
-    //    }
+    func getPrivateMovesFromCache() -> Results<PrivateMoveModel> {
+        let realm = try! Realm()
+        return realm.objects(PrivateMoveModel.self)
+    }
     
+    func getPrivateMovesFromAPI() -> Observable<Results<PrivateMoveModel>> {
+        return restService.getUserMoves("user")
+            .map { (response, json) -> Results<PrivateMoveModel> in
+                if response.statusCode == 200 {
+                    // All went well, update cache
+                    let realm = try! Realm()
+                    
+                    try realm.write {
+                        // TODO: Update cache
+                    }
+                }
+                
+                // Regardless if it worked or not, return the last valid data
+                return self.getPrivateMovesFromCache()
+            }
+    }
+    
+
     func getPrivateMovesFromAPI() -> Void {
         restService.getUserMoves("user")
             .observeOn(MainScheduler.instance)
