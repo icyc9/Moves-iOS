@@ -70,9 +70,16 @@ class PrivateMoveService {
     //
     //    }
     
-    //    func accept() -> Observable<DarwinBoolean> {
-    //
-    //    }
+    func accept(moveId: String) -> Observable<DarwinBoolean> {
+        return restService.markAsDownToHang(moveId)
+            .map({ (response, json) -> DarwinBoolean in
+                if response.statusCode == 200 {
+                    return true
+                }
+                
+                return false
+            })
+    }
     
     func send(hangoutId: String, friendUsernames: [String]) -> Observable<DarwinBoolean> {
         return restService.sendPrivateMoveToFriends(hangoutId, friendUsernames: friendUsernames)
