@@ -21,9 +21,16 @@ class MoveTimelineService {
     //
     //    }
     
-    //    func acceptJoinMoveRequest() -> Observable<DarwinBoolean> {
-    //
-    //    }
+    func acceptJoinMoveRequest(moveId: String) -> Observable<DarwinBoolean> {
+        return restService.markAsDownToHang(moveId)
+            .map({ (response, json) -> DarwinBoolean in
+                if response.statusCode == 200 {
+                    return true
+                }
+                
+                return false
+            })
+    }
     
     func getTimelineMovesFromCache() -> Results<TimelineMoveModel> {
         let realm = try! Realm()
