@@ -8,11 +8,15 @@
 
 import UIKit
 
-class RootFriendsListViewController: UIViewController {
+class RootFriendsListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableView.setUpPullToRefresh(Color.primaryDark)
+    }
+    
+    deinit {
+        tableView.dg_removePullToRefresh()
     }
     
     @IBAction func goBack(sender: UIBarButtonItem) {

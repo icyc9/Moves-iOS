@@ -17,4 +17,8 @@ class FriendsListTableViewController: UITableViewController {
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         navigationController?.navigationBar.barTintColor = Color.primary
     }
+    
+    deinit {
+        tableView.dg_removePullToRefresh()
+    }
 }
