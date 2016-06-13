@@ -74,9 +74,16 @@ class PrivateMoveService {
     //
     //    }
     
-//    func send() -> Observable<DarwinBoolean> {
-//        
-//    }
+    func send(hangoutId: String, friendUsernames: [String]) -> Observable<DarwinBoolean> {
+        return restService.sendPrivateMoveToFriends(hangoutId, friendUsernames: friendUsernames)
+            .map { (response, json) -> DarwinBoolean in
+                if response.statusCode == 200 {
+                    return true
+                }
+                
+                return false
+            }
+    }
     
     func createMove(message: String, scope: String) -> Observable<DarwinBoolean> {
         return restService.createMove(message, scope: scope)

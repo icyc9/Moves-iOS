@@ -50,17 +50,14 @@ class RestService {
         }
     }
     
-    func sendMove(hangoutId: String, friendIds: [String]) {
+    func sendPrivateMoveToFriends(hangoutId: String, friendUsernames: [String]) -> Observable<(NSHTTPURLResponse, AnyObject)> {
         let url = "http://moves-api.us-east-1.elasticbeanstalk.com/hangout/\(hangoutId)/send"
         let headers = ["Content-Type": "application/json", "JWT-Auth": "Bearer \(authenticationService.getAuthToken())"]
         let body = [
-            "users": friendIds
+            "users": friendUsernames
         ];
         
-        Alamofire.request(.POST, url, headers: headers, parameters: body, encoding: .JSON)
-            .responseJSON { response in
-                print("Response JSON: \(response)")
-        }
+        return requestJSON(.POST, url, headers: headers, parameters: body, encoding: .JSON)
     }
     
     func createMove(message: String, scope: String) -> Observable<(NSHTTPURLResponse, AnyObject)> {
