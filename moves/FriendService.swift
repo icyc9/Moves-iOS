@@ -18,41 +18,45 @@ class FriendService {
         self.restService = restService
     }
     
-    func addFriend(username: String) -> Observable<Void> {
+    func addFriend(username: String) -> Observable<DarwinBoolean> {
         return restService.addFriend(username)
             .observeOn(MainScheduler.instance)
-            .map({(response, json) -> Void in
+            .map({(response, json) -> DarwinBoolean in
                 print(response)
                 print(json)
-                return Void()
+                
+                if response.statusCode == 200 {
+                    return true
+                }
+                
+                return false
             })
     }
     
-    func getUserFriends() -> Observable<Results<UserModel>> {
-        return Observable.create { observer in
-            let realm = try! Realm()
-            
-            // Load friends from cache
-            let results = realm.objects(UserModel.self).filter("id !='\(self.authenticationService.getUserId())'")
-            
-            if results.count != 0 {
-                observer.onNext(results)
-            }
-            else {
-                // Either user has no friends or cache is bad
-                //                self.restService.getUserFriends()
-                //                    .observeOn(MainScheduler.instance)
-                //                    .subscribe(onNext: { (response, json) in
-                //                        // TODO: Update cache
-                //                        try! realm.write {
-                //
-                //                        }
-                //                    })
-            }
-            
-            return AnonymousDisposable {
+    func getUserFriendsFromAPI() -> Observable<Results<UserModel>> {
+        return restService.getUserFriends()
+            .map { (response, json) -> Void in
+                if response.statusCode == 200 {
+                    // Success
+                    let realm = try! Realm()
+                    try realm.write {
+                       // TODO: write to db cache
+                    }
+                }
                 
+                return Void()
             }
+            .flatMap { (Void) -> Observable<Results<UserModel>> in
+                return self.getUserFriendsFromCache()
         }
+    }
+    
+    func getUserFriendsFromCache() -> Observable<Results<UserModel>> {
+        let realm = try! Realm()
+        
+        // Load friends from cache
+        let results = realm.objects(UserModel.self).filter("id !='\(self.authenticationService.getUserId())'")
+        
+        return Observable.just(results)
     }
 }

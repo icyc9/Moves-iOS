@@ -78,7 +78,7 @@ class RestService {
         let url = "http://moves-api.us-east-1.elasticbeanstalk.com/user/friends"
         let headers = ["Content-Type": "application/json", "JWT-Auth": "Bearer \(authenticationService.getAuthToken())"]
         let body = [
-            "friend_id": username
+            "friend_username": username
         ];
         
         return requestJSON(.PATCH, url, headers: headers, parameters: body, encoding: .JSON)

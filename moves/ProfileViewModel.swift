@@ -35,8 +35,10 @@ class ProfileViewModel {
     
     func addFriend(username: String) {
         friendService.addFriend(username)
-            .subscribe(onNext: {
-                print("friend added")
+            .subscribe(onNext: { success in
+                if success {
+                    print("friend request sent")
+                }
             }).addDisposableTo(disposeBag)
     }
     
