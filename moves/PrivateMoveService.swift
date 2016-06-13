@@ -88,7 +88,20 @@ class PrivateMoveService {
             })
     }
     
-    func send(hangoutId: String, friendUsernames: [String]) -> Observable<DarwinBoolean> {
+    func send(moveMessage: String, hangoutId: String, friendUsernames: [String]) -> Observable<DarwinBoolean> {
+        let realm = try! Realm()
+       
+        do {
+            try realm.write {
+                let model = PrivateMoveModel()
+                model.messsage = moveMessage
+                realm.add(model)
+            }
+        } catch {
+            print("An error has occurred writing to db")
+            return Observable.just(false)
+        }
+        
         return restService.sendPrivateMoveToFriends(hangoutId, friendUsernames: friendUsernames)
             .map { (response, json) -> DarwinBoolean in
                 if response.statusCode == 200 {
