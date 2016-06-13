@@ -25,11 +25,25 @@ class MoveTimelineService {
     //
     //    }
     
+    func getTimelineMovesFromCache() -> Results<TimelineMoveModel> {
+        let realm = try! Realm()
+        return realm.objects(TimelineMoveModel.self)
+    }
     
-    func getFriendMovesTimeline() -> Observable<Results<PrivateMoveModel>> {
+    func getTimelineMovesFromAPI() -> Observable<Results<TimelineMoveModel>> {
         return restService.getUserMoves("open")
-            .map({ (response, json) -> Result<MoveModel> in
+            .observeOn(MainScheduler.instance)
+            .map({ (response, json) -> Results<TimelineMoveModel> in
+                if response.statusCode == 200 {
+                    // Success, update local cache
+                    let realm = try! Realm()
+                    
+                    try realm.write {
+                        // TODO: Convert API model into db models and insert
+                    }
+                }
                 
+                return self.getTimelineMovesFromCache()
             })
     }
 }
