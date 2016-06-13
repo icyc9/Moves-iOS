@@ -24,13 +24,19 @@ class SendMoveViewModel {
         self.moveTimelineService = moveTimelineService
     }
     
-    func getFriends() {
-        friendService.getUserFriends()
-            .subscribe(onNext: { friends in
+    func invalidateFriendsCache() {
+        friendService.getUserFriendsFromAPI()
+            .subscribeNext { friends in
                 dispatch_async(dispatch_get_main_queue()) {
                     self.friends.onNext(friends)
                 }
-            }).addDisposableTo(disposeBag)
+            }.addDisposableTo(disposeBag)
+    }
+    
+    func getFriendsFromCache() {
+        // Load and show from cache
+        let friends = friendService.getUserFriendsFromCache()
+        self.friends.onNext(friends)
     }
     
     func createMove(message: String, scope: String) {

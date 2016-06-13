@@ -133,6 +133,14 @@ class RestService {
         return "Basic \(base64Credentials)"
     }
     
+    func getPendingFriendRequestsFromOtherUsers() -> Observable<(NSHTTPURLResponse, AnyObject)> {
+        let url = "http://moves-api.us-east-1.elasticbeanstalk.com/user/friends?pending=true"
+        let headers = ["Content-Type": "application/json"]
+        
+        return requestJSON(.GET, url, headers:headers,
+                           encoding: .JSON)
+    }
+    
     func createUser(data: CreateUserJobData) -> Observable<(NSHTTPURLResponse, AnyObject)> {
         let url = "http://moves-api.us-east-1.elasticbeanstalk.com/user"
         let headers = ["Content-Type": "application/json"]

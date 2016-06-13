@@ -50,8 +50,6 @@ class SendMoveViewController: UIViewController, UITableViewDelegate, UITableView
             self.friends = friends
             self.tableView.reloadData()
         }).addDisposableTo(disposeBag)
-        
-        sendMoveViewModel.getFriends()
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

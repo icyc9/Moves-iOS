@@ -18,6 +18,31 @@ class FriendService {
         self.restService = restService
     }
     
+    func getUserFriendsFromCache() -> Results<UserModel> {
+        let realm = try! Realm()
+        
+        // Load friends from cache
+        let results = realm.objects(UserModel.self).filter("id !='\(self.authenticationService.getUserId())'")
+        
+        return results
+    }
+    
+    func getRequestingFriendsFromAPI() -> Observable<Results<UserModel>> {
+        return restService.getPendingFriendRequestsFromOtherUsers()
+            .map { (response, json) -> Realm in
+                let realm = try! Realm()
+                
+                try realm.write {
+                    // TODO: Database cache write
+                }
+                
+                return realm
+            }
+            .map { realm -> Results<UserModel> in
+                return self.getUserFriendsFromCache()
+            }
+    }
+    
     func addFriend(username: String) -> Observable<DarwinBoolean> {
         return restService.addFriend(username)
             .observeOn(MainScheduler.instance)
@@ -46,17 +71,8 @@ class FriendService {
                 
                 return Void()
             }
-            .flatMap { (Void) -> Observable<Results<UserModel>> in
+            .map { (Void) -> Results<UserModel> in
                 return self.getUserFriendsFromCache()
-        }
-    }
-    
-    func getUserFriendsFromCache() -> Observable<Results<UserModel>> {
-        let realm = try! Realm()
-        
-        // Load friends from cache
-        let results = realm.objects(UserModel.self).filter("id !='\(self.authenticationService.getUserId())'")
-        
-        return Observable.just(results)
+            }
     }
 }
