@@ -60,6 +60,7 @@ class PrivateMoveService {
     
     func decline(moveId: String) -> Observable<DarwinBoolean> {
         return restService.markAsNotDownToHang(moveId)
+            .observeOn(MainScheduler.instance)
             .map({ (response, json) -> DarwinBoolean in
                 if response.statusCode == 200 {
                     return true
@@ -71,6 +72,7 @@ class PrivateMoveService {
     
     func accept(moveId: String) -> Observable<DarwinBoolean> {
         return restService.markAsDownToHang(moveId)
+            .observeOn(MainScheduler.instance)
             .map({ (response, json) -> DarwinBoolean in
                 if response.statusCode == 200 {
                     return true
@@ -80,13 +82,15 @@ class PrivateMoveService {
             })
     }
     
-    func send(moveMessage: String, hangoutId: String, friendUsernames: [String]) -> Observable<DarwinBoolean> {
+    func send(moveMessage: String, moveId: String, friendUsernames: [String]) -> Observable<DarwinBoolean> {
         let realm = try! Realm()
        
         do {
             try realm.write {
                 let model = PrivateMoveModel()
                 model.messsage = moveMessage
+                model.id = moveId
+                model.state = PrivateMoveModel.STATE_SYNCING
                 realm.add(model)
             }
         } catch {
@@ -94,10 +98,24 @@ class PrivateMoveService {
             return Observable.just(false)
         }
         
-        return restService.sendPrivateMoveToFriends(hangoutId, friendUsernames: friendUsernames)
+        return restService.sendPrivateMoveToFriends(moveId, friendUsernames: friendUsernames)
+            .observeOn(MainScheduler.instance)
             .map { (response, json) -> DarwinBoolean in
                 if response.statusCode == 200 {
+                    try realm.write {
+                        let model = realm.objects(PrivateMoveModel.self).filter("id = '\(moveId)'").first
+                        model!.state = PrivateMoveModel.STATE_SYNC_SUCCESS
+                        realm.add(model!, update: true)
+                    }
+                    
                     return true
+                }
+                else {
+                    try realm.write {
+                        let model = realm.objects(PrivateMoveModel.self).filter("id = '\(moveId)'").first
+                        model!.state = PrivateMoveModel.STATE_SYNC_FAILURE
+                        realm.add(model!, update: true)
+                    }
                 }
                 
                 return false

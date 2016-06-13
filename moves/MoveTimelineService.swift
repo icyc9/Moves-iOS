@@ -6,6 +6,10 @@
 //  Copyright © 2016 Daniel Christopher. All rights reserved.
 //
 
+import RxSwift
+import RxCocoa
+import RealmSwift
+
 class MoveTimelineService {
     private var restService: RestService
     
@@ -22,7 +26,10 @@ class MoveTimelineService {
     //    }
     
     
-    //    func getFriendMovesTimeline() -> Observable<Result<MoveModel>> {
-    //
-    //    }
+    func getFriendMovesTimeline() -> Observable<Results<PrivateMoveModel>> {
+        return restService.getUserMoves("open")
+            .map({ (response, json) -> Result<MoveModel> in
+                
+            })
+    }
 }
