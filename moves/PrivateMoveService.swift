@@ -47,9 +47,20 @@ class PrivateMoveService {
     //            })
     //    }
     
-    //    func getPrivateMovesTimeline() -> Observable<Result<MoveModel>> {
-    //
-    //    }
+    func getPrivateMovesFromAPI() -> Void {
+        restService.getUserMoves("user")
+            .observeOn(MainScheduler.instance)
+            .subscribeNext { (response, json) in
+                print(response)
+            }
+    }
+    
+    func getPrivateMovesTimelineFromCache() -> Results<PrivateMoveModel> {
+        let realm = try! Realm()
+        
+        // Load moves in from cache
+        return realm.objects(PrivateMoveModel.self)
+    }
     
     //    func getUsersInMove() -> Observable<Results<UserModel>> {
     //
