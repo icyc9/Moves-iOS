@@ -9,9 +9,9 @@
 import UIKit
 
 class NonSwipableProfileViewController: UIViewController {
-
-    override func viewWillAppear(animated: Bool) {
-        toggleScrollOnPageViewController(false)
+    
+    override func viewDidLoad() {
+        toggleScrollOnPageViewController(false, horizontalScrollEnabled: false)
     }
     
     override func didReceiveMemoryWarning() {
@@ -19,24 +19,24 @@ class NonSwipableProfileViewController: UIViewController {
     }
 
     @IBAction func goBack(sender: UIBarButtonItem) {
-        toggleScrollOnPageViewController(true)
+        toggleScrollOnPageViewController(true, horizontalScrollEnabled:true)
         self.navigationController?.popViewControllerAnimated(true)
     }
     
-    func toggleScrollOnPageViewController(scrollEnabled: Bool) {
+    func toggleScrollOnPageViewController(verticalScrollEnabled: Bool, horizontalScrollEnabled: Bool) {
         
         let verticalPageController = self.parentViewController?.parentViewController as! UIPageViewController
         let horizontalPageController = self.parentViewController?.parentViewController?.parentViewController as! UIPageViewController
 
         for view in verticalPageController.view.subviews {
             if let subView = view as? UIScrollView {
-                subView.scrollEnabled = scrollEnabled
+                subView.scrollEnabled = verticalScrollEnabled
             }
         }
         
         for view in horizontalPageController.view.subviews {
             if let subView = view as? UIScrollView {
-                subView.scrollEnabled = scrollEnabled
+                subView.scrollEnabled = horizontalScrollEnabled
             }
         }
     }

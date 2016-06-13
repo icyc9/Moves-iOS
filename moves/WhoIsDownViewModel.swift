@@ -7,11 +7,11 @@
 //
 
 class WhoIsDownViewModel {
-    private var moveService: MoveService
+    private var moveTimelineService: MoveTimelineService
     private var userService: UserService
     
-    init(moveService: MoveService, userService: UserService) {
-        self.moveService = moveService
+    init(moveTimelineService: MoveTimelineService, userService: UserService) {
+        self.moveTimelineService = moveTimelineService
         self.userService = userService
     }
     

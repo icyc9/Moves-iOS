@@ -20,7 +20,7 @@ class FriendTableViewCell: UITableViewCell {
 
 class SendMoveViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    private var sendMoveViewModel: SendMoveViewModel = SendMoveViewModel(moveService: MoveService(restService: RestService(authenticationService: AuthenticationService())), userService: UserService(restService: RestService(authenticationService: AuthenticationService()), authenticationService: AuthenticationService()))
+    private var sendMoveViewModel: SendMoveViewModel = SendMoveViewModel(privateMoveService: PrivateMoveService(restService: RestService(authenticationService: AuthenticationService())), moveTimelineService: MoveTimelineService(restService: RestService(authenticationService: AuthenticationService())), friendService: FriendService(authenticationService: AuthenticationService(), restService: RestService(authenticationService: AuthenticationService())))
     
     var moveMessage: String = ""
     var disposeBag = DisposeBag()

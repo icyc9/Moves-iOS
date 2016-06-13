@@ -15,7 +15,7 @@ class OpenMoveJoinRequestTableViewCell: UITableViewCell {
 
 class WhoIsDownTableViewController: UITableViewController {
     private var friends: Results<UserModel>?
-    private var viewModel: WhoIsDownViewModel = WhoIsDownViewModel(moveService: MoveService(restService: RestService(authenticationService: AuthenticationService())), userService: UserService(restService: RestService(authenticationService: AuthenticationService()), authenticationService: AuthenticationService()))
+    private var viewModel: WhoIsDownViewModel = WhoIsDownViewModel(moveTimelineService: MoveTimelineService(restService: RestService(authenticationService: AuthenticationService())), userService: UserService(restService: RestService(authenticationService: AuthenticationService()), authenticationService: AuthenticationService()))
     
     override func viewDidLoad() {
         tableView.setUpPullToRefresh(Color.primaryDark)

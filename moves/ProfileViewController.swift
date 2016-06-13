@@ -22,11 +22,12 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
     
     private var disposeBag = DisposeBag()
     
-    private var profileViewModel: ProfileViewModel = ProfileViewModel(userService: UserService(restService: RestService(authenticationService: AuthenticationService()),
+    private var profileViewModel: ProfileViewModel = ProfileViewModel(friendService: FriendService(authenticationService: AuthenticationService(), restService: RestService(authenticationService: AuthenticationService())), userService: UserService(restService: RestService(authenticationService: AuthenticationService()),
         authenticationService: AuthenticationService()))
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         friendUsernameTextField.delegate = self
         addFriendButton.layer.cornerRadius = 5
         navigationController?.navigationBar.barTintColor = Color.primary

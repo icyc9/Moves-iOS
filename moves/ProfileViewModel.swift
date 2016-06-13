@@ -10,12 +10,14 @@ import RxSwift
 import RxCocoa
 
 class ProfileViewModel {
+    private var friendService: FriendService
     private var userService: UserService
     var username = BehaviorSubject(value: "")
     var name = BehaviorSubject(value: "")
     var disposeBag = DisposeBag()
     
-    init(userService: UserService) {
+    init(friendService: FriendService, userService: UserService) {
+        self.friendService = friendService
         self.userService = userService
     }
     
@@ -32,7 +34,7 @@ class ProfileViewModel {
     }
     
     func addFriend(username: String) {
-        userService.addFriend(username)
+        friendService.addFriend(username)
             .subscribe(onNext: {
                 print("friend added")
             }).addDisposableTo(disposeBag)

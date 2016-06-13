@@ -35,6 +35,10 @@
 		028C86571D0E0F3D00194CC1 /* WhoIsDownTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C86561D0E0F3D00194CC1 /* WhoIsDownTableViewController.swift */; };
 		028C865B1D0E1A8500194CC1 /* WhoIsDownViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C865A1D0E1A8500194CC1 /* WhoIsDownViewModel.swift */; };
 		028C865E1D0E455100194CC1 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 028C865D1D0E455100194CC1 /* UserTableViewCell.xib */; };
+		028C86601D0E573E00194CC1 /* MoveTimelineService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C865F1D0E573E00194CC1 /* MoveTimelineService.swift */; };
+		028C86641D0E57B000194CC1 /* PrivateMoveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C86631D0E57B000194CC1 /* PrivateMoveService.swift */; };
+		028C86661D0E58DC00194CC1 /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C86651D0E58DC00194CC1 /* ChatService.swift */; };
+		028C86681D0E590F00194CC1 /* FriendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C86671D0E590F00194CC1 /* FriendService.swift */; };
 		029793231D078C6500E20C77 /* proxima-nova-soft-light-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 029793211D078C6500E20C77 /* proxima-nova-soft-light-webfont.ttf */; };
 		029793241D078C6500E20C77 /* proxima-nova-soft-normal-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 029793221D078C6500E20C77 /* proxima-nova-soft-normal-webfont.ttf */; };
 		0297932E1D078D5300E20C77 /* SignInOrUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0297932D1D078D5300E20C77 /* SignInOrUp.storyboard */; };
@@ -44,7 +48,6 @@
 		029793421D0841F800E20C77 /* RestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029793411D0841F800E20C77 /* RestService.swift */; };
 		029793441D08429200E20C77 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029793431D08429200E20C77 /* AuthenticationService.swift */; };
 		02B5993D1D0A7132005C7169 /* MoveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B5993C1D0A7132005C7169 /* MoveModel.swift */; };
-		02B5993F1D0A714D005C7169 /* MoveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B5993E1D0A714D005C7169 /* MoveService.swift */; };
 		02B599431D0A7410005C7169 /* SendMoveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B599421D0A7410005C7169 /* SendMoveViewModel.swift */; };
 		02B599451D0B4ECA005C7169 /* SendMoveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B599441D0B4ECA005C7169 /* SendMoveViewController.swift */; };
 		02F4E0FE1D0B658100AF5970 /* FriendRequestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F4E0FD1D0B658100AF5970 /* FriendRequestsViewController.swift */; };
@@ -86,6 +89,10 @@
 		028C86561D0E0F3D00194CC1 /* WhoIsDownTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhoIsDownTableViewController.swift; sourceTree = "<group>"; };
 		028C865A1D0E1A8500194CC1 /* WhoIsDownViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhoIsDownViewModel.swift; sourceTree = "<group>"; };
 		028C865D1D0E455100194CC1 /* UserTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
+		028C865F1D0E573E00194CC1 /* MoveTimelineService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveTimelineService.swift; sourceTree = "<group>"; };
+		028C86631D0E57B000194CC1 /* PrivateMoveService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivateMoveService.swift; sourceTree = "<group>"; };
+		028C86651D0E58DC00194CC1 /* ChatService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
+		028C86671D0E590F00194CC1 /* FriendService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendService.swift; sourceTree = "<group>"; };
 		029793211D078C6500E20C77 /* proxima-nova-soft-light-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "proxima-nova-soft-light-webfont.ttf"; sourceTree = "<group>"; };
 		029793221D078C6500E20C77 /* proxima-nova-soft-normal-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "proxima-nova-soft-normal-webfont.ttf"; sourceTree = "<group>"; };
 		0297932D1D078D5300E20C77 /* SignInOrUp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignInOrUp.storyboard; sourceTree = "<group>"; };
@@ -95,7 +102,6 @@
 		029793411D0841F800E20C77 /* RestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestService.swift; sourceTree = "<group>"; };
 		029793431D08429200E20C77 /* AuthenticationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		02B5993C1D0A7132005C7169 /* MoveModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveModel.swift; sourceTree = "<group>"; };
-		02B5993E1D0A714D005C7169 /* MoveService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveService.swift; sourceTree = "<group>"; };
 		02B599421D0A7410005C7169 /* SendMoveViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendMoveViewModel.swift; sourceTree = "<group>"; };
 		02B599441D0B4ECA005C7169 /* SendMoveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendMoveViewController.swift; sourceTree = "<group>"; };
 		02F4E0FD1D0B658100AF5970 /* FriendRequestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendRequestsViewController.swift; sourceTree = "<group>"; };
@@ -313,7 +319,10 @@
 				0204C22F1D0A1F7200E0B9AE /* UserService.swift */,
 				029793411D0841F800E20C77 /* RestService.swift */,
 				029793431D08429200E20C77 /* AuthenticationService.swift */,
-				02B5993E1D0A714D005C7169 /* MoveService.swift */,
+				028C865F1D0E573E00194CC1 /* MoveTimelineService.swift */,
+				028C86631D0E57B000194CC1 /* PrivateMoveService.swift */,
+				028C86651D0E58DC00194CC1 /* ChatService.swift */,
+				028C86671D0E590F00194CC1 /* FriendService.swift */,
 			);
 			name = services;
 			sourceTree = "<group>";
@@ -480,21 +489,24 @@
 				023D05511D078ADC003D19A4 /* CreateHangoutOrMeetPeopleViewController.swift in Sources */,
 				028C86571D0E0F3D00194CC1 /* WhoIsDownTableViewController.swift in Sources */,
 				023D054F1D078AD3003D19A4 /* UserMovesTableViewController.swift in Sources */,
+				028C86641D0E57B000194CC1 /* PrivateMoveService.swift in Sources */,
 				0204C2301D0A1F7200E0B9AE /* UserService.swift in Sources */,
 				02B599451D0B4ECA005C7169 /* SendMoveViewController.swift in Sources */,
 				028C86451D0D3EDB00194CC1 /* SettingsTableViewController.swift in Sources */,
 				023D05571D078AE6003D19A4 /* ProfileAndCreateMovesNavigationViewController.swift in Sources */,
 				023D055F1D078AF0003D19A4 /* ProfileViewController.swift in Sources */,
 				02F4E0FE1D0B658100AF5970 /* FriendRequestsViewController.swift in Sources */,
+				028C86661D0E58DC00194CC1 /* ChatService.swift in Sources */,
+				028C86681D0E590F00194CC1 /* FriendService.swift in Sources */,
 				029793441D08429200E20C77 /* AuthenticationService.swift in Sources */,
 				0204C2231D08CA2300E0B9AE /* UserModel.swift in Sources */,
 				028C864C1D0D3EE900194CC1 /* DemoConversation.swift in Sources */,
 				023D054E1D078AD3003D19A4 /* InvitationTableViewCell.swift in Sources */,
+				028C86601D0E573E00194CC1 /* MoveTimelineService.swift in Sources */,
 				02F4E1061D0B729C00AF5970 /* MovesViewController.swift in Sources */,
 				02B599431D0A7410005C7169 /* SendMoveViewModel.swift in Sources */,
 				028C864B1D0D3EE900194CC1 /* Conversation.swift in Sources */,
 				023D05641D078AF5003D19A4 /* BasePageViewController.swift in Sources */,
-				02B5993F1D0A714D005C7169 /* MoveService.swift in Sources */,
 				023D05601D078AF0003D19A4 /* FriendsListTableViewController.swift in Sources */,
 				028A80361D0854CD000328B2 /* JobData.swift in Sources */,
 				023D05671D078B52003D19A4 /* Constants.swift in Sources */,

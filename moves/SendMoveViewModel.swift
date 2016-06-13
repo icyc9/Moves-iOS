@@ -11,19 +11,21 @@ import RxCocoa
 import RealmSwift
 
 class SendMoveViewModel {
-    private var moveService: MoveService
-    private var userService: UserService
+    private var privateMoveService: PrivateMoveService
+    private var moveTimelineService: MoveTimelineService
+    private var friendService: FriendService
     var createMoveState = BehaviorSubject<DarwinBoolean>(value: false)
     var friends = PublishSubject<Results<UserModel>>()
     private var disposeBag = DisposeBag()
     
-    init(moveService: MoveService, userService: UserService) {
-        self.moveService = moveService
-        self.userService = userService
+    init(privateMoveService: PrivateMoveService, moveTimelineService: MoveTimelineService, friendService: FriendService) {
+        self.privateMoveService = privateMoveService
+        self.friendService = friendService
+        self.moveTimelineService = moveTimelineService
     }
     
     func getFriends() {
-        userService.getUserFriends()
+        friendService.getUserFriends()
             .subscribe(onNext: { friends in
                 dispatch_async(dispatch_get_main_queue()) {
                     self.friends.onNext(friends)
@@ -32,11 +34,11 @@ class SendMoveViewModel {
     }
     
     func createMove(message: String, scope: String) {
-        moveService.createMove(message, scope: scope)
-            .subscribe(onNext: {moveCreatedSuccessfully in
-                dispatch_async(dispatch_get_main_queue()) {
-                    self.createMoveState.onNext(moveCreatedSuccessfully)
-                }
-            }).addDisposableTo(disposeBag)
+//        moveService.createMove(message, scope: scope)
+//            .subscribe(onNext: {moveCreatedSuccessfully in
+//                dispatch_async(dispatch_get_main_queue()) {
+//                    self.createMoveState.onNext(moveCreatedSuccessfully)
+//                }
+//            }).addDisposableTo(disposeBag)
     }
 }
