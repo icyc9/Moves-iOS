@@ -47,6 +47,7 @@
             <string>ProximaNovaSoft-Medium</string>
             <string>ProximaNovaSoft-Medium</string>
             <string>ProximaNovaSoft-Medium</string>
+            <string>ProximaNovaSoft-Medium</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -688,16 +689,32 @@
                                     <segue destination="VHh-bk-yBS" kind="show" id="mvy-nJ-JCI"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="twR-OB-a4j">
+                                <rect key="frame" x="268" y="562" width="67" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0Bk-WX-41T"/>
+                                    <constraint firstAttribute="width" constant="67" id="tb4-2P-Qmc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNovaSoft-Medium" family="ProximaNovaSoft-Medium" pointSize="17"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="signOut:" destination="fWm-Ji-99n" eventType="touchUpInside" id="ot8-c5-5eD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.12941177189350128" green="0.58823531866073608" blue="0.9529411792755127" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="wwZ-6v-f1c" firstAttribute="centerX" secondItem="mGb-Cf-ukO" secondAttribute="centerX" id="25V-ug-KFa"/>
                             <constraint firstItem="afc-Li-NYc" firstAttribute="top" secondItem="gMi-9E-Hne" secondAttribute="bottom" constant="8" symbolic="YES" id="C9p-0l-EzG"/>
+                            <constraint firstItem="yjJ-b0-g6z" firstAttribute="top" secondItem="twR-OB-a4j" secondAttribute="bottom" constant="8" symbolic="YES" id="LL4-vw-7tS"/>
                             <constraint firstItem="cvc-Ed-9WI" firstAttribute="top" secondItem="aBy-ZA-hqh" secondAttribute="bottom" constant="8" symbolic="YES" id="NLc-09-Fby"/>
                             <constraint firstItem="cvc-Ed-9WI" firstAttribute="centerX" secondItem="SFI-vn-U5k" secondAttribute="centerX" id="Rwg-Cl-Cj8"/>
                             <constraint firstItem="IGP-g5-KQw" firstAttribute="centerX" secondItem="afc-Li-NYc" secondAttribute="centerX" id="ToR-6c-x6a"/>
                             <constraint firstItem="gMi-9E-Hne" firstAttribute="top" secondItem="wwZ-6v-f1c" secondAttribute="bottom" constant="18" id="UVV-Cf-skk"/>
                             <constraint firstItem="jQz-S1-cUk" firstAttribute="top" secondItem="afc-Li-NYc" secondAttribute="bottom" constant="90" id="W3K-Xd-72s"/>
+                            <constraint firstItem="twR-OB-a4j" firstAttribute="centerX" secondItem="SFI-vn-U5k" secondAttribute="centerX" id="ZAH-WY-qYA"/>
                             <constraint firstItem="wwZ-6v-f1c" firstAttribute="centerX" secondItem="gMi-9E-Hne" secondAttribute="centerX" id="bfl-n9-WOW"/>
                             <constraint firstItem="gMi-9E-Hne" firstAttribute="centerX" secondItem="afc-Li-NYc" secondAttribute="centerX" id="c9t-7j-qYg"/>
                             <constraint firstItem="jQz-S1-cUk" firstAttribute="centerX" secondItem="afc-Li-NYc" secondAttribute="centerX" id="kSY-4v-Lcl"/>

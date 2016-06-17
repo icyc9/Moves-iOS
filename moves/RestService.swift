@@ -135,6 +135,7 @@ class RestService {
         let headers = ["Content-Type": "application/json"]
         
         let parameters = [
+            "id": NSUUID().UUIDString,
             "name": data.name,
             "username": data.username,
             "password": data.password,

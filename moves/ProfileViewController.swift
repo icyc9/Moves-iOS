@@ -55,6 +55,16 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
         super.didReceiveMemoryWarning()
     }
 
+    @IBAction func signOut(sender: UIButton) {
+        profileViewModel.signOut()
+        navigationController?.popViewControllerAnimated(true)
+        
+        let storyboard = UIStoryboard(name: "SignInOrUp", bundle: nil)
+        let signUpViewController = storyboard.instantiateViewControllerWithIdentifier("sign_up")
+        
+        presentViewController(signUpViewController, animated: true, completion: nil)
+    }
+    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return false

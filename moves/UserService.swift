@@ -68,6 +68,10 @@ class UserService {
         return realm.objects(UserModel.self).filter("id = '\(authenticationService.getUserId())'").first
     }
     
+    func signUserOut() {
+        authenticationService.authenticate("", userId: "")
+    }
+    
     func createUser(data: CreateUserJobData) -> Observable<UserModel?> {
         return restService.createUser(data)
             .observeOn(MainScheduler.instance)

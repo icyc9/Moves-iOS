@@ -21,6 +21,10 @@ class ProfileViewModel {
         self.userService = userService
     }
     
+    func signOut() {
+        userService.signUserOut()
+    }
+    
     func updateName(username: String) {
         userService.updateName(username)
             .subscribe(onNext: { success in

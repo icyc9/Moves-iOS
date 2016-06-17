@@ -47,13 +47,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         Realm.Configuration.defaultConfiguration = Realm.Configuration(
-            schemaVersion: 2,
+            schemaVersion: 3,
             migrationBlock: { migration, oldSchemaVersion in
                 // The enumerateObjects:block: method iterates
                 // over every 'Person' object stored in the Realm file
                 migration.enumerate(UserModel.className()) { oldObject, newObject in
                     // Add the `isBestfriend` property to Realms with a schema version of 0 or 1
-                    if oldSchemaVersion < 2 {
+                    if oldSchemaVersion < 3 {
                         newObject!["isBestFriend"] = false
                     }
                 }
