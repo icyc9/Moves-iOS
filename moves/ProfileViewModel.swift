@@ -12,9 +12,10 @@ import RxCocoa
 class ProfileViewModel {
     private var friendService: FriendService
     private var userService: UserService
+    var disposeBag = DisposeBag()
+    
     var username = BehaviorSubject(value: "")
     var name = BehaviorSubject(value: "")
-    var disposeBag = DisposeBag()
     
     init(friendService: FriendService, userService: UserService) {
         self.friendService = friendService
@@ -25,25 +26,14 @@ class ProfileViewModel {
         userService.signUserOut()
     }
     
-    func updateName(username: String) {
-        userService.updateName(username)
-            .subscribe(onNext: { success in
-                if success {
-                    print("Username updated")
-                }
-                else {
-                    print("Username failed to update")
-                }
-            }).addDisposableTo(disposeBag)
+    func updateName(username: String) -> Observable<DarwinBoolean> {
+        return userService.updateName(username)
+            .observeOn(MainScheduler.instance)
     }
     
-    func addFriend(username: String) {
-        friendService.addFriend(username)
-            .subscribe(onNext: { success in
-                if success {
-                    print("friend request sent")
-                }
-            }).addDisposableTo(disposeBag)
+    func addFriend(username: String) -> Observable<DarwinBoolean> {
+        return friendService.addFriend(username)
+            .observeOn(MainScheduler.instance)
     }
     
     func getUserDetails() {

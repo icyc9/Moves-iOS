@@ -41,6 +41,14 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
     @IBAction func updateName(sender: UIButton) {
         // Update model
         profileViewModel.updateName(usernameTextView.text!)
+            .subscribeNext { (success) in
+                if success {
+                    print("Update name success")
+                }
+                else {
+                    print("Failed to update name")
+                }
+            }.addDisposableTo(disposeBag)
     }
     
     @IBAction func viewFriendRequests(sender: UIButton) {
@@ -49,6 +57,14 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func addFriend(sender: UIButton) {
         profileViewModel.addFriend(friendUsernameTextField.text!)
+            .subscribeNext { (success) in
+                if success {
+                    print("Add friend success")
+                }
+                else {
+                    print("Failed to add friend")
+                }
+            }.addDisposableTo(disposeBag)
     }
     
     override func didReceiveMemoryWarning() {
