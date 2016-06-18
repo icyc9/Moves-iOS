@@ -46,10 +46,11 @@ class SendMoveViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.delegate = self
         tableView.dataSource = self
         
-        sendMoveViewModel.friends.subscribe(onNext: { (friends) in
-            self.friends = friends
-            self.tableView.reloadData()
-        }).addDisposableTo(disposeBag)
+        sendMoveViewModel.getFriendsFromCache()
+            .subscribeNext { (results) in
+                self.friends = results
+                self.tableView.reloadData()
+        }.addDisposableTo(disposeBag)
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

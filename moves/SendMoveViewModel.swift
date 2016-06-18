@@ -14,9 +14,6 @@ class SendMoveViewModel {
     private var privateMoveService: PrivateMoveService
     private var moveTimelineService: MoveTimelineService
     private var friendService: FriendService
-    var createMoveState = BehaviorSubject<DarwinBoolean>(value: false)
-    var friends = PublishSubject<Results<UserModel>>()
-    private var disposeBag = DisposeBag()
     
     init(privateMoveService: PrivateMoveService, moveTimelineService: MoveTimelineService, friendService: FriendService) {
         self.privateMoveService = privateMoveService
@@ -24,19 +21,14 @@ class SendMoveViewModel {
         self.moveTimelineService = moveTimelineService
     }
     
-    func invalidateFriendsCache() {
-        friendService.getUserFriendsFromAPI()
-            .subscribeNext { friends in
-                dispatch_async(dispatch_get_main_queue()) {
-                    self.friends.onNext(friends)
-                }
-            }.addDisposableTo(disposeBag)
+    func invalidateFriendsCache() -> Observable<Results<UserModel>> {
+        return friendService.getUserFriendsFromAPI()
+            .observeOn(MainScheduler.instance)
     }
     
-    func getFriendsFromCache() {
+    func getFriendsFromCache() -> Observable<Results<UserModel>>{
         // Load and show from cache
-        let friends = friendService.getUserFriendsFromCache()
-        self.friends.onNext(friends)
+        return Observable.just(friendService.getUserFriendsFromCache())
     }
     
     func createMove(message: String, scope: String) {
