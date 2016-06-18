@@ -12,8 +12,6 @@ import RxCocoa
 
 class SignUpViewModel {
     private var userService: UserService
-    var signInState = BehaviorSubject<DarwinBoolean>(value: false)
-    private var disposeBag = DisposeBag()
     
     init(userService: UserService) {
         self.userService = userService
