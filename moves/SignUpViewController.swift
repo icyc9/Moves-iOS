@@ -44,9 +44,11 @@ class SignUpViewController: UIViewController {
             .subscribeNext { signUpCode in
                 switch signUpCode {
                 case SignUpCode.InvalidEmailOrPhone:
+                    self.signUpFailureLabel.backgroundColor = UIColor.whiteColor()
                     self.signUpFailureLabel.text = "Invalid email or phone"
                     break
                 case SignUpCode.InvalidUsername:
+                    self.signUpFailureLabel.backgroundColor = UIColor.whiteColor()
                     self.signUpFailureLabel.text = "Invalid username"
                     break
                 case SignUpCode.Success:
@@ -57,6 +59,7 @@ class SignUpViewController: UIViewController {
                     
                     break
                 default:
+                    self.signUpFailureLabel.backgroundColor = UIColor.whiteColor()
                     self.signUpFailureLabel.text = "An unknown error has occurred"
                     break
                 }

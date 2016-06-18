@@ -18,7 +18,7 @@ class SignInViewModel {
         self.userService = userService
     }
     
-    func signIn(username: String, password: String) -> Observable<DarwinBoolean> {
+    func signIn(username: String, password: String) -> Observable<SignInCode> {
         return userService.signIn(username, password: password)
             .observeOn(MainScheduler.instance)
     }

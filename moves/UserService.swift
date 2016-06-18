@@ -19,20 +19,24 @@ class UserService {
         self.authenticationService = authenticationService
     }
     
-    func signIn(username: String, password: String) -> Observable<DarwinBoolean> {
+    func signIn(username: String, password: String) -> Observable<SignInCode> {
         return restService.authenticate(username, password: password)
             .observeOn(MainScheduler.instance)
-            .map({ (response, json) -> DarwinBoolean in
+            .map({ (response, json) -> SignInCode in
                 guard response.statusCode == 200 else {
-                    return false
+                    if response.statusCode == 400 {
+                        return SignInCode.InvalidCredentials
+                    }
+                    
+                    return SignInCode.UnknownFailure
                 }
                 
                 if let data = json as? [String: AnyObject] {
                     self.authenticationService.authenticate(data["access_token"] as! String, userId: data["_id"] as! String)
-                    return true
+                    return SignInCode.Success
                 }
                 
-                return false
+                return SignInCode.UnknownFailure
             })
     }
     
