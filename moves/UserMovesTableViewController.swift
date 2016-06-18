@@ -35,11 +35,11 @@ class UserMovesTableViewController: UITableViewController {
         navigationBar?.barTintColor = Color.primary
         navigationBar?.topItem?.title = "My Moves"
         
-        privateMovesViewModel.moves.subscribeNext { moves in
-            self.moves = moves
-            print("move len: \(moves.count)")
-            self.tableView.reloadData()
-        }.addDisposableTo(disposeBag)
+        privateMovesViewModel.getPrivateMoves()
+            .subscribeNext { (results) in
+                self.moves = results
+                self.tableView.reloadData()
+            }.addDisposableTo(disposeBag)
         
         privateMovesViewModel.getPrivateMoves()
     }
@@ -56,7 +56,7 @@ class UserMovesTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("PrivateMoveTableViewCell", forIndexPath: indexPath) as! AcceptedPrivateMoveTableViewCell
   
         if moves != nil {
-            var move = moves![indexPath.item] as? AcceptedPrivateMoveTableViewCell
+            let move = moves![indexPath.item] as? AcceptedPrivateMoveTableViewCell
             
             if move != nil {
                 

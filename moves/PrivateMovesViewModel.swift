@@ -12,18 +12,12 @@ import RealmSwift
 
 class PrivateMovesViewModel {
     private var privateMoveService: PrivateMoveService
-    private var disposeBag = DisposeBag()
-    
-    var moves = PublishSubject<Results<PrivateMoveModel>>()
     
     init(privateMoveService: PrivateMoveService) {
         self.privateMoveService = privateMoveService
-        moves.addDisposableTo(disposeBag)
     }
     
-    func getPrivateMoves() {
-        dispatch_async(dispatch_get_main_queue()) {
-            self.moves.onNext(self.privateMoveService.getPrivateMovesTimelineFromCache())
-        }
+    func getPrivateMoves() -> Observable<Results<PrivateMoveModel>> {
+        return Observable.just(privateMoveService.getPrivateMovesFromCache())
     }
 }
