@@ -43,6 +43,7 @@
 		028C866E1D0E659F00194CC1 /* TimelineMoveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C866D1D0E659F00194CC1 /* TimelineMoveModel.swift */; };
 		028C86701D0ED19C00194CC1 /* FriendsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C866F1D0ED19C00194CC1 /* FriendsListViewModel.swift */; };
 		028C86721D14EB1000194CC1 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C86711D14EB1000194CC1 /* SignInViewModel.swift */; };
+		028C86751D15ADA900194CC1 /* SignUpCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C86741D15ADA900194CC1 /* SignUpCode.swift */; };
 		029793231D078C6500E20C77 /* proxima-nova-soft-light-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 029793211D078C6500E20C77 /* proxima-nova-soft-light-webfont.ttf */; };
 		029793241D078C6500E20C77 /* proxima-nova-soft-normal-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 029793221D078C6500E20C77 /* proxima-nova-soft-normal-webfont.ttf */; };
 		0297932E1D078D5300E20C77 /* SignInOrUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0297932D1D078D5300E20C77 /* SignInOrUp.storyboard */; };
@@ -100,6 +101,7 @@
 		028C866D1D0E659F00194CC1 /* TimelineMoveModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineMoveModel.swift; sourceTree = "<group>"; };
 		028C866F1D0ED19C00194CC1 /* FriendsListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListViewModel.swift; sourceTree = "<group>"; };
 		028C86711D14EB1000194CC1 /* SignInViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		028C86741D15ADA900194CC1 /* SignUpCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpCode.swift; sourceTree = "<group>"; };
 		029793211D078C6500E20C77 /* proxima-nova-soft-light-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "proxima-nova-soft-light-webfont.ttf"; sourceTree = "<group>"; };
 		029793221D078C6500E20C77 /* proxima-nova-soft-normal-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "proxima-nova-soft-normal-webfont.ttf"; sourceTree = "<group>"; };
 		0297932D1D078D5300E20C77 /* SignInOrUp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignInOrUp.storyboard; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				028C865C1D0E452100194CC1 /* nib */,
 				023D05131D0787B0003D19A4 /* storyboards */,
 				029793401D0841E100E20C77 /* services */,
+				028C86731D15AD9500194CC1 /* codes */,
 				028A803A1D0860C6000328B2 /* models */,
 				0297933B1D08408500E20C77 /* jobs */,
 				029793321D078DBE00E20C77 /* viewmodel */,
@@ -298,6 +301,14 @@
 				028C865D1D0E455100194CC1 /* UserTableViewCell.xib */,
 			);
 			name = nib;
+			sourceTree = "<group>";
+		};
+		028C86731D15AD9500194CC1 /* codes */ = {
+			isa = PBXGroup;
+			children = (
+				028C86741D15ADA900194CC1 /* SignUpCode.swift */,
+			);
+			name = codes;
 			sourceTree = "<group>";
 		};
 		029793321D078DBE00E20C77 /* viewmodel */ = {
@@ -481,6 +492,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				023D055A1D078AEB003D19A4 /* SignInViewController.swift in Sources */,
+				028C86751D15ADA900194CC1 /* SignUpCode.swift in Sources */,
 				023D05021D0786FD003D19A4 /* AppDelegate.swift in Sources */,
 				023D05561D078AE6003D19A4 /* MainNavigationViewController.swift in Sources */,
 				02F4E1001D0B666200AF5970 /* NonSwipableProfileViewController.swift in Sources */,

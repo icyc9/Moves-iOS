@@ -89,15 +89,29 @@ class UserService {
         authenticationService.authenticate("", userId: "")
     }
     
-    func createUser(data: CreateUserJobData) -> Observable<UserModel?> {
+    func createUser(data: CreateUserJobData) -> Observable<(UserModel?, SignUpCode)> {
         return restService.createUser(data)
             .observeOn(MainScheduler.instance)
-            .map({(r, json) -> UserModel? in
+            .map({(r, json) -> (UserModel?, SignUpCode) in
                 guard r.statusCode == 201 else {
-                    return nil
+                    return (nil, SignUpCode.UnknownFailure)
                 }
                 
                 if let dict = json as? [String: AnyObject] {
+                    let signUpResultCode = dict["sign_up_result"] as! Int
+                    
+                    guard signUpResultCode == SignUpCode.InvalidEmailOrPhone.rawValue else {
+                        return (nil, SignUpCode.InvalidEmailOrPhone)
+                    }
+                    
+                    guard signUpResultCode == SignUpCode.InvalidUsername.rawValue else {
+                        return (nil, SignUpCode.InvalidUsername)
+                    }
+                    
+                    guard signUpResultCode == SignUpCode.UnknownFailure.rawValue else {
+                        return (nil, SignUpCode.UnknownFailure)
+                    }
+                    
                     let accessToken = dict["access_token"]
                     let user_id = dict["_id"]
                     
@@ -119,10 +133,10 @@ class UserService {
                     
                     print("Auth token: \(self.authenticationService.getAuthToken()))")
                     
-                    return model
+                    return (model, SignUpCode.Success)
                 }
                 
-                return nil
+                return (nil, SignUpCode.UnknownFailure)
             })
     }
 }
