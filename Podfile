@@ -17,4 +17,5 @@ target 'moves' do
     pod 'RealmSwift'
     pod 'Locksmith'
     pod 'JSQMessagesViewController'
+    pod "RxViewModel"
 end

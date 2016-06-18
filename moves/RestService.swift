@@ -105,14 +105,11 @@ class RestService {
         return requestJSON(.GET, url, headers: headers, encoding: .JSON)
     }
     
-    func authenticate(username: String, password: String) {
+    func authenticate(username: String, password: String) -> Observable<(NSHTTPURLResponse, AnyObject)> {
         let url = "http://moves-api.us-east-1.elasticbeanstalk.com/authenticate"
         let headers = ["Content-Type": "application/json", "JWT-Auth": basicAuthHeader(username, password: password)]
         
-        Alamofire.request(.POST, url, headers: headers, encoding: .JSON)
-            .responseJSON { response in
-                print("Response JSON: \(response)")
-        }
+        return requestJSON(.POST, url, headers: headers, encoding: .JSON)
     }
     
     private func basicAuthHeader(username: String, password: String) -> String {
