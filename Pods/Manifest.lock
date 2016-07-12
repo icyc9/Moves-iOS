@@ -1,3 +1,59 @@
-PODFILE CHECKSUM: 5650cd52bd1d9ca166069bbfaa002001110ab550
+PODS:
+  - Alamofire (3.4.0)
+  - DGElasticPullToRefresh (1.0.3)
+  - JSQMessagesViewController (7.3.2):
+    - JSQSystemSoundPlayer (~> 2.0.1)
+  - JSQSystemSoundPlayer (2.0.1)
+  - Locksmith (2.0.8)
+  - Realm (1.0.0):
+    - Realm/Headers (= 1.0.0)
+  - Realm/Headers (1.0.0)
+  - RealmSwift (1.0.0):
+    - Realm (= 1.0.0)
+  - RxAlamofire (2.5):
+    - RxAlamofire/Core (= 2.5)
+  - RxAlamofire/Core (2.5):
+    - Alamofire (~> 3.4)
+    - RxSwift (~> 2.5)
+  - RxCocoa (2.5.0):
+    - RxSwift (~> 2.5)
+  - RxSwift (2.5.0)
+  - RxViewModel (3.1.3):
+    - RxSwift (~> 2.5)
+  - SCLAlertView (0.5.8)
+  - Swinject (1.1.2)
+  - TextFieldEffects (1.2.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 3.4)
+  - DGElasticPullToRefresh
+  - JSQMessagesViewController
+  - Locksmith
+  - RealmSwift
+  - RxAlamofire
+  - RxCocoa
+  - RxSwift
+  - RxViewModel
+  - SCLAlertView
+  - Swinject (~> 1.1.0)
+  - TextFieldEffects
+
+SPEC CHECKSUMS:
+  Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
+  DGElasticPullToRefresh: 040f39ae69840b3261d163fe6735c5901bf851e9
+  JSQMessagesViewController: bf14e4d644e1c59476f47f2f8410c34c6c0294f3
+  JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
+  Locksmith: a8ed41ac4c06506ea8cb199d8ec8a8d3d108eb2a
+  Realm: e15cd8e7c11d3e576f628ba0b7cb855269b4991c
+  RealmSwift: 3229306d020d96f83b335f87a0dcbf2cef0e6a2b
+  RxAlamofire: b4572a077b6b2410c8732a27266299df4c00736e
+  RxCocoa: e1b1562e57a554d0fb2aabf9d71b637f177257c7
+  RxSwift: 402b41a50e922a0368fc14cb3bc9f4427920e8ae
+  RxViewModel: d2a8f05c008b932131f590f34f4afba4b0948f9a
+  SCLAlertView: 653e84d1f9fd95333bc54671fbadb7d0c47fce49
+  Swinject: 3debc5ac926dcd1be00947265a9db7a5f31b272a
+  TextFieldEffects: bc4fd3bd557321bd61a0762f3f50965477a36f62
+
+PODFILE CHECKSUM: f79ac74dc263d93c3728ff9c8333246b00e8efc3
 
 COCOAPODS: 1.0.0
